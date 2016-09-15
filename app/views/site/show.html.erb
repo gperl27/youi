@@ -1,0 +1,9 @@
+<h1>test</h1>
+
+<% content_for :stylesheet_includes do %>
+  <%= stylesheet_link_tag(show_path(@room, format: :css)) %>
+<% end %>
+
+<div class="room">
+  Room Contents Here
+</div>
