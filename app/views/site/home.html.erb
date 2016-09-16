@@ -1,3 +1,9 @@
-<button class='test'>Click me</button>
+<h1>test</h1>
 
-<button class='test'>Click me also</button>
+<% content_for :stylesheet_includes do %>
+  <%= stylesheet_link_tag(home_path(@room, format: :css)) %>
+<% end %>
+
+<button class='test' id='firstChoice'>Get Data</button>
+<button class='test' id='secondChoice'>Get Other</button>
+<button>Skip</button>
