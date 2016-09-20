@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  h1: one
+  fontsize: 1
+  letterspacing: 1
+  texttransformation: MyString
+  fontweight: 1
+
+two:
+  h1: two
+  fontsize: 1
+  letterspacing: 1
+  texttransformation: MyString
+  fontweight: 1

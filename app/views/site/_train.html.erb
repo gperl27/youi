@@ -1,23 +1,14 @@
-<% content_for :stylesheet_includes do %>
-  <%= stylesheet_link_tag(home_path(@h1_font_size, format: :css)) %>
-<% end %>
-
-<div class='container-fluid body'>
-  <header class='header section active-section'>
+<div class='container-fluid'>
+  <header class='header'>
     <div class='row'>
       
       <div class='col-md-2'>
-        <!-- <h1 data-property="h1_header" class='h1 component active'>youi</h1> -->
-        <%= link_to 'youi', train_path("h1", 1), class: "h1 component"%>
+        <h1 class='h1 h1_header'>youi</h1>
       </div>
       
-      <div class='col-md-3'>
-        <button class='edit'>Edit Mode</button><span class='edit-mode'>On</span>
-      </div>
-      
-      <div class='col-md-7'>
+      <div class='col-md-10'>
         <nav class='nav'>
-          <ul class='component active'>
+          <ul>
             <li>
               Stats
             </li>
@@ -31,7 +22,7 @@
     </div>
   </header>
   
-  <section class='instructions section active-section'>
+  <section class='instructions'>
     <span class='loud'>
       It's Your Site
     </span>
@@ -39,40 +30,40 @@
       Components with a <span class='green'>green</span> border are individually editable
     </p>
     <p>
-      Sections with a <span class='blue'>blue</span> border mean you can edit an entire container (i.e. color scheme, spacing)
+     Sections with a <span class='>blue</span> border mean you can edit an entire container (i.e. color scheme, spacing)
     </p>
-    <button class='component active'>
+    <button>
       Try Me
     </button>
   </section>
-  <section class='info section active-section'>
+  <section class='info'>
     <div class='container'>
-       <h2 class='component active'>About</h2>
-      <p class='component active'>
+       <h2>About</h2>
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ratione labore fuga harum ad laboriosam dicta veritatis temporibus obcaecati libero optio non alias fugiat mollitia iure, iusto porro itaque rerum!
       </p>
       
       <div class='inspirations'>
-      <h2 class='component active'>Inspirations</h2>
+      <h2>Inspirations</h2>
       <div class='row'>
         
         <div class='col-md-6'>
           <figure>
-            <img class='component active' src="#" alt="#" />
-            <h4 class='component active'>Twitch plays pokemon</h4>
+            <img src="#" alt="#" />
+            <h4>Twitch plays pokemon</h4>
           </figure>
           
-          <p class='component active'>
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quibusdam cupiditate harum nesciunt placeat, accusantium at voluptatem itaque adipisci, nulla tenetur explicabo unde. Autem blanditiis, qui non rerum eveniet praesentium.
           </p>
         </div>
         
         <div class='col-md-6'>
            <figure>
-            <img class='component active' src="#" alt="#" />
-            <h4 class='component active'>Twitch plays pokemon</h4>
+            <img src="#" alt="#" />
+            <h4>Twitch plays pokemon</h4>
           </figure>
-          <p class='component active'>
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quibusdam cupiditate harum nesciunt placeat, accusantium at voluptatem itaque adipisci, nulla tenetur explicabo unde. Autem blanditiis, qui non rerum eveniet praesentium.
           </p>
         </div>
@@ -81,8 +72,8 @@
       </div>
       
       <div class='site-editables'>
-      <h2 class='component active'>Site-wide Editables</h2>
-      <ul class='component active'>
+      <h2>Site-wide Editables</h2>
+      <ul>
         <li>
           <button>Heading Fonts</button>
         </li>
@@ -95,7 +86,7 @@
     </div>
   </section>
   
-  <footer class='footer section active-section'>
-    <p class='component active'>Curated by Greg Perlman. Copyright 2016</p>
+  <footer class='footer'>
+    <p>Curated by Greg Perlman. Copyright 2016</p>
   </footer>
 </div>
