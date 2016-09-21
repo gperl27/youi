@@ -5,19 +5,12 @@
 /** Site JS **/
 
 $(document).ready(function(){
-  
    $('.edit').on('click', toggleEdit);
-  
-  $('.body').on('click', function(e){
-    console.log(e.target);
-    var targ = e.target;
-    console.log(targ);
-    var cl = $(targ).attr('class');
-    var select = cl.split(" ")[0];
-    console.log(select);
-    console.log($(targ).data("property"));
-  })
 });
+
+
+//toggles borders for components and sections
+//edit button turns from on to off
 
 function toggleEdit(){
   var text = $('.edit-mode').text();
