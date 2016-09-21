@@ -11,7 +11,7 @@ class H1sController < ApplicationController
         fontsize: font_size,
         letterspacing: letter_spacing,
         fontweight: font_weight,
-        texttransformation: "test"
+        texttransformation: text_transform
       )
 
     data = "h1_header"

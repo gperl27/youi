@@ -5,18 +5,6 @@ class ApplicationController < ActionController::Base
     median = map_property(component, prop)
 
     median = get_max_count(median)[0]
-
-    p median
-
-    # p median
-    # median = median.sort
-    # length = median.length
-    # p median[(length-1)/2]
-    # p median[length/2]
-
-    # (median[(length-1)/2] + median[length/2])/2
-
-
   end
 
   def average(component, prop)

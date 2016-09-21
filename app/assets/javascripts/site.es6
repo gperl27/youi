@@ -4,11 +4,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** Site JS **/
 
-$(document).on('turbolinks:load', function(){
-  $('.test').on('click', getAllCSS)
-});
-
-
 $(document).ready(function(){
   
    $('.edit').on('click', toggleEdit);

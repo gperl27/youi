@@ -26,7 +26,6 @@ function getAllCSS(e){
   $.ajax({
     type: 'post',
     url: `/train/${model}/${id}`,
-    //url: `/train/h1/1`,
     data: css,
     success: handleData,
     error: handleError
@@ -103,7 +102,7 @@ function augmentH1(selector){
   var fontSize = generateRandom(82);
   var letterSpacing = generateRandom(8);
 
-  var fontWeight = [0,100,200,300,400,500,600,700,800,900];
+  var fontWeight = [100,200,300,400,500,600,700,800,900];
   var weightLength = fontWeight.length;
 
   var textTransform = ["uppercase", "lowercase", "capitalize"];
