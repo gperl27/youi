@@ -3,24 +3,18 @@ class H1sController < ApplicationController
     @h1 = H1.find(params[:id])
 
     font_size = params["font-size"]
-    p font_size
-
-    id = params[:id]
-    data = "h1_header"
-
-    # t.integer :fontsize
-    #   t.integer :letterspacing
-    #   t.string :texttransformation
-    #   t.integer :fontweight
-
+    letter_spacing = params["letter-spacing"]
+    font_weight = params["font-weight"]
+    text_transform = params["text-transform"]
 
     @h1.h1_properties.create(
         fontsize: font_size,
-        letterspacing: 14,
-        fontweight: 700,
+        letterspacing: letter_spacing,
+        fontweight: font_weight,
         texttransformation: "test"
       )
 
+    data = "h1_header"
     render json: [data]
   end
 end

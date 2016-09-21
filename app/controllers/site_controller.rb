@@ -6,9 +6,10 @@ class SiteController < ApplicationController
   def home
     h1 = H1.first.h1_properties
 
-    @h1_font_size = fontsize(h1)
-
-    p @h1_font_size
+    @h1_font_size = average(h1, "fontsize")
+    @h1_font_weight = median(h1, "fontweight")
+    @h1_text_transform = median(h1, "texttransformation")
+    @h1_letter_spacing = average(h1, "letterspacing")
 
     respond_to do |format|
       format.html
