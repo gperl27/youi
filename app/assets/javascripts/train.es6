@@ -1,3 +1,5 @@
+'use strict'
+
 $(document).on('turbolinks:load', function(){
   
   $('.good').on('click', getAllCSS); 
@@ -11,16 +13,20 @@ function getAllCSS(e){
   var target = e.target;
   var selector = $(target).data("selector");
   var id = $(target).data("id");
-  console.log(typeof selector);
-
+  console.log(selector);
+  console.log(id);
+  var model = $(target).data("model");
   var css = $(`.${selector}`).css();
+  console.log(model);
+
   console.log(css);
 
   $.ajax({
     type: 'post',
-    url: `/train/${selector}/${id}`,
+    url: `/train/${model}/${id}`,
+    //url: `/train/h1/1`,
     data: css,
-    success: handleData(selector),
+    success: handleData,
     error: handleError
   });
 }
@@ -29,11 +35,9 @@ function getAllCSS(e){
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Handlers */
 
-function handleData(selector){
+function handleData(response){
   //USE CASE STATEMENT
-
-  console.log(selector);
-  console.log();
+  var selector = response[0];
   //render/generate new buttons here
   var fonts = [ "Arial", "Verdana", "Helvetica", "Georgia", "Palatino Linotype",
                 "Times New Roman", "Arial Black", "Comic Sans MS", "Impact",

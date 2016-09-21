@@ -5,6 +5,9 @@ class H1sController < ApplicationController
     font_size = params["font-size"]
     p font_size
 
+    id = params[:id]
+    data = "h1_header"
+
     # t.integer :fontsize
     #   t.integer :letterspacing
     #   t.string :texttransformation
@@ -17,5 +20,7 @@ class H1sController < ApplicationController
         fontweight: 700,
         texttransformation: "test"
       )
+
+    render json: [data]
   end
 end

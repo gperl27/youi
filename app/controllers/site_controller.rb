@@ -6,8 +6,6 @@ class SiteController < ApplicationController
   def home
     h1 = H1.first.h1_properties
 
-    average("test")
-
     @h1_font_size = fontsize(h1)
 
     p @h1_font_size
@@ -19,7 +17,8 @@ class SiteController < ApplicationController
   end
 
   def show
-    @component = params[:component]
+    @class = params[:class]
     @id = params[:id]
+    @model = params[:model]
   end
 end
