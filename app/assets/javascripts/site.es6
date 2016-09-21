@@ -1,10 +1,12 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
+'use strict'
+
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** Site JS **/
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
    $('.edit').on('click', toggleEdit);
 });
 
