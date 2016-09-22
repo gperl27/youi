@@ -1,8 +1,15 @@
 'use strict'
 
 $(document).on('turbolinks:load', function(){
-  
+  //do a CSS transformation when the page loads
+  var selector = $(`.good`).data("selector");
+  caseHandler(selector);
+
+  //trigger css change and send data to the server
   $('.good').on('click', getAllCSS); 
+
+  //trigger css change with no ajax
+  $('.bad').on('click', handleBadClick);
 });
 
 
@@ -20,8 +27,6 @@ function getAllCSS(e){
 
   //get CSS properties of current component
   var css = $(`.${selector}`).css();
-
-  console.log(css);
 
   $.ajax({
     type: 'post',
@@ -67,19 +72,19 @@ function handleData(response){
   // $(`.${selector}`).css('background-color', `#${randomColor()}`);
   // $(`.${selector}`).css('font-family', `${fonts[generateRandom(fontLength)]}`);
 
-  switch(selector){
-    case "h1_header":
-      augmentH1(selector);
-      break;
-  }
-
-  //augmentH1(selector);
-
+  caseHandler(selector);
 }
 
 function handleError(err){
   console.log('ERROR');
   console.log(err);
+}
+
+function handleBadClick(e){
+  var target = e.target;
+  var selector = $(target).data("selector");
+
+  caseHandler(selector);
 }
 
 
@@ -90,7 +95,7 @@ function generateRandom(num){
   return Math.floor((Math.random() * num));
 }
 
-var randomColor = () => {
+function randomColor(){
   return Math.floor(Math.random()*16777215).toString(16);
 }
 
@@ -98,19 +103,33 @@ var randomColor = () => {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Case-specific CSS Augmentations */
 
-function augmentH1(selector){
-  var fontSize = generateRandom(82);
-  var letterSpacing = generateRandom(8);
-
-  var fontWeight = [100,200,300,400,500,600,700,800,900];
+function augmentH1(selector, properties){
+  var fontSize = properties.fontSize;
+  var letterSpacing = properties.letterSpacing;
+  var fontWeight = properties.fontWeight;
   var weightLength = fontWeight.length;
-
-  var textTransform = ["uppercase", "lowercase", "capitalize"];
+  var textTransform = properties.textTransform;
   var textTransformLength = textTransform.length;
-
 
   $(`.${selector}`).css('font-size', `${fontSize}px` );
   $(`.${selector}`).css('letter-spacing', `${letterSpacing}px` );
   $(`.${selector}`).css('font-weight', `${fontWeight[generateRandom(weightLength)]}`);
   $(`.${selector}`).css('text-transform', `${textTransform[generateRandom(textTransformLength)]}`);
+}
+
+/* Function to handle selector Cases */
+
+function caseHandler(selector){
+  var properties = {
+    fontSize: generateRandom(82),
+    letterSpacing : generateRandom(8),
+    fontWeight : [100,200,300,400,500,600,700,800,900],
+    textTransform : ["uppercase", "lowercase", "capitalize"],
+  }
+
+  switch(selector){
+    case "h1_header":
+      augmentH1(selector, properties);
+      break;
+  }
 }
