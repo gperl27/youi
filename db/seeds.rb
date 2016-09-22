@@ -6,5 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-h1 = H1.create
-h1.h1_properties.create(fontsize: 36, letterspacing: 4, texttransformation: "capitalize", fontweight: 700)
+h1 = H1.create!
+h1.h1_properties.create!(fontsize: 36, letterspacing: 4, texttransformation: "capitalize", fontweight: 700)
+
+h2 = H2.create!
+h2.h2_properties.create!(fontsize: 32, letterspacing: 2, texttransformation: "lowercase", fontweight: 400, wordspacing: 5)
