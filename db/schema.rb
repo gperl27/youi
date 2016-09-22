@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160919133601) do
+ActiveRecord::Schema.define(version: 20160922000950) do
 
   create_table "h1_properties", force: :cascade do |t|
     t.integer  "h1_id"
@@ -24,6 +24,23 @@ ActiveRecord::Schema.define(version: 20160919133601) do
   end
 
   create_table "h1s", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "h2_properties", force: :cascade do |t|
+    t.integer  "fontsize"
+    t.integer  "letterspacing"
+    t.string   "texttransformation"
+    t.integer  "wordspacing"
+    t.integer  "fontweight"
+    t.integer  "h2_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["h2_id"], name: "index_h2_properties_on_h2_id"
+  end
+
+  create_table "h2s", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
