@@ -19,9 +19,8 @@ class SiteController < ApplicationController
     @h2_word_spacing = average(h2, "wordspacing")
 
     respond_to do |format|
-      format.html
       format.css
-      format.js {render inline: "location.reload();" }
+      format.html
     end
   end
 

@@ -42,36 +42,7 @@ function getAllCSS(e){
 /* Handlers */
 
 function handleData(response){
-  //USE CASE STATEMENT
   var selector = response[0];
-  // //render/generate new buttons here
-  // var fonts = [ "Arial", "Verdana", "Helvetica", "Georgia", "Palatino Linotype",
-  //               "Times New Roman", "Arial Black", "Comic Sans MS", "Impact",
-  //               "Lucida Sans Unicode", "Tahoma", "Trebuchet MS", "Verdana",
-  //               "Courier New", "Lucida Console"
-  //             ];
-  // var fontLength = fonts.length;
-
-  // var fontStyle = ["normal", "italic", "bold", "oblique"];
-  // var fontStyleLength = fontStyle.length;
-  
-
-  // var fontWeight = generateRandom(1000);
-  // var border = generateRandom(20);
-  // var borderRadius = generateRandom(20);
-  // var boxShadow = generateRandom(20);
-  // var fontSize = generateRandom(82);
-  // var padding = generateRandom(100);
-
-  // $(`.${selector}`).css('color', `#${randomColor()}`);
-  // $(`.${selector}`).css('border', `${border}px solid #${randomColor()}`);
-  // $(`.${selector}`).css('border-radius', `${borderRadius}px`);
-  // $(`.${selector}`).css('box-shadow', `${generateRandom(20)}px ${generateRandom(20)}px ${generateRandom(20)}px  #${randomColor()}`);
-  // $(`.${selector}`).css('font-size', `${fontSize}px` );
-  // $(`.${selector}`).css('padding', `${padding}px`);
-  // $(`.${selector}`).css('background-color', `#${randomColor()}`);
-  // $(`.${selector}`).css('font-family', `${fonts[generateRandom(fontLength)]}`);
-
   caseHandler(selector);
 }
 
@@ -83,7 +54,6 @@ function handleError(err){
 function handleBadClick(e){
   var target = e.target;
   var selector = $(target).data("selector");
-
   caseHandler(selector);
 }
 

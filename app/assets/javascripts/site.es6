@@ -2,7 +2,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 $(document).on('turbolinks:load', function(){
-    console.log('home');
    $('.edit').on('click', toggleEdit);
 });
 

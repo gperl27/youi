@@ -19,6 +19,7 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** Alter jQuery CSS function to extract all CSS properties of any element **/
 /** This is the key to sending properties to the server **/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 jQuery.fn.css2 = jQuery.fn.css;
 jQuery.fn.css = function() {
