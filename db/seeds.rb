@@ -11,3 +11,8 @@ h1.h1_properties.create!(fontsize: 36, letterspacing: 4, texttransformation: "ca
 
 h2 = H2.create!
 h2.h2_properties.create!(fontsize: 32, letterspacing: 2, texttransformation: "lowercase", fontweight: 400, wordspacing: 5)
+
+button = button.create!
+button.button_properties.create!(
+  fontsize: 16, letterspacing: 2, texttransformation: "capitalize", fontweight: 200, )
+

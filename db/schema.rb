@@ -18,11 +18,20 @@ ActiveRecord::Schema.define(version: 20160923164617) do
     t.integer  "borderradius"
     t.integer  "padding"
     t.integer  "fontsize"
-    t.integer  "hue"
-    t.integer  "saturation"
-    t.integer  "luminosity"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "letterspacing"
+    t.integer  "fontweight"
+    t.integer  "color_hue"
+    t.integer  "color_saturation"
+    t.integer  "color_luminosity"
+    t.integer  "bg_hue"
+    t.integer  "bg_saturation"
+    t.integer  "bg_luminosity"
+    t.integer  "border_hue"
+    t.integer  "border_saturation"
+    t.integer  "border_luminosity"
+    t.string   "texttransformation"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.index ["button_id"], name: "index_button_properties_on_button_id"
   end
 
