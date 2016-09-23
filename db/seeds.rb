@@ -12,7 +12,10 @@ h1.h1_properties.create!(fontsize: 36, letterspacing: 4, texttransformation: "ca
 h2 = H2.create!
 h2.h2_properties.create!(fontsize: 32, letterspacing: 2, texttransformation: "lowercase", fontweight: 400, wordspacing: 5)
 
-button = button.create!
+button = Button.create!
 button.button_properties.create!(
-  fontsize: 16, letterspacing: 2, texttransformation: "capitalize", fontweight: 200, )
-
+  fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
+    border: 5, borderradius: 10, border_hue: 180, border_saturation: 50, border_luminosity: 50,
+    bg_hue: 120, bg_saturation: 30, bg_luminosity:70,
+    color_hue: 300, color_saturation: 70, color_luminosity: 30
+  )
