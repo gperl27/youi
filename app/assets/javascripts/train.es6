@@ -98,7 +98,9 @@ function augmentH1(selector){
 }
 
 function augmentH2(selector, properties){
-
+  var props = generateProperties(selector, 
+      ["fontSize", "letterSpacing", "fontWeight", "textTransform", "wordSpacing"]);
+  invokeProps(props);
 }
 /* Function to handle selector Cases */
 
