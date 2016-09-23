@@ -89,47 +89,25 @@ function handleBadClick(e){
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/* Helpers */
-
-function generateRandom(num){
-  return Math.floor((Math.random() * num));
-}
-
-function randomColor(){
-  return Math.floor(Math.random()*16777215).toString(16);
-}
-
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Case-specific CSS Augmentations */
 
-function augmentH1(selector, properties){
-  var fontSize = properties.fontSize;
-  var letterSpacing = properties.letterSpacing;
-  var fontWeight = properties.fontWeight;
-  var weightLength = fontWeight.length;
-  var textTransform = properties.textTransform;
-  var textTransformLength = textTransform.length;
-
-  $(`.${selector}`).css('font-size', `${fontSize}px` );
-  $(`.${selector}`).css('letter-spacing', `${letterSpacing}px` );
-  $(`.${selector}`).css('font-weight', `${fontWeight[generateRandom(weightLength)]}`);
-  $(`.${selector}`).css('text-transform', `${textTransform[generateRandom(textTransformLength)]}`);
+function augmentH1(selector){
+  var props = generateProperties(selector, 
+      ["fontSize", "letterSpacing", "fontWeight", "textTransform"]);
+  invokeProps(props);
 }
 
+function augmentH2(selector, properties){
+
+}
 /* Function to handle selector Cases */
 
 function caseHandler(selector){
-  var properties = {
-    fontSize: generateRandom(82),
-    letterSpacing : generateRandom(8),
-    fontWeight : [100,200,300,400,500,600,700,800,900],
-    textTransform : ["uppercase", "lowercase", "capitalize"],
-  }
-
   switch(selector){
     case "h1_header":
-      augmentH1(selector, properties);
+      augmentH1(selector);
+    case "h2-selector":
+      augmentH2(selector);
       break;
   }
 }

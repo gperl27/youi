@@ -12,7 +12,7 @@ class H2sController < ApplicationController
         fontsize: font_size,
         letterspacing: letter_spacing,
         fontweight: font_weight,
-        texttransformation: text_transform
+        texttransformation: text_transform,
         wordspacing: word_spacing
       )
 
