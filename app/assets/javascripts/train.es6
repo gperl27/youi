@@ -28,6 +28,8 @@ function getAllCSS(e){
   //get CSS properties of current component
   var css = $(`.${selector}`).css();
 
+  console.log(css);
+
   $.ajax({
     type: 'post',
     url: `/train/${model}/${id}`,

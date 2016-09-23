@@ -7,10 +7,10 @@ function randomNumber(num){
 }
 
 function randomColor(){
-  var r = randomNumber(256);
-  var g = randomNumber(256);
-  var b = randomNumber(256);
+  var h = randomNumber(360);
+  var s = randomNumber(100);
+  var l = randomNumber(100);
 
-  var rgb = [r,g,b];
-  return rgb;
+  var hsl = [h,s,l];
+  return hsl;
 }

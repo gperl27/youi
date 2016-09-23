@@ -5,13 +5,12 @@ class RandomColor {
     this.colorArray = randomColor();
   }
 
-
-
   random(){
     return $(`.${this.selector}`).css(`${this.propName}`, 
-                                  `rgb(${this.colorArray[0]},
-                                       ${this.colorArray[1]},
-                                       ${this.colorArray[2]})
+                                  `hsl(${this.colorArray[0]},
+                                       ${this.colorArray[1]}%,
+                                       ${this.colorArray[2]}%)
                                        `);
   }
 }
+

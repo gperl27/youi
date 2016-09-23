@@ -8,15 +8,15 @@ class CreateButtonProperties < ActiveRecord::Migration[5.0]
       t.integer :fontsize
       t.integer :letterspacing
       t.integer :fontweight
-      t.integer :color_hue
-      t.integer :color_saturation
-      t.integer :color_luminosity
-      t.integer :bg_hue
-      t.integer :bg_saturation
-      t.integer :bg_luminosity
-      t.integer :border_hue
-      t.integer :border_saturation
-      t.integer :border_luminosity
+      t.integer :color_red
+      t.integer :color_green
+      t.integer :color_blue
+      t.integer :bg_red
+      t.integer :bg_green
+      t.integer :bg_blue
+      t.integer :border_red
+      t.integer :border_green
+      t.integer :border_blue
       t.string :texttransformation
 
       t.timestamps

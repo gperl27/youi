@@ -9,7 +9,12 @@ function generateProperties(selector, wantedProps){
   var padding = new RandomPx(selector, "padding", 100);
   var border = new RandomPx(selector, "border", 20);
   var borderRadius = new RandomPx(selector, "border-radius", 20);
-  var boxShadow = new RandomPx(selector, "box-shadow", 20);
+
+
+
+  /* NOT INCLUDING BOX SHADOW BC IT IS DIFFICULT TO COMBINE COLOR & PIXELS */
+  //var boxShadow = new RandomPx(selector, "box-shadow", 20);
+
 
 
   /** Props that contain strings **/
@@ -28,6 +33,9 @@ function generateProperties(selector, wantedProps){
 
   /** Props for color **/
   var color = new RandomColor(selector, "color");
+  var borderColor = new RandomColor(selector, "border-color");
+  var bgColor = new RandomColor(selector, "background-color");
+
     //bg color
 
 
@@ -41,10 +49,11 @@ function generateProperties(selector, wantedProps){
     "padding": padding,
     "border": border,
     "borderRadius": borderRadius,
-    "boxShadow": boxShadow,
     "fontFamily": fonts,
     "fontStyle": fontStyle,
-    "color": color
+    "color": color,
+    "borderColor": borderColor,
+    "bgColor": bgColor
   }
 
   /** This function helps identify which variable(s) to use because we are passing an array of strings **/

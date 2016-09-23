@@ -2,9 +2,9 @@ class H1sController < ApplicationController
   def create
     @h1 = H1.find(params[:id])
 
-    color = extractRGB(params["color"])
+    color = params["color"]
 
-    p color
+    p "#{color} color"
 
     font_size = params["font-size"]
     letter_spacing = params["letter-spacing"]
