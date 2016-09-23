@@ -28,7 +28,23 @@ function getAllCSS(e){
   //get CSS properties of current component
   var css = $(`.${selector}`).css();
 
-  console.log(css);
+  //extract r,g,b out of color, convert to HSL, and send to backend
+  var color = css["color"];
+  
+  var rgb = splitRgb(color);
+
+  var r = parseInt(rgb[0]);
+  var g = parseInt(rgb[1]);
+  var b = parseInt(rgb[2]);
+
+  //actually conversion
+  var hsl = rgbToHsl(r,g,b);
+
+  //round numbers and make them CSS ready
+  hsl = cleanHsl(hsl);
+
+  //add hsl to the css object to be sent to AJAX
+  css["hsl"] = hsl;
 
   $.ajax({
     type: 'post',

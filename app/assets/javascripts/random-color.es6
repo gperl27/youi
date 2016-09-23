@@ -7,9 +7,9 @@ class RandomColor {
 
   random(){
     return $(`.${this.selector}`).css(`${this.propName}`, 
-                                  `hsl(${this.colorArray[0]},
-                                       ${this.colorArray[1]}%,
-                                       ${this.colorArray[2]}%)
+                                  `rgb(${this.colorArray[0]},
+                                       ${this.colorArray[1]},
+                                       ${this.colorArray[2]})
                                        `);
   }
 }
