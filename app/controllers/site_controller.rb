@@ -21,6 +21,7 @@ class SiteController < ApplicationController
     respond_to do |format|
       format.html
       format.css
+      format.js {render inline: "location.reload();" }
     end
   end
 
