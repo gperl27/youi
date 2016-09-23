@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  button: one
+  border: 1
+  borderradius: 1
+  padding: 1
+  fontsize: 1
+  hue: 1
+  saturation: 1
+  luminosity: 1
+
+two:
+  button: two
+  border: 1
+  borderradius: 1
+  padding: 1
+  fontsize: 1
+  hue: 1
+  saturation: 1
+  luminosity: 1

@@ -63,7 +63,7 @@ function handleBadClick(e){
 
 function augmentH1(selector){
   var props = generateProperties(selector, 
-      ["fontSize", "letterSpacing", "fontWeight", "textTransform"]);
+      ["fontSize", "letterSpacing", "fontWeight", "textTransform", "color"]);
   invokeProps(props);
 }
 

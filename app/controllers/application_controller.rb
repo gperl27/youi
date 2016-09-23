@@ -30,4 +30,8 @@ class ApplicationController < ActionController::Base
     array = counts.max_by {|k,v| v }
   end
 
+  def extractRGB(rgb)
+    rgb.gsub!(/\D+/, "")
+  end
+
 end
