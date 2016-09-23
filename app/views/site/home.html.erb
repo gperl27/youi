@@ -1,6 +1,4 @@
-<% content_for :stylesheet_includes do %>
-  <%= stylesheet_link_tag(home_path(@h1_font_size, format: :css)) %>
-<% end %>
+<%= render("home_style") %>
 
 <div class='container-fluid body'>
   <header class='header section active-section'>

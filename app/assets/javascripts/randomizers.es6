@@ -7,5 +7,10 @@ function randomNumber(num){
 }
 
 function randomColor(){
-  return Math.floor(Math.random()*16777215).toString(16);
+  var r = randomNumber(256);
+  var g = randomNumber(256);
+  var b = randomNumber(256);
+
+  var rgb = [r,g,b];
+  return rgb;
 }

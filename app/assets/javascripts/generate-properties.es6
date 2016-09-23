@@ -27,7 +27,7 @@ function generateProperties(selector, wantedProps){
                         ["normal", "italic", "oblique"]);
 
   /** Props for color **/
-    //color
+  var color = new RandomColor(selector, "color");
     //bg color
 
 
@@ -43,7 +43,8 @@ function generateProperties(selector, wantedProps){
     "borderRadius": borderRadius,
     "boxShadow": boxShadow,
     "fontFamily": fonts,
-    "fontStyle": fontStyle
+    "fontStyle": fontStyle,
+    "color": color
   }
 
   /** This function helps identify which variable(s) to use because we are passing an array of strings **/

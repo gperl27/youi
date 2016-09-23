@@ -17,11 +17,6 @@ class SiteController < ApplicationController
     @h2_text_transform = median(h2, "texttransformation")
     @h2_letter_spacing = average(h2, "letterspacing")
     @h2_word_spacing = average(h2, "wordspacing")
-
-    respond_to do |format|
-      format.css
-      format.html
-    end
   end
 
   def show
