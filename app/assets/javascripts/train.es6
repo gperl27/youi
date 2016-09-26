@@ -2,13 +2,12 @@
 
 $(document).on('turbolinks:load', function(){
 
-  // var id = $('.good').data("id");
-
+  var id = $('.good').data("id");
 
   //do a CSS transformation when the page loads
   var selector = $(`.good`).data("selector"); 
   // selector += `-${id}`;
-  caseHandler(selector);
+  caseHandler(selector, id);
   //trigger css change and send data to the server
   $('.good').on('click', getAllCSS); 
 
@@ -111,10 +110,10 @@ function caseHandler(selector, id){
     case `h1-selector-${id}`:
       augmentH1(selector);
       break;
-    case "h2-selector":
+    case `h2-selector-${id}`:
       augmentH2(selector);
       break;
-    case "button-selector":
+    case `button-selector-${id}`:
       augmentButton(selector);
       break;
     case `paragraph-selector-${id}`:

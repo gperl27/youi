@@ -42,14 +42,14 @@
       Sections with a <span class='blue'>blue</span> border mean you can edit an entire container (i.e. color scheme, spacing)
     </p>
 
-    <%= link_to 'Try Me', train_path("button", "button-selector", 1), class: "button-selector component active"%>
+    <%= link_to 'Try Me', train_path("button", "button-selector", 1), class: "button-selector-1 button-selector component active"%>
   </section>
 
 
   <section class='info section active-section'>
     <div class='container'>
       <%= link_to train_path("h2", "h2-selector", 1) do %>
-        <h2 class='h2-selector component active'>About</h2>
+        <h2 class='h2-selector-1 component active'>About</h2>
       <% end %>
       
       <%= link_to train_path("paragraph", "paragraph-selector", 1) do %>
@@ -63,7 +63,7 @@
       
       <div class='inspirations'>
         <%= link_to train_path("h2", "h2-selector", 1) do %>
-          <h2 class='h2-selector component active'>Inspirations</h2>
+          <h2 class='h2-selector-1 component active'>Inspirations</h2>
         <% end %>
       <div class='row'>
         
@@ -98,7 +98,7 @@
       
       <div class='site-editables'>
         <%= link_to train_path("h2", "h2-selector", 1) do %>
-            <h2 class='h2-selector component active'>Site-Wide Editables</h2>
+            <h2 class='h2-selector-1 component active'>Site-Wide Editables</h2>
         <% end %>
         <ul class='component active'>
           <li>

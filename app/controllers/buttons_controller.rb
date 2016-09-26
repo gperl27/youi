@@ -1,6 +1,7 @@
 class ButtonsController < ApplicationController
   def create
-    @button = Button.find(params[:id])
+    id = params[:id]
+    @button = Button.find(id)
 
     font_size = params["font-size"]
     letter_spacing = params["letter-spacing"]
@@ -35,7 +36,7 @@ class ButtonsController < ApplicationController
       color_hue: hsl_color_hue, color_saturation: hsl_color_saturation, color_luminosity: hsl_color_luminosity
     )
 
-    data = "button-selector"
-    render json: [data]
+    data = "button-selector-#{id}"
+    render json: [data,id]
   end
 end

@@ -3,7 +3,6 @@ class ParagraphsController < ApplicationController
     id = params[:id]
     @paragraph = Paragraph.find(id)
 
-
     font_size = params["font-size"]
     text_align = params["text-align"]
     padding = params["padding"]

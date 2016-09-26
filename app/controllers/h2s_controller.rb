@@ -1,5 +1,6 @@
 class H2sController < ApplicationController
   def create
+    id = params[:id]
     @h2 = H2.find(params[:id])
 
     font_size = params["font-size"]
@@ -16,7 +17,7 @@ class H2sController < ApplicationController
         wordspacing: word_spacing
       )
 
-    data = "h2-selector"
-    render json: [data]
+    data = "h2-selector-#{id}"
+    render json: [data,id]
   end
 end
