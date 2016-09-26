@@ -1,6 +1,7 @@
 class SiteController < ApplicationController
   before_action :h1_props, only: [:home, :show]
   before_action :h2_props, only: [:home, :show]
+  before_action :button_props, only: [:home, :show]
 
   def index
     redirect_to home_path
@@ -37,7 +38,7 @@ class SiteController < ApplicationController
   end
 
   def button_props
-    button = Button.first.h2_properties
+    button = Button.first.button_properties
 
     @button_font_size = average(button, "fontsize")
     @button_font_weight = median(button, "fontweight")

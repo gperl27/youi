@@ -13,4 +13,27 @@
     font-weight: <%= @h2_font_weight %>;
     word-spacing: <%= @h2_word_spacing %>px;
   }
+
+  .button-selector {
+    font-size: <%= @button_font_size %>px;
+    font-weight: <%= @button_font_weight %>;
+    text-transform: <%= @button_text_transform %>;
+    letter-spacing: <%= @button_letter_spacing %>px;
+    padding: <%= @button_padding %>px;
+    border: <%= @button_border %>px;
+    border-radius: <%= @button_border_radius %>px;
+    border-style: <%= @button_border_style %>;
+    color: hsl(
+      <%= @button_color_hue %>, 
+      <%= @button_color_saturation %>%, 
+      <%= @button_color_luminosity %>%);
+    border-color: hsl(
+      <%= @button_border_color_hue %>, 
+      <%= @button_border_color_saturation %>%, 
+      <%= @button_border_color_luminosity %>%);
+    background-color: hsl(
+      <%= @button_bg_color_hue %>, 
+      <%= @button_bg_color_saturation %>%, 
+      <%= @button_bg_color_luminosity %>%);
+  }
 </style>

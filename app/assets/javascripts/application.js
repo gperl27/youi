@@ -30,11 +30,11 @@ jQuery.fn.css = function() {
   'background-image','background-repeat','background-position',
   'background-attachment','opacity','width','height','top','right','bottom',
   'left','margin-top','margin-right','margin-bottom','margin-left',
-  'padding-top','padding-right','padding-bottom','padding-left',
+  'padding-top','padding-right','padding-bottom','padding-left', 'padding',
   'border-top-width','border-right-width','border-bottom-width',
-  'border-left-width','border-top-color','border-right-color',
-  'border-bottom-color','border-left-color','border-color', 'border-style','position',
-  'display','visibility','z-index','overflow-x','overflow-y','white-space',
+  'border-left-width', 'border', 'border-top-color','border-right-color',
+  'border-bottom-color','border-left-color','border-color', 'border-style','border-radius',
+  'position', 'display','visibility','z-index','overflow-x','overflow-y','white-space',
   'clip','float','clear','cursor','list-style-image','list-style-position',
   'list-style-type','marker-offset'];
     var len = attr.length, obj = {};
