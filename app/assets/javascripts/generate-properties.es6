@@ -1,6 +1,6 @@
 function generateProperties(selector, wantedProps){
   /** Eventually fill this with props we want **/
-  var PROPERTIES = []
+  var PROPERTIES = [];
   
   /** Props that contain pixels **/
   var fontSize = new RandomPx(selector, "font-size", 82);

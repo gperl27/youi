@@ -81,7 +81,7 @@ function handleBadClick(e){
 
 function augmentH1(selector){
   var props = generateProperties(selector, 
-      ["fontSize", "letterSpacing", "fontWeight", "textTransform", "color"]);
+      ["fontSize", "letterSpacing", "fontWeight", "textTransform"]);
   invokeProps(props);
 }
 
@@ -96,6 +96,7 @@ function caseHandler(selector){
   switch(selector){
     case "h1_header":
       augmentH1(selector);
+      break;
     case "h2-selector":
       augmentH2(selector);
       break;

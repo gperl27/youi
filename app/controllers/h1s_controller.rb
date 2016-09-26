@@ -1,9 +1,7 @@
 class H1sController < ApplicationController
   def create
     @h1 = H1.find(params[:id])
-
-    p params['hsl']
-
+    
     font_size = params["font-size"]
     letter_spacing = params["letter-spacing"]
     font_weight = params["font-weight"]
