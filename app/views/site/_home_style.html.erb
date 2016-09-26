@@ -70,4 +70,16 @@
     text-indent: <%= @paragraph_2_indent %>px;
     word-spacing: <%= @paragraph_2_word_spacing %>px;
   }
+
+  .image-selector-1 {
+    padding: <%= @image_padding %>px;
+    border: <%= @image_border %>px;
+    border-radius: <%= @image_border_radius %>px;
+    height: <%= @image_height %>px;
+    width: <%= @image_width %>px;
+    border-color: hsl(
+      <%= @button_border_color_hue %>, 
+      <%= @button_border_color_saturation %>%, 
+      <%= @button_border_color_luminosity %>%);
+  }
 </style>

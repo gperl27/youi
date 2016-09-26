@@ -103,6 +103,12 @@ function augmentParagraph(selector){
       ["fontSize", "textAlign", "padding", "indent", "wordSpacing"]);
   invokeProps(props);
 }
+
+function augmentImage(selector){
+  var props = generateProperties(selector,
+      ["height", "width", "padding", "border", "borderRadius", "borderColor"]);
+  invokeProps(props);
+}
 /* Function to handle selector Cases */
 
 function caseHandler(selector, id){
@@ -118,6 +124,9 @@ function caseHandler(selector, id){
       break;
     case `paragraph-selector-${id}`:
       augmentParagraph(selector);
+      break;
+    case `image-selector-${id}`:
+      augmentImage(selector);
       break;
   }
 }

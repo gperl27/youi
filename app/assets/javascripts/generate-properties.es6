@@ -10,7 +10,8 @@ function generateProperties(selector, wantedProps){
   var border = new RandomPx(selector, "border", 20);
   var borderRadius = new RandomPx(selector, "border-radius", 20);
   var indent = new RandomPx(selector, "text-indent", 35);
-
+  var height = new RandomPx(selector, "height", 500);
+  var width = new RandomPx(selector, "width", 500);
 
 
   /* NOT INCLUDING BOX SHADOW BC IT IS DIFFICULT TO COMBINE COLOR & PIXELS */
@@ -63,7 +64,9 @@ function generateProperties(selector, wantedProps){
     "bgColor": bgColor,
     "borderStyle": borderStyle,
     "indent": indent,
-    "textAlign": textAlign
+    "textAlign": textAlign,
+    "height": height,
+    "width": width
   }
 
   /** This function helps identify which variable(s) to use because we are passing an array of strings **/

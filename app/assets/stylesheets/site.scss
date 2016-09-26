@@ -4,7 +4,7 @@
 
 /** Universal **/
 
-.button-selector:hover {
+.button-selector:hover, .image-selector:hover {
   opacity: .8;
   transition: .3s;
 }
@@ -59,8 +59,7 @@
 .inspirations img {
   display: block;
   margin: 0 auto;
-  height: 300px;
-  width: 300px;
+  border-style: solid !important;
 }
 
 .inspirations h4 {

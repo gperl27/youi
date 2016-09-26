@@ -3,6 +3,7 @@ class SiteController < ApplicationController
   before_action :h2_props, only: [:home, :show]
   before_action :button_props, only: [:home, :show]
   before_action :paragraph_props, only: [:home, :show]
+  before_action :image_props, only: [:home, :show]
 
   def index
     redirect_to home_path
@@ -76,5 +77,18 @@ class SiteController < ApplicationController
     @paragraph_2_padding = median(paragraph_2, "padding")
     @paragraph_2_indent = average(paragraph_2, "indent")
     @paragraph_2_word_spacing = average(paragraph_2, "wordspacing")
+  end
+
+  def image_props
+    image = Image.first.image_properties
+
+    @image_padding = average(image, "padding")
+    @image_border = average(image, "border")
+    @image_border_radius = average(image, "borderradius")
+    @image_height = average(image, "height")
+    @image_width = average(image, "width")
+    @image_border_color_hue = median(image, "border_hue")
+    @image_border_color_saturation = median(image, "border_saturation")
+    @image_border_color_luminosity = median(image, "border_luminosity")
   end
 end
