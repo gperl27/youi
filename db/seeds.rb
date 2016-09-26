@@ -22,3 +22,6 @@ button.button_properties.create!(
 
 paragraph = Paragraph.create!
 paragraph.paragraph_properties.create!(textalign: "left", fontsize: 12, wordspacing: 3, padding: 5, indent: 25)
+
+paragraph2 = Paragraph.create!
+paragraph2.paragraph_properties.create!(textalign: "center", fontsize: 14, wordspacing: 4, padding: 10, indent: 15)
