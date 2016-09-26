@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/** Universal **/
+
+.button-selector:hover {
+  opacity: .8;
+  transition: .3s;
+}
+
+
 /** header **/
 .edit {
   margin-top: 25px;
@@ -74,13 +82,14 @@
 /** functionality **/
 
 .component:hover {
+  cursor: pointer;
   border: 1px solid green;
 }
 
-.section:hover {
-  border: 1px solid blue;
-  cursor: pointer;
-}
+// .section:hover {
+//   border: 1px solid blue;
+//   cursor: pointer;
+// }
 
 .green {
   color: green;

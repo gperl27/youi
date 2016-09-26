@@ -14,5 +14,5 @@ function toggleEdit(){
      $('.edit-mode').text(
     text == "On" ? "Off" : "On");
      $('.active').toggleClass('component');
-     $('.active-section').toggleClass('section');
+     //$('.active-section').toggleClass('section');
 }

@@ -36,4 +36,22 @@
       <%= @button_bg_color_saturation %>%, 
       <%= @button_bg_color_luminosity %>%);
   }
+
+  .button-selector:hover {
+    border: <%= @button_border %>px;
+    border-radius: <%= @button_border_radius %>px;
+    border-style: <%= @button_border_style %>;
+    color: hsl(
+      <%= @button_color_hue %>, 
+      <%= @button_color_saturation %>%, 
+      <%= @button_color_luminosity %>%);
+    border-color: hsl(
+      <%= @button_border_color_hue %>, 
+      <%= @button_border_color_saturation %>%, 
+      <%= @button_border_color_luminosity %>%);
+    background-color: hsl(
+      <%= @button_bg_color_hue %>, 
+      <%= @button_bg_color_saturation %>%, 
+      <%= @button_bg_color_luminosity %>%);
+  }
 </style>
