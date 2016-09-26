@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     average.reduce(:+)/average.count
   end
 
+  def delegate_color()
+    
+  end
+
   private
 
   def map_property(component, prop_name)

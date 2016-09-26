@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160923164617) do
+ActiveRecord::Schema.define(version: 20160926140531) do
 
   create_table "button_properties", force: :cascade do |t|
     t.integer  "button_id"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160923164617) do
     t.string   "texttransformation"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.string   "border_style"
     t.index ["button_id"], name: "index_button_properties_on_button_id"
   end
 

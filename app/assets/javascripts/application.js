@@ -33,8 +33,7 @@ jQuery.fn.css = function() {
   'padding-top','padding-right','padding-bottom','padding-left',
   'border-top-width','border-right-width','border-bottom-width',
   'border-left-width','border-top-color','border-right-color',
-  'border-bottom-color','border-left-color','border-top-style',
-  'border-right-style','border-bottom-style','border-left-style','position',
+  'border-bottom-color','border-left-color','border-color', 'border-style','position',
   'display','visibility','z-index','overflow-x','overflow-y','white-space',
   'clip','float','clear','cursor','list-style-image','list-style-position',
   'list-style-type','marker-offset'];

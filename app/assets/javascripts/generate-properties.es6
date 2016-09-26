@@ -30,6 +30,10 @@ function generateProperties(selector, wantedProps){
               ]);
   var fontStyle = new RandomString(selector, "font-style", 
                         ["normal", "italic", "oblique"]);
+  var borderStyle = new RandomString(selector, "border-style",
+              ["hidden", "dotted", "dashed", "solid", "double",
+               "groove", "ridge", "inset", "outset"
+              ]);
 
   /** Props for color **/
   var color = new RandomColor(selector, "color");
@@ -53,7 +57,8 @@ function generateProperties(selector, wantedProps){
     "fontStyle": fontStyle,
     "color": color,
     "borderColor": borderColor,
-    "bgColor": bgColor
+    "bgColor": bgColor,
+    "borderStyle": borderStyle
   }
 
   /** This function helps identify which variable(s) to use because we are passing an array of strings **/

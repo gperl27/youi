@@ -15,7 +15,7 @@ h2.h2_properties.create!(fontsize: 32, letterspacing: 2, texttransformation: "lo
 button = Button.create!
 button.button_properties.create!(
   fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
-    border: 5, borderradius: 10, border_hue: 180, border_saturation: 50, border_luminosity: 50,
+    border: 5, borderradius: 10, border_style: "solid", border_hue: 180, border_saturation: 50, border_luminosity: 50,
     bg_hue: 120, bg_saturation: 30, bg_luminosity:70,
     color_hue: 255, color_saturation: 70, color_luminosity: 30
   )

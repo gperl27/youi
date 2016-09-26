@@ -28,23 +28,11 @@ function getAllCSS(e){
   //get CSS properties of current component
   var css = $(`.${selector}`).css();
 
-  //extract r,g,b out of color, convert to HSL, and send to backend
-  var color = css["color"];
-  
-  var rgb = splitRgb(color);
-
-  var r = parseInt(rgb[0]);
-  var g = parseInt(rgb[1]);
-  var b = parseInt(rgb[2]);
-
-  //actually conversion
-  var hsl = rgbToHsl(r,g,b);
-
-  //round numbers and make them CSS ready
-  hsl = cleanHsl(hsl);
-
   //add hsl to the css object to be sent to AJAX
-  css["hsl"] = hsl;
+  css["hsl-color"] = getColor(css, "color");
+  css["hsl-border-color"] = getColor(css, "border-color");
+  css["hsl-bg-color"] = getColor(css, "background-color");
+
 
   $.ajax({
     type: 'post',
@@ -85,9 +73,19 @@ function augmentH1(selector){
   invokeProps(props);
 }
 
-function augmentH2(selector, properties){
+function augmentH2(selector){
   var props = generateProperties(selector, 
       ["fontSize", "letterSpacing", "fontWeight", "textTransform", "wordSpacing"]);
+  invokeProps(props);
+}
+
+function augmentButton(selector){
+  var props = generateProperties(selector,
+      ["fontSize", "letterSpacing", "fontWeight", "textTransform",
+        "border", "borderRadius", "borderColor", "borderStyle", 
+        "bgColor", "color"
+      ]
+    );
   invokeProps(props);
 }
 /* Function to handle selector Cases */
@@ -99,6 +97,9 @@ function caseHandler(selector){
       break;
     case "h2-selector":
       augmentH2(selector);
+      break;
+    case "button-selector":
+      augmentButton(selector);
       break;
   }
 }
