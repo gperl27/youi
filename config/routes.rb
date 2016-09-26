@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   post '/train/h2/:id', to: "h2s#create", as: :train_h2
   post '/train/button/:id', to: "buttons#create", as: :train_button
   post '/train/paragraph/:id', to: "paragraphs#create", as: :train_paragraph
+  post '/train/image/:id', to: "images#create", as: :train_image
 end
