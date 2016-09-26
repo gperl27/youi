@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paragraph: one
+  textalign: MyString
+  fontsize: 1
+  wordspacing: 1
+  padding: 1
+  indent: 1
+
+two:
+  paragraph: two
+  textalign: MyString
+  fontsize: 1
+  wordspacing: 1
+  padding: 1
+  indent: 1

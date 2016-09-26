@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160926140531) do
+ActiveRecord::Schema.define(version: 20160926184346) do
 
   create_table "button_properties", force: :cascade do |t|
     t.integer  "button_id"
@@ -70,6 +70,23 @@ ActiveRecord::Schema.define(version: 20160926140531) do
   end
 
   create_table "h2s", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "paragraph_properties", force: :cascade do |t|
+    t.integer  "paragraph_id"
+    t.string   "textalign"
+    t.integer  "fontsize"
+    t.integer  "wordspacing"
+    t.integer  "padding"
+    t.integer  "indent"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["paragraph_id"], name: "index_paragraph_properties_on_paragraph_id"
+  end
+
+  create_table "paragraphs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
