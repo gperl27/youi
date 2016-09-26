@@ -47,30 +47,14 @@ class SiteController < ApplicationController
     @button_border = average(button, "border")
     @button_border_radius = average(button, "borderradius")
     @button_border_style = median(button, "border_style")
-    
-
-    font_size = params["font-size"]
-    letter_spacing = params["letter-spacing"]
-    font_weight = params["font-weight"]
-    text_transform = params["text-transform"]
-    padding = params["padding"]
-    border = params["border"]
-    border_radius = params["border-radius"]
-    border_style = params["border-style"]
-
-    #delegate colors
-    hsl_color = params["hsl-color"]
-    hsl_color_hue = hsl_color[0]
-    hsl_color_saturation = hsl_color[1]
-    hsl_color_luminosity = hsl_color[2]
-
-    hsl_border_color = params["hsl-border-color"]
-    hsl_border_color_hue = hsl_border_color[0]
-    hsl_border_color_saturation = hsl_border_color[1]
-    hsl_border_color_luminosity = hsl_border_color[2]
-
-    hsl_bg_color = params["hsl-bg-color"]
-    hsl_bg_color_hue = hsl_bg_color[0]
-    hsl_bg_color_saturation = hsl_bg_color[1]
-    hsl_bg_color_luminosity = hsl_bg_color[2]
+    @button_color_hue = average(button, "color_hue")
+    @button_color_saturation = average(button, "color_saturation")
+    @button_color_luminosity = average(button, "color_luminosity")
+    @button_border_color_hue = average(button, "border_hue")
+    @button_border_color_saturation = average(button, "border_saturation")
+    @button_border_color_luminosity = average(button, "border_luminosity")
+    @button_bg_color_hue = average(button, "bg_hue")
+    @button_bg_color_saturation = average(button, "bg_saturation")
+    @button_bg_color_luminosity = average(button, "bg_luminosity")
+  end
 end
