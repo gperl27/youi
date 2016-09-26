@@ -19,3 +19,6 @@ button.button_properties.create!(
     bg_hue: 120, bg_saturation: 30, bg_luminosity:70,
     color_hue: 255, color_saturation: 70, color_luminosity: 30
   )
+
+paragraph = Paragraph.create!
+paragraph.paragraph_properties.create!(textalign: "left", fontsize: 12, wordspacing: 3, padding: 5, indent: 25)
