@@ -2,6 +2,7 @@ class SiteController < ApplicationController
   before_action :h1_props, only: [:home, :show]
   before_action :h2_props, only: [:home, :show]
   before_action :button_props, only: [:home, :show]
+  before_action :paragraph_props, only: [:home, :show]
 
   def index
     redirect_to home_path
@@ -58,5 +59,15 @@ class SiteController < ApplicationController
     @button_bg_color_hue = median(button, "bg_hue")
     @button_bg_color_saturation = median(button, "bg_saturation")
     @button_bg_color_luminosity = median(button, "bg_luminosity")
+  end
+
+  def paragraph_props
+    paragraph_1 = Paragraph.first.paragraph_properties
+
+    @paragraph_1_font_size = average(paragraph_1, "fontsize")
+    @paragraph_1_text_align = median(paragraph_1, "textalign")
+    @paragraph_1_padding = median(paragraph_1, "padding")
+    @paragraph_1_indent = average(paragraph_1, "indent")
+    @paragraph_1_word_spacing = average(paragraph_1, "wordspacing")
   end
 end

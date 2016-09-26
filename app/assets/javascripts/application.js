@@ -35,7 +35,7 @@ jQuery.fn.css = function() {
   'border-left-width', 'border', 'border-top-color','border-right-color',
   'border-bottom-color','border-left-color','border-color', 'border-style','border-radius',
   'position', 'display','visibility','z-index','overflow-x','overflow-y','white-space',
-  'clip','float','clear','cursor','list-style-image','list-style-position',
+  'clip','float','clear','cursor','list-style-image','list-style-position', 'text-indent',
   'list-style-type','marker-offset'];
     var len = attr.length, obj = {};
     for (var i = 0; i < len; i++) 
