@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160926184346) do
+ActiveRecord::Schema.define(version: 20160926214709) do
 
   create_table "button_properties", force: :cascade do |t|
     t.integer  "button_id"
@@ -70,6 +70,26 @@ ActiveRecord::Schema.define(version: 20160926184346) do
   end
 
   create_table "h2s", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "image_properties", force: :cascade do |t|
+    t.integer  "image_id"
+    t.integer  "height"
+    t.integer  "width"
+    t.integer  "border"
+    t.integer  "border_hue"
+    t.integer  "border_saturation"
+    t.integer  "border_luminosity"
+    t.integer  "borderradius"
+    t.integer  "padding"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["image_id"], name: "index_image_properties_on_image_id"
+  end
+
+  create_table "images", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

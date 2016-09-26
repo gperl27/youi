@@ -25,3 +25,8 @@ paragraph.paragraph_properties.create!(textalign: "left", fontsize: 12, wordspac
 
 paragraph2 = Paragraph.create!
 paragraph2.paragraph_properties.create!(textalign: "center", fontsize: 14, wordspacing: 4, padding: 10, indent: 15)
+
+image = Image.create!
+image.image_properties.create!(height: 250, width: 250, border: 1, borderradius: 5, padding: 15, 
+  border_hue: 180, border_luminosity: 50, border_saturation: 50
+  )

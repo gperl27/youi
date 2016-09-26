@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: one
+  height: 1
+  width: 1
+  border: 1
+  borderradius: 1
+  padding: 1
+
+two:
+  image: two
+  height: 1
+  width: 1
+  border: 1
+  borderradius: 1
+  padding: 1
