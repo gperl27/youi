@@ -1,6 +1,7 @@
 class H1sController < ApplicationController
   def create
-    @h1 = H1.find(params[:id])
+    id = params[:id]
+    @h1 = H1.find(id)
     
     font_size = params["font-size"]
     letter_spacing = params["letter-spacing"]
@@ -14,7 +15,7 @@ class H1sController < ApplicationController
         texttransformation: text_transform
       )
 
-    data = "h1_header"
-    render json: [data]
+    data = "h1-selector-#{id}"
+    render json: [data,id]
   end
 end

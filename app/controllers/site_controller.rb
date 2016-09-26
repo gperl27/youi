@@ -13,6 +13,7 @@ class SiteController < ApplicationController
   def show
     @class = params[:class]
     @id = params[:id]
+    @class << "-#{@id}"
     @model = params[:model]
   end
 

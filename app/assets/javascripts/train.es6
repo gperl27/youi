@@ -1,10 +1,14 @@
 'use strict'
 
 $(document).on('turbolinks:load', function(){
-  //do a CSS transformation when the page loads
-  var selector = $(`.good`).data("selector");
-  caseHandler(selector);
 
+  // var id = $('.good').data("id");
+
+
+  //do a CSS transformation when the page loads
+  var selector = $(`.good`).data("selector"); 
+  // selector += `-${id}`;
+  caseHandler(selector);
   //trigger css change and send data to the server
   $('.good').on('click', getAllCSS); 
 
@@ -24,6 +28,7 @@ function getAllCSS(e){
   //store data to use for AJAX & controller
   var id = $(target).data("id");
   var model = $(target).data("model");
+  // selector += `-${id}`;
 
   //get CSS properties of current component
   var css = $(`.${selector}`).css();
@@ -49,7 +54,11 @@ function getAllCSS(e){
 
 function handleData(response){
   var selector = response[0];
-  caseHandler(selector);
+  var id = parseInt(response[1]);
+  // if(id !== undefined){
+  //   selector += `-${id}`;
+  // }
+  caseHandler(selector, id);
 }
 
 function handleError(err){
@@ -60,7 +69,8 @@ function handleError(err){
 function handleBadClick(e){
   var target = e.target;
   var selector = $(target).data("selector");
-  caseHandler(selector);
+  var id = $('.good').data('id');
+  caseHandler(selector, id);
 }
 
 
@@ -88,11 +98,17 @@ function augmentButton(selector){
     );
   invokeProps(props);
 }
+
+function augmentParagraph(selector){
+  var props = generateProperties(selector,
+      ["fontSize", "textAlign", "padding", "indent", "wordSpacing"]);
+  invokeProps(props);
+}
 /* Function to handle selector Cases */
 
-function caseHandler(selector){
+function caseHandler(selector, id){
   switch(selector){
-    case "h1_header":
+    case `h1-selector-${id}`:
       augmentH1(selector);
       break;
     case "h2-selector":
@@ -100,6 +116,9 @@ function caseHandler(selector){
       break;
     case "button-selector":
       augmentButton(selector);
+      break;
+    case `paragraph-selector-${id}`:
+      augmentParagraph(selector);
       break;
   }
 }

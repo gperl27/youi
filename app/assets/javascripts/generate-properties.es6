@@ -9,6 +9,7 @@ function generateProperties(selector, wantedProps){
   var padding = new RandomPx(selector, "padding", 100);
   var border = new RandomPx(selector, "border", 20);
   var borderRadius = new RandomPx(selector, "border-radius", 20);
+  var indent = new RandomPx(selector, "text-indent", 35);
 
 
 
@@ -34,6 +35,8 @@ function generateProperties(selector, wantedProps){
               ["hidden", "dotted", "dashed", "solid", "double",
                "groove", "ridge", "inset", "outset"
               ]);
+  var textAlign = new RandomString(selector, "text-align",
+                  ["center", "left", "right", "justify"]);
 
   /** Props for color **/
   var color = new RandomColor(selector, "color");
@@ -58,7 +61,9 @@ function generateProperties(selector, wantedProps){
     "color": color,
     "borderColor": borderColor,
     "bgColor": bgColor,
-    "borderStyle": borderStyle
+    "borderStyle": borderStyle,
+    "indent": indent,
+    "textAlign": textAlign
   }
 
   /** This function helps identify which variable(s) to use because we are passing an array of strings **/
