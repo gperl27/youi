@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927135022) do
+ActiveRecord::Schema.define(version: 20160927143006) do
 
   create_table "button_properties", force: :cascade do |t|
     t.integer  "button_id"
@@ -87,6 +87,40 @@ ActiveRecord::Schema.define(version: 20160927135022) do
   end
 
   create_table "h3s", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "h4_properties", force: :cascade do |t|
+    t.integer  "h4_id"
+    t.integer  "fontsize"
+    t.integer  "letterspacing"
+    t.integer  "texttransformation"
+    t.integer  "wordspacing"
+    t.integer  "fontweight"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["h4_id"], name: "index_h4_properties_on_h4_id"
+  end
+
+  create_table "h4s", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "h5_properties", force: :cascade do |t|
+    t.integer  "h5_id"
+    t.integer  "fontsize"
+    t.integer  "letterspacing"
+    t.integer  "texttransformation"
+    t.integer  "wordspacing"
+    t.integer  "fontweight"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["h5_id"], name: "index_h5_properties_on_h5_id"
+  end
+
+  create_table "h5s", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
