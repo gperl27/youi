@@ -12,6 +12,10 @@ h1.h1_properties.create!(fontsize: 36, letterspacing: 4, texttransformation: "ca
 h2 = H2.create!
 h2.h2_properties.create!(fontsize: 32, letterspacing: 2, texttransformation: "lowercase", fontweight: 400, wordspacing: 5)
 
+
+h3 = H3.create!
+h3.h3_properties.create!(fontsize: 28, letterspacing: 3, texttransformation: "uppercase", fontweight: 300, wordspacing: 3)
+
 button = Button.create!
 button.button_properties.create!(
   fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
