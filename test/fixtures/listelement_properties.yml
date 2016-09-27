@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  listelement: one
+  letterspacing: 1
+  fontsize: 1
+  fontstyle: MyString
+  texttransformation: MyString
+
+two:
+  listelement: two
+  letterspacing: 1
+  fontsize: 1
+  fontstyle: MyString
+  texttransformation: MyString

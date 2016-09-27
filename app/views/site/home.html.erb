@@ -13,14 +13,14 @@
       <div class='col-md-10'>
         <nav class='nav'>
           <ul>
-            <li>
+            <li class='li-selector-1'>
               <button class='edit'>Edit Mode</button><span class='edit-mode'>On</span>
             </li>
-            <span> |</span>
-            <li>
+            <span class='li-selector-1'> |</span>
+            <li class='li-selector-1'>
               Stats
             </li>
-            <li>
+            <li class='li-selector-1'>
               Login
             </li>
           </ul>
@@ -99,9 +99,9 @@
           <button>
             This section's buttons
           </button>
-          <button>
-            Top-right Nav Bar
-          </button>
+          <%= link_to train_path("li", "li-selector", 1) do %>
+            <button class='button-selector-3 component active'>Top-right Nav</button>
+          <% end %>
         </ul>
       </div>
     </div>

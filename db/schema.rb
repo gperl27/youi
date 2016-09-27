@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927180611) do
+ActiveRecord::Schema.define(version: 20160927213824) do
 
   create_table "bodies", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -154,6 +154,22 @@ ActiveRecord::Schema.define(version: 20160927180611) do
   end
 
   create_table "images", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "listelement_properties", force: :cascade do |t|
+    t.integer  "listelement_id"
+    t.integer  "letterspacing"
+    t.integer  "fontsize"
+    t.string   "fontstyle"
+    t.string   "texttransformation"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["listelement_id"], name: "index_listelement_properties_on_listelement_id"
+  end
+
+  create_table "listelements", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

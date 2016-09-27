@@ -117,6 +117,12 @@ function augmentBody(selector){
   invokeProps(props);
 }
 
+function augmentLi(selector){
+  var props = generateProperties(selector,
+    ["fontSize", "fontStyle", "letterSpacing", "textTransform"]);
+  invokeProps(props);
+}
+
 /* Function to handle selector Cases */
 
 function caseHandler(selector, id){
@@ -144,6 +150,9 @@ function caseHandler(selector, id){
       break;
     case `body-selector-${id}`:
       augmentBody(selector);
+      break;
+    case `li-selector-${id}`:
+      augmentLi(selector);
       break;
   }
 }

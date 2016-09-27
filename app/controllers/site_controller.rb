@@ -11,6 +11,7 @@ class SiteController < ApplicationController
   before_action :image_props, only: [:home, :show]
   before_action :section_props, only: [:home, :show]
   before_action :body_props, only: [:home, :show]
+  before_action :li_props, only: [:home, :show]
 
   def index
     redirect_to home_path
@@ -137,6 +138,16 @@ class SiteController < ApplicationController
     @image_border_color_hue = median(image, "border_hue")
     @image_border_color_saturation = median(image, "border_saturation")
     @image_border_color_luminosity = median(image, "border_luminosity")
+  end
+
+  def li_props
+    li = Listelement.find(1).listelement_properties
+    # vote_count(li)
+
+    @li_font_size = average(li, "fontsize")
+    @li_text_transform = median(li, "texttransformation")
+    @li_letter_spacing = average(li, "letterspacing")
+    @li_font_style = median(li, "fontstyle")
   end
 
   def section_props
