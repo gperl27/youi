@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   post '/train/button/:id', to: "buttons#create", as: :train_button
   post '/train/paragraph/:id', to: "paragraphs#create", as: :train_paragraph
   post '/train/image/:id', to: "images#create", as: :train_image
+  post '/train/section/:id', to: "sections#create", as: :train_section
 end

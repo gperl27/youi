@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927145540) do
+ActiveRecord::Schema.define(version: 20160927152748) do
 
   create_table "button_properties", force: :cascade do |t|
     t.integer  "button_id"
@@ -158,6 +158,24 @@ ActiveRecord::Schema.define(version: 20160927145540) do
   end
 
   create_table "paragraphs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "section_properties", force: :cascade do |t|
+    t.integer  "section_id"
+    t.integer  "color_hue"
+    t.integer  "color_saturation"
+    t.integer  "color_luminosity"
+    t.integer  "bg_hue"
+    t.integer  "bg_saturation"
+    t.integer  "bg_luminosity"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["section_id"], name: "index_section_properties_on_section_id"
+  end
+
+  create_table "sections", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
