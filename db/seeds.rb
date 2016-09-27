@@ -45,3 +45,5 @@ section.section_properties.create!(
   color_hue: 180, color_luminosity: 50, color_saturation: 50,
   bg_hue: 90, bg_luminosity: 25, bg_saturation: 75,
   )
+
+font = Font.create!(fontname: "Times New Roman")
