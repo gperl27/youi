@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927174621) do
+ActiveRecord::Schema.define(version: 20160927180611) do
+
+  create_table "bodies", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "body_properties", force: :cascade do |t|
+    t.integer  "body_id"
+    t.string   "headingfont"
+    t.string   "bodyfont"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["body_id"], name: "index_body_properties_on_body_id"
+  end
 
   create_table "button_properties", force: :cascade do |t|
     t.integer  "button_id"
@@ -37,12 +51,6 @@ ActiveRecord::Schema.define(version: 20160927174621) do
   end
 
   create_table "buttons", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "fonts", force: :cascade do |t|
-    t.string   "fontname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

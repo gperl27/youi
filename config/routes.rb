@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root "site#index"
   
   get '/home', to: "site#home"
+  get '/indv/:model', to: "site#indv", as: :indv
   get '/train/:model/:class/:id', to: "site#show", as: :train
+
 
   post '/train/h1/:id', to: "h1s#create", as: :train_h1
   post '/train/h2/:id', to: "h2s#create", as: :train_h2

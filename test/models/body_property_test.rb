@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FontsControllerTest < ActionDispatch::IntegrationTest
+class BodyPropertyTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

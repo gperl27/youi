@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: one
+  headingfont: MyString
+  bodyfont: MyString
+
+two:
+  body: two
+  headingfont: MyString
+  bodyfont: MyString

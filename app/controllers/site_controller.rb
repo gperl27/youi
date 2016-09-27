@@ -18,6 +18,10 @@ class SiteController < ApplicationController
   def home
   end
 
+  def indv
+    
+  end
+
   def show
     @class = params[:class]
     @id = params[:id]

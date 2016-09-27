@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FontTest < ActiveSupport::TestCase
+class BodyTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
