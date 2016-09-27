@@ -68,8 +68,18 @@
 
 /** site editables **/
 
-.site-editables ul li{
-  display: inline-block;
+.site-editables {
+  text-align: center;
+  ul {
+    padding-left: 0;
+    button {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 /** footer **/

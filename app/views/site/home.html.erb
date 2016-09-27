@@ -46,7 +46,66 @@
       <button class='button-selector-1 button-selector component active'>Try Me</button>
     <% end %>
   </section>
+  
+  <div class='container site-editables'>
 
+    <div class='row'>
+      <div class='col-md-4'>
+        <%= link_to train_path("h2", "h2-selector", 1) do %>
+          <h2 class='h2-selector-1 component active'>Section Colors</h2>
+        <% end %>
+        <ul>
+          <button>
+            Heading
+          </button>
+           <button>
+            This section
+          </button>
+          <button>
+            About
+          </button>
+          <button>
+            Inspirations
+          </button>
+          <button>
+            Footer
+          </button>
+        </ul>
+      </div>
+      <div class='col-md-4'>
+        <%= link_to train_path("h2", "h2-selector", 1) do %>
+          <h2 class='h2-selector-1 component active'>Universal Editables</h2>
+        <% end %>
+        <ul>
+          <button>
+            Heading Fonts
+          </button>
+          <button>
+            Body Fonts
+          </button>
+          <button>
+            Line Height
+          </button>
+        </ul>
+      </div>
+        <div class='col-md-4'>
+        <%= link_to train_path("h2", "h2-selector", 1) do %>
+          <h2 class='h2-selector-1 component active'>Other Editables</h2>
+        <% end %>
+        <ul>
+          <button>
+            Edit Button
+          </button>
+          <button>
+            This section's buttons
+          </button>
+          <button>
+            Top-right Nav Bar
+          </button>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <section class='info section active-section'>
     <div class='container'>
@@ -105,20 +164,6 @@
         </div>
         
       </div>
-      </div>
-      
-      <div class='site-editables'>
-        <%= link_to train_path("h2", "h2-selector", 1) do %>
-            <h2 class='h2-selector-1 component active'>Site-Wide Editables</h2>
-        <% end %>
-        <ul class='component active'>
-          <li>
-            <button>Heading Fonts</button>
-          </li>
-          <li>
-            <button>Body Font</button>
-          </li>
-        </ul>
       </div>
       
     </div>
