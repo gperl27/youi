@@ -1,12 +1,11 @@
 'use strict'
 
 $(document).on('turbolinks:load', function(){
-
+  //grab id of selector to set first component change on load
   var id = $('.good').data("id");
 
   //do a CSS transformation when the page loads
   var selector = $(`.good`).data("selector"); 
-  // selector += `-${id}`;
   caseHandler(selector, id);
   //trigger css change and send data to the server
   $('.good').on('click', getAllCSS); 
@@ -54,9 +53,6 @@ function getAllCSS(e){
 function handleData(response){
   var selector = response[0];
   var id = parseInt(response[1]);
-  // if(id !== undefined){
-  //   selector += `-${id}`;
-  // }
   caseHandler(selector, id);
 }
 

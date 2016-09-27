@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
     average.reduce(:+)/average.count
   end
 
+  # def vote_count(component)
+  #   p component.count
+  #   p $count
+  #   $count += component.count
+  # end
+
   private
 
   def map_property(component, prop_name)
