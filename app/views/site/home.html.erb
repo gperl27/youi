@@ -2,7 +2,7 @@
 
 <div class='container-fluid body'>
   
-  <header class='header section active-section'>
+  <header class='header section active-section section-selector-1'>
     <div class='row'>
       
       <div class='col-md-2'>
@@ -55,9 +55,9 @@
           <h2 class='h2-selector-1 component active'>Section Colors</h2>
         <% end %>
         <ul>
-          <button>
-            Heading
-          </button>
+          <%= link_to train_path("section", "section-selector", 1) do %>
+            <button class='button-selector-3 button-selector'>Heading</button>
+          <% end %>
            <button>
             This section
           </button>

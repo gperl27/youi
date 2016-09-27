@@ -9,6 +9,7 @@ class SiteController < ApplicationController
   before_action :button_props, only: [:home, :show]
   before_action :paragraph_props, only: [:home, :show]
   before_action :image_props, only: [:home, :show]
+  before_action :section_props, only: [:home, :show]
 
   def index
     redirect_to home_path
@@ -135,5 +136,16 @@ class SiteController < ApplicationController
     @image_border_color_hue = median(image, "border_hue")
     @image_border_color_saturation = median(image, "border_saturation")
     @image_border_color_luminosity = median(image, "border_luminosity")
+  end
+
+  def section_props
+    section = Section.find(1).section_properties
+
+    @section_1_color_hue = median(section, "color_hue")
+    @section_1_color_saturation = median(section, "color_saturation")
+    @section_1_color_luminosity = median(section, "color_luminosity")
+    @section_1_bg_color_hue = median(section, "bg_hue")
+    @section_1_bg_color_saturation = median(section, "bg_saturation")
+    @section_1_bg_color_luminosity = median(section, "bg_luminosity")
   end
 end

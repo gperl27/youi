@@ -105,6 +105,13 @@ function augmentImage(selector){
       ["height", "width", "padding", "border", "borderRadius", "borderColor"]);
   invokeProps(props);
 }
+
+function augmentSection(selector){
+  var props = generateProperties(selector,
+      ["color", "bgColor"]);
+  invokeProps(props);
+}
+
 /* Function to handle selector Cases */
 
 function caseHandler(selector, id){
@@ -126,6 +133,9 @@ function caseHandler(selector, id){
       break;
     case `image-selector-${id}`:
       augmentImage(selector);
+      break;
+    case `section-selector-${id}`:
+      augmentSection(selector);
       break;
   }
 }

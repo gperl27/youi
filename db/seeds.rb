@@ -39,3 +39,9 @@ image = Image.create!
 image.image_properties.create!(height: 250, width: 250, border: 1, borderradius: 5, padding: 15, 
   border_hue: 180, border_luminosity: 50, border_saturation: 50
   )
+
+section = Section.create!
+section.section_properties.create!(
+  color_hue: 180, color_luminosity: 50, color_saturation: 50,
+  bg_hue: 90, bg_luminosity: 25, bg_saturation: 75,
+  )
