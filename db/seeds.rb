@@ -21,13 +21,30 @@ h4.h4_properties.create!(fontsize: 22, letterspacing: 1, texttransformation: "up
 h5 = H5.create!
 h5.h5_properties.create!(fontsize: 14, letterspacing: 2, texttransformation: "capitalize", fontweight: 200, wordspacing: 2)
 
-button = Button.create!
-button.button_properties.create!(
+button_1 = Button.create!
+button_1.button_properties.create!(
   fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
-    border: 5, borderradius: 10, border_style: "solid", border_hue: 180, border_saturation: 50, border_luminosity: 50,
-    bg_hue: 120, bg_saturation: 30, bg_luminosity:70,
-    color_hue: 255, color_saturation: 70, color_luminosity: 30
+    border: 5, borderradius: 10, border_style: "solid", border_hue: 0, border_saturation: 0, border_luminosity: 0,
+    bg_hue: 00, bg_saturation: 0, bg_luminosity: 0,
+    color_hue: 0, color_saturation: 0, color_luminosity: 0
   )
+
+button_2 = Button.create!
+button_2.button_properties.create!(
+  fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
+    border: 5, borderradius: 10, border_style: "solid", border_hue: 0, border_saturation: 0, border_luminosity: 0,
+    bg_hue: 00, bg_saturation: 0, bg_luminosity: 0,
+    color_hue: 0, color_saturation: 0, color_luminosity: 0
+  )
+
+button_3 = Button.create!
+button_3.button_properties.create!(
+  fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
+    border: 5, borderradius: 10, border_style: "solid", border_hue: 0, border_saturation: 0, border_luminosity: 0,
+    bg_hue: 0, bg_saturation: 0, bg_luminosity: 0,
+    color_hue: 0, color_saturation: 0, color_luminosity: 0
+  )
+
 
 li = Listelement.create!
 li.listelement_properties.create!(fontsize: 14, letterspacing: 6, texttransformation: "Capitalize", fontstyle: "italic")
@@ -43,10 +60,25 @@ image.image_properties.create!(height: 250, width: 250, border: 1, borderradius:
   border_hue: 180, border_luminosity: 50, border_saturation: 50
   )
 
-section = Section.create!
-section.section_properties.create!(
-  color_hue: 180, color_luminosity: 50, color_saturation: 50,
-  bg_hue: 90, bg_luminosity: 25, bg_saturation: 75,
+section_1 = Section.create!
+section_1.section_properties.create!(
+  color_hue: 0, color_luminosity: 0, color_saturation: 0,
+  bg_hue: 0, bg_luminosity: 0, bg_saturation: 0,
+  )
+section_2 = Section.create!
+section_2.section_properties.create!(
+  color_hue: 0, color_luminosity: 0, color_saturation: 0,
+  bg_hue: 0, bg_luminosity: 0, bg_saturation: 0,
+  )
+section_3 = Section.create!
+section_3.section_properties.create!(
+  color_hue: 0, color_luminosity: 0, color_saturation: 0,
+  bg_hue: 0, bg_luminosity: 0, bg_saturation: 0,
+  )
+section_4 = Section.create!
+section_4.section_properties.create!(
+  color_hue: 0, color_luminosity: 0, color_saturation: 0,
+  bg_hue: 0, bg_luminosity: 0, bg_saturation: 0,
   )
 
 body = Body.create!
