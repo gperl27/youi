@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160926214709) do
+ActiveRecord::Schema.define(version: 20160927135022) do
 
   create_table "button_properties", force: :cascade do |t|
     t.integer  "button_id"
@@ -70,6 +70,23 @@ ActiveRecord::Schema.define(version: 20160926214709) do
   end
 
   create_table "h2s", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "h3_properties", force: :cascade do |t|
+    t.integer  "h3_id"
+    t.integer  "fontsize"
+    t.integer  "letterspacing"
+    t.integer  "texttransformation"
+    t.integer  "wordspacing"
+    t.integer  "fontweight"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["h3_id"], name: "index_h3_properties_on_h3_id"
+  end
+
+  create_table "h3s", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
