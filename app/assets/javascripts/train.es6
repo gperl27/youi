@@ -78,7 +78,7 @@ function augmentH1(selector){
   invokeProps(props);
 }
 
-function augmentH2(selector){
+function augmentHeading(selector){
   var props = generateProperties(selector, 
       ["fontSize", "letterSpacing", "fontWeight", "textTransform", "wordSpacing"]);
   invokeProps(props);
@@ -113,7 +113,10 @@ function caseHandler(selector, id){
       augmentH1(selector);
       break;
     case `h2-selector-${id}`:
-      augmentH2(selector);
+    case `h3-selector-${id}`:
+    case `h4-selector-${id}`:
+    case `h5-selector-${id}`:
+      augmentHeading(selector);
       break;
     case `button-selector-${id}`:
       augmentButton(selector);
