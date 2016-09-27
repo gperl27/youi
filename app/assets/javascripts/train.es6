@@ -112,6 +112,11 @@ function augmentSection(selector){
   invokeProps(props);
 }
 
+function augmentBody(selector){
+  var props = generateProperties(selector, ["fontFamily"]);
+  invokeProps(props);
+}
+
 /* Function to handle selector Cases */
 
 function caseHandler(selector, id){
@@ -136,6 +141,9 @@ function caseHandler(selector, id){
       break;
     case `section-selector-${id}`:
       augmentSection(selector);
+      break;
+    case `body-selector-${id}`:
+      augmentBody(selector);
       break;
   }
 }

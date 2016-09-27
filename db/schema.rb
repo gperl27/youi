@@ -19,10 +19,9 @@ ActiveRecord::Schema.define(version: 20160927180611) do
 
   create_table "body_properties", force: :cascade do |t|
     t.integer  "body_id"
-    t.string   "headingfont"
-    t.string   "bodyfont"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "fontfamily"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["body_id"], name: "index_body_properties_on_body_id"
   end
 

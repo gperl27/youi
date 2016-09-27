@@ -25,11 +25,7 @@ function generateProperties(selector, wantedProps){
   var textTransform = new RandomString(selector, "text-transform", 
                                         ["uppercase", "lowercase", "capitalize"]);
   var fonts = new RandomString(selector, "font-family",
-              [ "Arial", "Verdana", "Helvetica", "Georgia", "Palatino Linotype",
-                "Times New Roman", "Arial Black", "Comic Sans MS", "Impact",
-                "Lucida Sans Unicode", "Tahoma", "Trebuchet MS", "Verdana",
-                "Courier New", "Lucida Console"
-              ]);
+              [ "Arial", "Georgia","Comic Sans MS", "Courier New"]);
   var fontStyle = new RandomString(selector, "font-style", 
                         ["normal", "italic", "oblique"]);
   var borderStyle = new RandomString(selector, "border-style",

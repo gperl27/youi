@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     average.reduce(:+)/average.count
   end
 
+  def clean_font(str)
+    str.match(/\w+ ?\w+/)[0]
+  end
+
   # def vote_count(component)
   #   p component.count
   #   p $count

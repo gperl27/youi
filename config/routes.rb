@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "site#index"
   
   get '/home', to: "site#home"
-  get '/indv/:model', to: "site#indv", as: :indv
+  # get '/indv/:model', to: "site#indv", as: :indv
   get '/train/:model/:class/:id', to: "site#show", as: :train
 
 
@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   post '/train/paragraph/:id', to: "paragraphs#create", as: :train_paragraph
   post '/train/image/:id', to: "images#create", as: :train_image
   post '/train/section/:id', to: "sections#create", as: :train_section
+  post '/train/body/:id', to: "bodies#create", as: :train_body
 end

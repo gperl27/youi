@@ -46,4 +46,7 @@ section.section_properties.create!(
   bg_hue: 90, bg_luminosity: 25, bg_saturation: 75,
   )
 
-font = Font.create!(fontname: "Times New Roman")
+body = Body.create!
+heading = Body.create!
+bodyfont = body.body_properties.create!(fontfamily: "Times New Roman")
+headingfont = heading.body_properties.create!(fontfamily: "Helvetica")

@@ -10,16 +10,13 @@ class SiteController < ApplicationController
   before_action :paragraph_props, only: [:home, :show]
   before_action :image_props, only: [:home, :show]
   before_action :section_props, only: [:home, :show]
+  before_action :body_props, only: [:home, :show]
 
   def index
     redirect_to home_path
   end
 
   def home
-  end
-
-  def indv
-    
   end
 
   def show
@@ -151,5 +148,12 @@ class SiteController < ApplicationController
     @section_1_bg_color_hue = median(section, "bg_hue")
     @section_1_bg_color_saturation = median(section, "bg_saturation")
     @section_1_bg_color_luminosity = median(section, "bg_luminosity")
+  end
+
+  def body_props
+    headingfont = Body.find(1).body_properties
+
+    heading_font = median(headingfont, "fontfamily")
+    @heading_font = clean_font(heading_font)
   end
 end
