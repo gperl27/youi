@@ -4,6 +4,8 @@ class SiteController < ApplicationController
   before_action :h1_props, only: [:home, :show]
   before_action :h2_props, only: [:home, :show]
   before_action :h3_props, only: [:home, :show]
+  before_action :h4_props, only: [:home, :show]
+  before_action :h5_props, only: [:home, :show]
   before_action :button_props, only: [:home, :show]
   before_action :paragraph_props, only: [:home, :show]
   before_action :image_props, only: [:home, :show]
@@ -55,6 +57,28 @@ class SiteController < ApplicationController
     @h3_text_transform = median(h3, "texttransformation")
     @h3_letter_spacing = average(h3, "letterspacing")
     @h3_word_spacing = average(h3, "wordspacing")
+  end
+
+  def h4_props
+    h4 = H4.first.h4_properties
+    # vote_count(h4)
+
+    @h4_font_size = average(h4, "fontsize")
+    @h4_font_weight = median(h4, "fontweight")
+    @h4_text_transform = median(h4, "texttransformation")
+    @h4_letter_spacing = average(h4, "letterspacing")
+    @h4_word_spacing = average(h4, "wordspacing")
+  end
+
+  def h5_props
+    h5 = H5.first.h5_properties
+    # vote_count(h5)
+
+    @h5_font_size = average(h5, "fontsize")
+    @h5_font_weight = median(h5, "fontweight")
+    @h5_text_transform = median(h5, "texttransformation")
+    @h5_letter_spacing = average(h5, "letterspacing")
+    @h5_word_spacing = average(h5, "wordspacing")
   end
 
   def button_props
