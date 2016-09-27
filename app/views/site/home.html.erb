@@ -133,7 +133,9 @@
             <%= link_to train_path("image", "image-selector", 1) do %>
               <img class="image-selector-1 image-selector" src="#" alt="Picture here">
             <% end %>
-            <h4 class='component active'>Twitch plays pokemon</h4>
+            <%= link_to train_path("h4", "h4-selector", 1) do %>
+              <h4 class='h4-selector-1 component active'>Twtich Plays Pokemon</h4>
+            <% end %>
           </figure>
           
           <%= link_to train_path("paragraph", "paragraph-selector", 2) do %>
@@ -151,7 +153,9 @@
               <%= link_to train_path("image", "image-selector", 1) do %>
                 <img class="image-selector-1 image-selector" src="#" alt="Picture here">
               <% end %>
-            <h4 class='component active'>Twitch plays pokemon</h4>
+            <%= link_to train_path("h4", "h4-selector", 1) do %>
+              <h4 class='h4-selector-1 component active'>Twtich Plays Pokemon</h4>
+            <% end %>
           </figure>
           <%= link_to train_path("paragraph", "paragraph-selector", 2) do %>
             <p class='paragraph-selector-2 component active'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -170,6 +174,6 @@
   </section>
   
   <footer class='footer section active-section'>
-    <p class='component active'>Curated by Greg Perlman. Copyright 2016</p>
+    <h5 class='component active'>Curated by Greg Perlman. Copyright 2016</h5>
   </footer> 
 </div>
