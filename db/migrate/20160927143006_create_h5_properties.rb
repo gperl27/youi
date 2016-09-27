@@ -4,7 +4,7 @@ class CreateH5Properties < ActiveRecord::Migration[5.0]
       t.references :h5, foreign_key: true
       t.integer :fontsize
       t.integer :letterspacing
-      t.integer :texttransformation
+      t.string :texttransformation
       t.integer :wordspacing
       t.integer :fontweight
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927143006) do
+ActiveRecord::Schema.define(version: 20160927145540) do
 
   create_table "button_properties", force: :cascade do |t|
     t.integer  "button_id"
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20160927143006) do
     t.integer  "h3_id"
     t.integer  "fontsize"
     t.integer  "letterspacing"
-    t.integer  "texttransformation"
+    t.string   "texttransformation"
     t.integer  "wordspacing"
     t.integer  "fontweight"
     t.datetime "created_at",         null: false
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20160927143006) do
     t.integer  "h4_id"
     t.integer  "fontsize"
     t.integer  "letterspacing"
-    t.integer  "texttransformation"
+    t.string   "texttransformation"
     t.integer  "wordspacing"
     t.integer  "fontweight"
     t.datetime "created_at",         null: false
@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(version: 20160927143006) do
     t.integer  "h5_id"
     t.integer  "fontsize"
     t.integer  "letterspacing"
-    t.integer  "texttransformation"
+    t.string   "texttransformation"
     t.integer  "wordspacing"
     t.integer  "fontweight"
     t.datetime "created_at",         null: false

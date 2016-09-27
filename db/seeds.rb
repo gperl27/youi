@@ -16,10 +16,10 @@ h3 = H3.create!
 h3.h3_properties.create!(fontsize: 28, letterspacing: 3, texttransformation: "uppercase", fontweight: 300, wordspacing: 3)
 
 h4 = H4.create!
-h4.h4_properties.create!(fontsize: 28, letterspacing: 3, texttransformation: "uppercase", fontweight: 300, wordspacing: 3)
+h4.h4_properties.create!(fontsize: 22, letterspacing: 1, texttransformation: "uppercase", fontweight: 300, wordspacing: 3)
 
 h5 = H5.create!
-h5.h5_properties.create!(fontsize: 28, letterspacing: 3, texttransformation: "uppercase", fontweight: 300, wordspacing: 3)
+h5.h5_properties.create!(fontsize: 14, letterspacing: 2, texttransformation: "capitalize", fontweight: 200, wordspacing: 2)
 
 button = Button.create!
 button.button_properties.create!(
