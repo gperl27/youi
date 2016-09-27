@@ -12,9 +12,9 @@
       </div>      
       <div class='col-md-10'>
         <nav class='nav'>
-          <ul>
+          <ul class='body-selector-2'>
             <li class='li-selector-1'>
-              <button class='edit'>Edit Mode</button><span class='edit-mode'>On</span>
+              <button class='edit button-selector-2'>Edit Mode</button><span class='edit-mode'>On</span>
             </li>
             <span class='li-selector-1'> |</span>
             <li class='li-selector-1'>
@@ -43,7 +43,7 @@
     </p>
 
     <%= link_to train_path("button", "button-selector", 1) do %>
-      <button class='button-selector-1 button-selector component active'>Try Me</button>
+      <button class='button-selector-1 button-selector component active body-selector-2'>Try Me</button>
     <% end %>
   </section>
   
@@ -54,51 +54,48 @@
         <%= link_to train_path("h2", "h2-selector", 1) do %>
           <h2 class='h2-selector-1 component active body-selector-1'>Section Colors</h2>
         <% end %>
-        <ul>
+        <ul class='body-selector-2'>
           <%= link_to train_path("section", "section-selector", 1) do %>
             <button class='button-selector-3 button-selector'>Heading</button>
           <% end %>
-           <button>
-            This section
-          </button>
-          <button>
-            About
-          </button>
-          <button>
-            Inspirations
-          </button>
-          <button>
-            Footer
-          </button>
+          <%= link_to train_path("section", "section-selector", 2) do %>
+            <button class='button-selector-3 button-selector'>This Section</button>
+          <% end %>
+          <%= link_to train_path("section", "section-selector", 3) do %>
+            <button class='button-selector-3 button-selector'>About</button>
+          <% end %>
+          <%= link_to train_path("section", "section-selector", 4) do %>
+            <button class='button-selector-3 button-selector'>Footer</button>
+          <% end %>
         </ul>
       </div>
       <div class='col-md-4'>
         <%= link_to train_path("h2", "h2-selector", 1) do %>
           <h2 class='h2-selector-1 component active body-selector-1'>Universal Editables</h2>
         <% end %>
-        <ul>
+        <ul class='body-selector-2'>
           <%= link_to train_path("body", "body-selector", 1) do %>
             <button class='button-selector-3 button-selector'>Heading Fonts</button>
           <% end %>
           <%= link_to train_path("body", "body-selector", 2) do %>
             <button class='button-selector-3 button-selector'>Body Fonts</button>
           <% end %>
-          <button>
+          <!-- <button>
             Line Height
-          </button>
+          </button> -->
         </ul>
       </div>
         <div class='col-md-4'>
         <%= link_to train_path("h2", "h2-selector", 1) do %>
           <h2 class='h2-selector-1 component active body-selector-1'>Other Editables</h2>
         <% end %>
-        <ul>
-          <button>
-            Edit Button
-          </button>
-          <button>
-            This section's buttons
-          </button>
+        <ul class='body-selector-2'>
+          <%= link_to train_path("button", "button-selector", 2) do %>
+            <button class='button-selector-3 button-selector'>Edit Button</button>
+          <% end %>
+          <%= link_to train_path("button", "button-selector", 3) do %>
+            <button class='button-selector-3 button-selector'>Body Fonts</button>
+          <% end %>
           <%= link_to train_path("li", "li-selector", 1) do %>
             <button class='button-selector-3 component active'>Top-right Nav</button>
           <% end %>
@@ -114,7 +111,7 @@
       <% end %>
       
       <%= link_to train_path("paragraph", "paragraph-selector", 1) do %>
-        <p class='paragraph-selector-1 component active'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <p class='paragraph-selector-1 component active body-selector-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -139,7 +136,7 @@
           </figure>
           
           <%= link_to train_path("paragraph", "paragraph-selector", 2) do %>
-            <p class='paragraph-selector-2 component active'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            <p class='paragraph-selector-2 component active body-selector-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -158,7 +155,7 @@
             <% end %>
           </figure>
           <%= link_to train_path("paragraph", "paragraph-selector", 2) do %>
-            <p class='paragraph-selector-2 component active'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            <p class='paragraph-selector-2 component active body-selector-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
