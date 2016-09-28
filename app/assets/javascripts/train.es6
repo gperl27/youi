@@ -1,6 +1,11 @@
 'use strict'
 
 $(document).on('turbolinks:load', function(){
+  //make voting Gui draggable
+    $("#dragme").draggable({
+      cursor: "crosshair"
+    });
+
   //grab id of selector to set first component change on load
   var id = $('.good').data("id");
 
