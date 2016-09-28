@@ -38,8 +38,8 @@ class ApplicationController < ActionController::Base
       "image-selector-1" => "Images",
       "section-selector-1" => "Header Colors",
       "section-selector-2" => "Property Section Colors",
-      "section-selector-1" => "About Section Colors",
-      "section-selector-1" => "Footer Colors",
+      "section-selector-3" => "About Section Colors",
+      "section-selector-4" => "Footer Colors",
       "li-selector-1" => "List Elements"
     }
     current = check_components(data , component_hash)

@@ -30,25 +30,13 @@
   </header>
   
   
-  <section class='instructions section active-section container'>
-    <span class='loud'>
-      Youi've made 60 changes
-    </span>
-    <div class='main-instructions'>
-      <h2>Instructions:</h2>
-      <ul>
-        <li>Most of what you see on this page CAN be changed!</li>
-        <li>
-          Individual components (like the 'Youi' text in the top left of the page) are changeable if they have a  <span class='green'>green</span> border.
-        </li>
-        <li>
-          Sections with a <span class='blue'>blue</span> border mean you can edit an entire container (i.e. color scheme, spacing)
-        </li>
-      </ul>
+  <section class='instructions active-section container'>
+    <%= render 'instructions' %>
+    <div class='component active try-me'>
+      <%= link_to train_path("button", "button-selector", 1) do %>
+      <button class='button-selector-1 button-selector body-selector-2'>Try Me</button>
+      <% end %>
     </div>
-    <%= link_to train_path("button", "button-selector", 1) do %>
-      <button class='button-selector-1 button-selector component active body-selector-2'>Try Me</button>
-    <% end %>
   </section>
   
   <div class='site-editables section-selector-2'>
@@ -102,7 +90,7 @@
               <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="right" title="Change this section's buttons">This Section's Buttons</button>
             <% end %>
             <%= link_to train_path("li", "li-selector", 1) do %>
-              <button class='button-selector-3 component active' data-toggle="tooltip" data-placement="right" title="Change the navigation element styles from the top-right corner">Top-right Navbar</button>
+              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="right" title="Change the navigation element styles from the top-right corner">Top-right Navbar</button>
             <% end %>
           </ul>
         </div> 
@@ -133,9 +121,11 @@
         
         <div class='col-md-6'>
           <figure>
-            <%= link_to train_path("image", "image-selector", 1) do %>
-              <img class="image-selector-1 image-selector" src="/twitch.jpg" alt="Twitch Plays Pokemon">
-            <% end %>
+            <div class='component'>
+              <%= link_to train_path("image", "image-selector", 1) do %>
+                <img class="image-selector-1 image-selector" src="/twitch.jpg" alt="Twitch Plays Pokemon">
+              <% end %>
+            </div>
             <%= link_to train_path("h4", "h4-selector", 1) do %>
               <h4 class='h4-selector-1 component active body-selector-1'>Twtich Plays Pokemon</h4>
             <% end %>
@@ -153,9 +143,11 @@
         
         <div class='col-md-6'>
            <figure>
+            <div class='component'>
               <%= link_to train_path("image", "image-selector", 1) do %>
                 <img class="image-selector-1 image-selector" src="/faces.jpg" alt="Average of women's faces">
               <% end %>
+            </div>
             <%= link_to train_path("h4", "h4-selector", 1) do %>
               <h4 class='h4-selector-1 component active body-selector-1'>Average Faces of Women</h4>
             <% end %>

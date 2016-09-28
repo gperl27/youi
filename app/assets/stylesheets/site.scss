@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//vars
+$neon-green-border: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 55px #00FF00, 0 0 75px #00FF00;
+
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** Universal **/
 
@@ -43,11 +47,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** instructions **/
 
-.loud {
-  font-size: 58px;
-}
-
-
 .instructions {
   text-align: center;
 }
@@ -59,7 +58,23 @@
 /** Main Page Instructions **/
 
 .main-instructions {
-  text-align: left;
+  h2, li {
+    text-align: left;
+  }
+  li {
+    font-size: 20px;
+  }
+}
+
+.loud {
+  font-size: 58px;
+}
+
+/** Try Me Button **/
+
+.try-me {
+  padding: 5px;
+  margin-bottom: 25px;
 }
 
 
@@ -105,7 +120,8 @@
 
 .component:hover {
   cursor: pointer;
-  border: 1px solid green;
+  box-shadow:$neon-green-border;
+  transition: .2s;
 }
 
 // .section:hover {
@@ -114,14 +130,16 @@
 // }
 
 .green {
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 2px;
   color: green;
-  border: 1px solid green;
+  box-shadow: $neon-green-border;
 }
 
 .blue {
   color: blue;
-  border: 1px solid green;
+  border: 1px solid blue;
 }
 
 /** ANCHOR TAG FIX **/
