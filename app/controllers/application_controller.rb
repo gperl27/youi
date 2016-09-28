@@ -21,6 +21,30 @@ class ApplicationController < ActionController::Base
   #   p $count
   #   $count += component.count
   # end
+  def which_component_is_editing(data)
+    component_hash = {
+      "h1-selector-1" => "Heading 1",
+      "h2-selector-1" => "Heading 2",
+      "h3-selector-1" => "Heading 3",
+      "h4-selector-1" => "Heading 4",
+      "h5-selector-1" => "Heading 5",
+      "body-selector-1" => "Heading Fonts",
+      "body-selector-2" => "Body Fonts",
+      "button-selector-1" => "Try Me Button",
+      "button-selector-2" => "Selection Buttons",
+      "button-selector-3" => "Edit Button",
+      "paragraph-selector-1" => "About Paragraph",
+      "paragraph-selector-2" => "Image Paragraphs",
+      "image-selector-1" => "Images",
+      "section-selector-1" => "Header Colors",
+      "section-selector-2" => "Property Section Colors",
+      "section-selector-1" => "About Section Colors",
+      "section-selector-1" => "Footer Colors",
+      "li-selector-1" => "List Elements"
+    }
+    current = check_components(data , component_hash)
+    current = current[data]
+  end
 
   private
 
@@ -40,8 +64,12 @@ class ApplicationController < ActionController::Base
     array = counts.max_by {|k,v| v }
   end
 
-  def extractRGB(rgb)
-    rgb.gsub!(/\D+/, "")
+  # def extractRGB(rgb)
+  #   rgb.gsub!(/\D+/, "")
+  # end
+
+  def check_components(data, components)
+    current = components.select {|k,v| k == data }
   end
 
 end

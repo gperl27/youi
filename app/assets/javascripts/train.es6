@@ -1,7 +1,7 @@
 'use strict'
 
 $(document).on('turbolinks:load', function(){
-  //make voting Gui draggable
+    //make voting Gui draggable
     $("#dragme").draggable({
       cursor: "crosshair"
     });
@@ -131,6 +131,10 @@ function augmentLi(selector){
 /* Function to handle selector Cases */
 
 function caseHandler(selector, id){
+  //empty current styles div on click
+  $('.current-styles').empty();
+
+  //depending on the selector, augment css on good/bad click
   switch(selector){
     case `h1-selector-${id}`:
       augmentH1(selector);

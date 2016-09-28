@@ -6,10 +6,17 @@ class RandomColor {
   }
 
   random(){
+    var r,g,b;
+    r = this.colorArray[0];
+    g = this.colorArray[1];
+    b = this.colorArray[2];
+
+    var html = `<p>${this.propName}: rgb(${r}, ${g}, ${b})</p>`
+    $('.current-styles').append(html);
     return $(`.${this.selector}`).css(`${this.propName}`, 
-                                  `rgb(${this.colorArray[0]},
-                                       ${this.colorArray[1]},
-                                       ${this.colorArray[2]})
+                                  `rgb(${r},
+                                       ${g},
+                                       ${b})
                                        `);
   }
 }

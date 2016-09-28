@@ -6,7 +6,10 @@ class RandomString {
     this.length = stringArray.length;
   }
   random(){
+    var randomStr = this.stringArray[randomNumber(this.length)];
+    var html = `<p>${this.propName}: ${randomStr}</p>`
+    $('.current-styles').append(html);
     return $(`.${this.selector}`).css(`${this.propName}`, 
-                                      `${this.stringArray[randomNumber(this.length)]}`);
+                                      `${randomStr}`);
   }
 }

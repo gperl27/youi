@@ -1,5 +1,5 @@
 .vote-gui {
-  min-width: 600px;
+  min-width: 300px;
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -15,11 +15,31 @@
 }
 
 .vote-gui:hover .move {
-  color:red;
+  color:orange;
 }
 
 .move {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
+}
+
+.current-styles {
+  p {
+    font-size: 14px;
+  }
+}
+
+.how-to-use {
+  cursor: help;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.modal {
+  z-index: 9999;
 }

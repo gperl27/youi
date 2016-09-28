@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** Universal **/
 
 .button-selector:hover, .image-selector:hover {
@@ -9,10 +10,10 @@
   transition: .3s;
 }
 
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** header **/
 .edit {
-  margin-top: 25px;
+  outline: none;
 }
 
 .edit-mode {
@@ -25,7 +26,7 @@
 }
 
 .nav {
-  margin-top: -10px;
+  // margin-top: -10px;
 }
 
 .nav {
@@ -39,10 +40,11 @@
   margin-right: 10px;
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** instructions **/
 
 .loud {
-  font-size: 72px;
+  font-size: 58px;
 }
 
 
@@ -54,8 +56,15 @@
   font-size: 18px;
 }
 
-/* info */
+/** Main Page Instructions **/
 
+.main-instructions {
+  text-align: left;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* info */
 /* inspirations */
 
 .inspirations img {
@@ -84,12 +93,14 @@
   }
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** footer **/
 
 .footer {
   text-align: center;
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** functionality **/
 
 .component:hover {

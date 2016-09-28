@@ -30,76 +30,81 @@
   </header>
   
   
-  <section class='instructions section active-section'>
+  <section class='instructions section active-section container'>
     <span class='loud'>
-      It's Your Site
+      Youi've made 60 changes
     </span>
-    <p>Current number of changes: <%= $count %></p>
-    <p>
-      Components with a <span class='green'>green</span> border are individually editable
-    </p>
-    <p>
-      Sections with a <span class='blue'>blue</span> border mean you can edit an entire container (i.e. color scheme, spacing)
-    </p>
-
+    <div class='main-instructions'>
+      <h2>Instructions:</h2>
+      <ul>
+        <li>
+          Components with a <span class='green'>green</span> border are individually editable
+        </li>
+        <li>
+          Sections with a <span class='blue'>blue</span> border mean you can edit an entire container (i.e. color scheme, spacing)
+        </li>
+      </ul>
+    </div>
     <%= link_to train_path("button", "button-selector", 1) do %>
       <button class='button-selector-1 button-selector component active body-selector-2'>Try Me</button>
     <% end %>
   </section>
   
-  <div class='container site-editables section-selector-2'>
+  <div class='site-editables section-selector-2'>
 
-    <div class='row'>
-      <div class='col-md-4'>
-        <%= link_to train_path("h2", "h2-selector", 1) do %>
-          <h2 class='h2-selector-1 component active body-selector-1'>Section Colors</h2>
-        <% end %>
-        <ul class='body-selector-2'>
-          <%= link_to train_path("section", "section-selector", 1) do %>
-            <button class='button-selector-3 button-selector'>Heading</button>
-          <% end %>
-          <%= link_to train_path("section", "section-selector", 2) do %>
-            <button class='button-selector-3 button-selector'>This Section</button>
-          <% end %>
-          <%= link_to train_path("section", "section-selector", 3) do %>
-            <button class='button-selector-3 button-selector'>About</button>
-          <% end %>
-          <%= link_to train_path("section", "section-selector", 4) do %>
-            <button class='button-selector-3 button-selector'>Footer</button>
-          <% end %>
-        </ul>
-      </div>
-      <div class='col-md-4'>
-        <%= link_to train_path("h2", "h2-selector", 1) do %>
-          <h2 class='h2-selector-1 component active body-selector-1'>Fonts</h2>
-        <% end %>
-        <ul class='body-selector-2'>
-          <%= link_to train_path("body", "body-selector", 1) do %>
-            <button class='button-selector-3 button-selector'>Heading Fonts</button>
-          <% end %>
-          <%= link_to train_path("body", "body-selector", 2) do %>
-            <button class='button-selector-3 button-selector'>Body Fonts</button>
-          <% end %>
-          <!-- <button>
-            Line Height
-          </button> -->
-        </ul>
-      </div>
+    <div class='container'>
+      <div class='row'>
         <div class='col-md-4'>
-        <%= link_to train_path("h2", "h2-selector", 1) do %>
-          <h2 class='h2-selector-1 component active body-selector-1'>Other Editables</h2>
-        <% end %>
-        <ul class='body-selector-2'>
-          <%= link_to train_path("button", "button-selector", 2) do %>
-            <button class='button-selector-3 button-selector'>Edit Button</button>
+          <%= link_to train_path("h2", "h2-selector", 1) do %>
+            <h2 class='h2-selector-1 component active body-selector-1'>Section Colors</h2>
           <% end %>
-          <%= link_to train_path("button", "button-selector", 3) do %>
-            <button class='button-selector-3 button-selector'>This Section's Buttons</button>
+          <ul class='body-selector-2'>
+            <%= link_to train_path("section", "section-selector", 1) do %>
+              <button class='button-selector-3 button-selector'>Heading</button>
+            <% end %>
+            <%= link_to train_path("section", "section-selector", 2) do %>
+              <button class='button-selector-3 button-selector'>This Section</button>
+            <% end %>
+            <%= link_to train_path("section", "section-selector", 3) do %>
+              <button class='button-selector-3 button-selector'>About</button>
+            <% end %>
+            <%= link_to train_path("section", "section-selector", 4) do %>
+              <button class='button-selector-3 button-selector'>Footer</button>
+            <% end %>
+          </ul>
+        </div>
+        <div class='col-md-4'>
+          <%= link_to train_path("h2", "h2-selector", 1) do %>
+            <h2 class='h2-selector-1 component active body-selector-1'>Fonts</h2>
           <% end %>
-          <%= link_to train_path("li", "li-selector", 1) do %>
-            <button class='button-selector-3 component active'>Top-right Nav</button>
+          <ul class='body-selector-2'>
+            <%= link_to train_path("body", "body-selector", 1) do %>
+              <button class='button-selector-3 button-selector'>Heading Fonts</button>
+            <% end %>
+            <%= link_to train_path("body", "body-selector", 2) do %>
+              <button class='button-selector-3 button-selector'>Body Fonts</button>
+            <% end %>
+            <!-- <button>
+              Line Height
+            </button> -->
+          </ul>
+        </div>
+        <div class='col-md-4'>
+          <%= link_to train_path("h2", "h2-selector", 1) do %>
+            <h2 class='h2-selector-1 component active body-selector-1'>Other Editables</h2>
           <% end %>
-        </ul>
+          <ul class='body-selector-2'>
+            <%= link_to train_path("button", "button-selector", 2) do %>
+              <button class='button-selector-3 button-selector'>Edit Button</button>
+            <% end %>
+            <%= link_to train_path("button", "button-selector", 3) do %>
+              <button class='button-selector-3 button-selector'>This Section's Buttons</button>
+            <% end %>
+            <%= link_to train_path("li", "li-selector", 1) do %>
+              <button class='button-selector-3 component active'>Top-right Nav</button>
+            <% end %>
+          </ul>
+        </div> 
       </div>
     </div>
   </div>

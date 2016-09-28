@@ -21,6 +21,8 @@ class SiteController < ApplicationController
     @id = params[:id]
     @class << "-#{@id}"
     @model = params[:model]
+
+    @currently_editing = which_component_is_editing(@class)
   end
 
   private
