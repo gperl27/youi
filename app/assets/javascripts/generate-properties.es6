@@ -3,7 +3,7 @@ function generateProperties(selector, wantedProps){
   var PROPERTIES = [];
   
   /** Props that contain pixels **/
-  var fontSize = new RandomPx(selector, "font-size", 82);
+  var fontSize = new RandomPx(selector, "font-size", 54);
   var letterSpacing = new RandomPx(selector, "letter-spacing", 20);
   var wordSpacing = new RandomPx(selector, "word-spacing", 20);
   var padding = new RandomPx(selector, "padding", 100);

@@ -39,7 +39,7 @@ function getAllCSS(e){
 
   $.ajax({
     type: 'post',
-    url: `/train/${model}/${id}`,
+    url: `/${model}/${id}`,
     data: css,
     success: handleData,
     error: handleError
@@ -52,7 +52,7 @@ function getAllCSS(e){
 
 function handleData(response){
   var selector = response[0];
-  var id = parseInt(response[1]);
+  var id = parseInt(response[1], 10);
   caseHandler(selector, id);
 }
 

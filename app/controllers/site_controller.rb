@@ -89,7 +89,6 @@ class SiteController < ApplicationController
     button_2 = Button.find(2).button_properties
     button_3 = Button.find(3).button_properties
 
-
       # vote_count(button)
 
     @button_1_font_size = average(button_1, "fontsize")
