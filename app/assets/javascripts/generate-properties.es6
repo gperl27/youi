@@ -6,7 +6,7 @@ function generateProperties(selector, wantedProps){
   var fontSize = new RandomPx(selector, "font-size", 54);
   var letterSpacing = new RandomPx(selector, "letter-spacing", 20);
   var wordSpacing = new RandomPx(selector, "word-spacing", 20);
-  var padding = new RandomPx(selector, "padding", 100);
+  var padding = new RandomPx(selector, "padding", 50);
   var border = new RandomPx(selector, "border", 20);
   var borderRadius = new RandomPx(selector, "border-radius", 20);
   var indent = new RandomPx(selector, "text-indent", 35);
