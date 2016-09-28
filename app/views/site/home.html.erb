@@ -37,8 +37,9 @@
     <div class='main-instructions'>
       <h2>Instructions:</h2>
       <ul>
+        <li>Most of what you see on this page CAN be changed!</li>
         <li>
-          Components with a <span class='green'>green</span> border are individually editable
+          Individual components (like the 'Youi' text in the top left of the page) are changeable if they have a  <span class='green'>green</span> border.
         </li>
         <li>
           Sections with a <span class='blue'>blue</span> border mean you can edit an entire container (i.e. color scheme, spacing)
@@ -60,16 +61,16 @@
           <% end %>
           <ul class='body-selector-2'>
             <%= link_to train_path("section", "section-selector", 1) do %>
-              <button class='button-selector-3 button-selector'>Heading</button>
+              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="left" title="Change the heading's colors">Heading</button>
             <% end %>
             <%= link_to train_path("section", "section-selector", 2) do %>
-              <button class='button-selector-3 button-selector'>This Section</button>
+              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="left" title="Change this section's colors">This Section</button>
             <% end %>
             <%= link_to train_path("section", "section-selector", 3) do %>
-              <button class='button-selector-3 button-selector'>About</button>
+              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="left" title="Change the about section's colors">About</button>
             <% end %>
             <%= link_to train_path("section", "section-selector", 4) do %>
-              <button class='button-selector-3 button-selector'>Footer</button>
+              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="left" title="Change the footer's colors">Footer</button>
             <% end %>
           </ul>
         </div>
@@ -79,10 +80,10 @@
           <% end %>
           <ul class='body-selector-2'>
             <%= link_to train_path("body", "body-selector", 1) do %>
-              <button class='button-selector-3 button-selector'>Heading Fonts</button>
+              <button class='button-selector-3 button-selector'  data-toggle="tooltip" data-placement="bottom" title="Change page's heading fonts">Heading Fonts</button>
             <% end %>
             <%= link_to train_path("body", "body-selector", 2) do %>
-              <button class='button-selector-3 button-selector'>Body Fonts</button>
+              <button class='button-selector-3 button-selector'  data-toggle="tooltip" data-placement="bottom" title="Change page's body font">Body Fonts</button>
             <% end %>
             <!-- <button>
               Line Height
@@ -95,13 +96,13 @@
           <% end %>
           <ul class='body-selector-2'>
             <%= link_to train_path("button", "button-selector", 2) do %>
-              <button class='button-selector-3 button-selector'>Edit Button</button>
+              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="right" title="Change the edit button">Edit Button</button>
             <% end %>
             <%= link_to train_path("button", "button-selector", 3) do %>
-              <button class='button-selector-3 button-selector'>This Section's Buttons</button>
+              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="right" title="Change this section's buttons">This Section's Buttons</button>
             <% end %>
             <%= link_to train_path("li", "li-selector", 1) do %>
-              <button class='button-selector-3 component active'>Top-right Nav</button>
+              <button class='button-selector-3 component active' data-toggle="tooltip" data-placement="right" title="Change the navigation element styles from the top-right corner">Top-right Navbar</button>
             <% end %>
           </ul>
         </div> 

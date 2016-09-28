@@ -6,6 +6,11 @@ $(document).on('turbolinks:load', function(){
       cursor: "crosshair"
     });
 
+  //bootstrap tooltip 'opt-in'
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+
   //grab id of selector to set first component change on load
   var id = $('.good').data("id");
 
