@@ -1,5 +1,10 @@
 <div class='vote-gui' id='dragme'>
-  <button class='good' data-id="<%= @id %>" data-selector="<%= @class %>" data-model="<%= @model %>">Good</button>
-  <button class='bad' data-selector='<%= @class %>'>Bad</button>
-  <%= link_to 'Home', root_path %>
+  <h3>Now Editing: Blah</h3>
+  <span class='glyphicon glyphicon-move move'></span>
+  <button class='good glyphicon glyphicon-ok' data-id="<%= @id %>" data-selector="<%= @class %>" data-model="<%= @model %>"></button>
+  <button class='bad glyphicon glyphicon-remove' data-selector='<%= @class %>'></button>
+  <hr>
+  <%= link_to root_path do %>
+    <button>Contribute!</button>
+  <% end %>
 </div>

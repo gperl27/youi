@@ -1,4 +1,6 @@
 .vote-gui {
+  min-width: 600px;
+  text-align: center;
   position: fixed;
   z-index: 999;
   border: 5px solid black;
@@ -7,6 +9,17 @@
   background-color: #fff;
 }
 
-#dragme {
-  
+.vote-gui:hover {
+  border-color: grey;
+  cursor: pointer;
+}
+
+.vote-gui:hover .move {
+  color:red;
+}
+
+.move {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
