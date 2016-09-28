@@ -13,10 +13,6 @@ class SiteController < ApplicationController
   before_action :body_props, only: [:home, :show]
   before_action :li_props, only: [:home, :show]
 
-  def index
-    redirect_to home_path
-  end
-
   def home
   end
 
