@@ -28,7 +28,7 @@ class ButtonsController < ApplicationController
     hsl_bg_color_saturation = hsl_bg_color[1]
     hsl_bg_color_luminosity = hsl_bg_color[2]
 
-    @button.button_properties.create!(
+    @button.button_properties.create(
       fontsize: font_size, texttransformation: text_transform, fontweight: font_weight, letterspacing: letter_spacing, padding: padding,
       border: border, borderradius: border_radius, border_style: border_style, 
       border_hue: hsl_border_color_hue, border_saturation: hsl_border_color_saturation, border_luminosity: hsl_border_color_luminosity,
@@ -46,12 +46,11 @@ class ButtonsController < ApplicationController
     font_weight_stats(ButtonProperty)
     letter_spacing_stats(ButtonProperty)
     text_transform_stats(ButtonProperty)
-
-    @colors = ButtonProperty.group(:color_hue).count  
-
-    @color_hue = median(ButtonProperty.all, "color_hue")
-    @color_hue_percent = (@color_hue/360.00)*100
-    @color_luminosity = median(ButtonProperty.all, "color_luminosity")
-    @color_saturation = median(ButtonProperty.all, "color_saturation")
+    border_stats(ButtonProperty)
+    border_style(ButtonProperty)
+    border_radius(ButtonProperty)
+    color_stats(ButtonProperty)
+    bg_stats(ButtonProperty)
+    border_color_stats(ButtonProperty)
   end
 end

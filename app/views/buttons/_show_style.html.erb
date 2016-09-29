@@ -20,34 +20,6 @@
     transform: translateY(50%);
   }
 
-  .hue-box {
-    bottom: <%= @color_hue_percent %>%;
-    background-color: hsl(
-        <%= @color_hue %>,
-        100%,
-        50%
-      );
-  }
-
-  .saturation-box {
-    bottom: <%= @color_saturation %>%;
-    background-color: hsl(
-        <%= @color_hue %>,
-        <%= @color_saturation %>%,
-        50%
-      );
-    
-  }
-
-  .luminosity-box {
-    bottom: <%= @color_luminosity %>%;
-    background-color: hsl(
-        <%= @color_hue %>,
-          100%,
-        <%= @color_luminosity %>%
-      );
-  }
-
   .bisector {
     border: 1px: solid black;
     height: 100%;
@@ -81,7 +53,39 @@
   );
 }
 
-.saturation-bar {
+
+/** Text Color **/
+
+.text-color .hue-box {
+    bottom: <%= @color_hue_percent %>%;
+    background-color: hsl(
+        <%= @color_hue %>,
+        100%,
+        50%
+      );
+  }
+
+.text-color .saturation-box {
+    bottom: <%= @color_saturation %>%;
+    background-color: hsl(
+        <%= @color_hue %>,
+        <%= @color_saturation %>%,
+        50%
+      );
+    
+  }
+
+.text-color .luminosity-box {
+    bottom: <%= @color_luminosity %>%;
+    background-color: hsl(
+        <%= @color_hue %>,
+          100%,
+        <%= @color_luminosity %>%
+      );
+  }
+
+
+.text-color .saturation-bar {
   background-image: linear-gradient(
     hsl(<%= @color_hue %>, 100%, 50%),
     hsl(<%= @color_hue %>, 90%, 50%),
@@ -97,7 +101,7 @@
   );
 }
 
-.luminosity-bar {
+.text-color .luminosity-bar {
   background-image: linear-gradient(
     hsl(<%= @color_hue %>, 100%, 100%),
     hsl(<%= @color_hue %>, 100%, 90%),
@@ -110,6 +114,130 @@
     hsl(<%= @color_hue %>, 100%, 20%),
     hsl(<%= @color_hue %>, 100%, 10%),
     hsl(<%= @color_hue %>, 100%, 0%)
+  );
+}
+
+/** Background Color **/
+
+.bg-color .hue-box {
+    bottom: <%= @bg_color_hue_percent %>%;
+    background-color: hsl(
+        <%= @bg_color_hue %>,
+        100%,
+        50%
+      );
+  }
+
+.bg-color .saturation-box {
+    bottom: <%= @bg_color_saturation %>%;
+    background-color: hsl(
+        <%= @bg_color_hue %>,
+        <%= @bg_color_saturation %>%,
+        50%
+      );
+    
+  }
+
+.bg-color .luminosity-box {
+    bottom: <%= @bg_color_luminosity %>%;
+    background-color: hsl(
+        <%= @bg_color_hue %>,
+          100%,
+        <%= @bg_color_luminosity %>%
+      );
+  }
+
+.bg-color .saturation-bar {
+  background-image: linear-gradient(
+    hsl(<%= @bg_color_hue %>, 100%, 50%),
+    hsl(<%= @bg_color_hue %>, 90%, 50%),
+    hsl(<%= @bg_color_hue %>, 80%, 50%),
+    hsl(<%= @bg_color_hue %>, 70%, 50%),
+    hsl(<%= @bg_color_hue %>, 60%, 50%),
+    hsl(<%= @bg_color_hue %>, 50%, 50%),
+    hsl(<%= @bg_color_hue %>, 40%, 50%),
+    hsl(<%= @bg_color_hue %>, 30%, 50%),
+    hsl(<%= @bg_color_hue %>, 20%, 50%),
+    hsl(<%= @bg_color_hue %>, 10%, 50%),
+    hsl(<%= @bg_color_hue %>, 0%, 50%)
+  );
+}
+
+.bg-color .luminosity-bar {
+  background-image: linear-gradient(
+    hsl(<%= @bg_color_hue %>, 100%, 100%),
+    hsl(<%= @bg_color_hue %>, 100%, 90%),
+    hsl(<%= @bg_color_hue %>, 100%, 80%),
+    hsl(<%= @bg_color_hue %>, 100%, 70%),
+    hsl(<%= @bg_color_hue %>, 100%, 60%),
+    hsl(<%= @bg_color_hue %>, 100%, 50%),
+    hsl(<%= @bg_color_hue %>, 100%, 40%),
+    hsl(<%= @bg_color_hue %>, 100%, 30%),
+    hsl(<%= @bg_color_hue %>, 100%, 20%),
+    hsl(<%= @bg_color_hue %>, 100%, 10%),
+    hsl(<%= @bg_color_hue %>, 100%, 0%)
+  );
+}
+
+/** Border Color **/
+
+.border-color .hue-box {
+    bottom: <%= @border_color_hue_percent %>%;
+    background-color: hsl(
+        <%= @border_color_hue %>,
+        100%,
+        50%
+      );
+  }
+
+.border-color .saturation-box {
+    bottom: <%= @border_color_saturation %>%;
+    background-color: hsl(
+        <%= @border_color_hue %>,
+        <%= @border_color_saturation %>%,
+        50%
+      );
+    
+  }
+
+.border-color .luminosity-box {
+    bottom: <%= @border_color_luminosity %>%;
+    background-color: hsl(
+        <%= @border_color_hue %>,
+          100%,
+        <%= @border_color_luminosity %>%
+      );
+  }
+
+.border-color .saturation-bar {
+  background-image: linear-gradient(
+    hsl(<%= @border_color_hue %>, 100%, 50%),
+    hsl(<%= @border_color_hue %>, 90%, 50%),
+    hsl(<%= @border_color_hue %>, 80%, 50%),
+    hsl(<%= @border_color_hue %>, 70%, 50%),
+    hsl(<%= @border_color_hue %>, 60%, 50%),
+    hsl(<%= @border_color_hue %>, 50%, 50%),
+    hsl(<%= @border_color_hue %>, 40%, 50%),
+    hsl(<%= @border_color_hue %>, 30%, 50%),
+    hsl(<%= @border_color_hue %>, 20%, 50%),
+    hsl(<%= @border_color_hue %>, 10%, 50%),
+    hsl(<%= @border_color_hue %>, 0%, 50%)
+  );
+}
+
+.border-color .luminosity-bar {
+  background-image: linear-gradient(
+    hsl(<%= @border_color_hue %>, 100%, 100%),
+    hsl(<%= @border_color_hue %>, 100%, 90%),
+    hsl(<%= @border_color_hue %>, 100%, 80%),
+    hsl(<%= @border_color_hue %>, 100%, 70%),
+    hsl(<%= @border_color_hue %>, 100%, 60%),
+    hsl(<%= @border_color_hue %>, 100%, 50%),
+    hsl(<%= @border_color_hue %>, 100%, 40%),
+    hsl(<%= @border_color_hue %>, 100%, 30%),
+    hsl(<%= @border_color_hue %>, 100%, 20%),
+    hsl(<%= @border_color_hue %>, 100%, 10%),
+    hsl(<%= @border_color_hue %>, 100%, 0%)
   );
 }
 </style>

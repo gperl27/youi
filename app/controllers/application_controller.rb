@@ -125,5 +125,62 @@ class ApplicationController < ActionController::Base
     @texttransformation = model.group(:texttransformation).count
   end
 
+  def border_style(model)
+    most = model.group("border_style").order("count_all desc").limit(1).count
+    least = model.group("border_style").order("count_all").limit(1).count
+
+    @border_style_most = most.keys.join("")
+    @border_style_least = least.keys.join("")
+
+    @border_style = model.group(:border_style).count
+  end
+
+  def border_radius(model)
+    @borderradius_max = model.maximum(:borderradius)
+    @borderradius_min = model.minimum(:borderradius)
+
+    most = model.group("borderradius").order("count_all desc").limit(1).count
+    least = model.group("borderradius").order("count_all").limit(1).count
+
+    @borderradius_most = most.keys.join("")
+    @borderradius_least = least.keys.join("")
+
+    @borderradius = model.group(:borderradius).count
+  end
+
+  def border_stats(model)
+    @border_max = model.maximum(:border)
+    @border_min = model.minimum(:border)
+
+    most = model.group("border").order("count_all desc").limit(1).count
+    least = model.group("border").order("count_all").limit(1).count
+
+    @border_most = most.keys.join("")
+    @border_least = least.keys.join("")
+
+    @border = model.group(:border).count
+  end
+
+  def color_stats(model)
+    @color_hue = median(ButtonProperty.all, "color_hue")
+    @color_hue_percent = (@color_hue/360.00)*100
+    @color_luminosity = median(ButtonProperty.all, "color_luminosity")
+    @color_saturation = median(ButtonProperty.all, "color_saturation")
+  end
+
+  def bg_stats(model)
+    @bg_color_hue = median(ButtonProperty.all, "bg_hue")
+    @bg_color_hue_percent = (@bg_color_hue/360.00)*100
+    @bg_color_luminosity = median(ButtonProperty.all, "bg_luminosity")
+    @bg_color_saturation = median(ButtonProperty.all, "bg_saturation")
+  end
+
+  def border_color_stats(model)
+    @border_color_hue = median(ButtonProperty.all, "border_hue")
+    @border_color_hue_percent = (@border_color_hue/360.00)*100
+    @border_color_luminosity = median(ButtonProperty.all, "border_luminosity")
+    @border_color_saturation = median(ButtonProperty.all, "border_saturation")
+  end
+
 
 end
