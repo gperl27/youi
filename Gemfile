@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "chartkick"
 gem 'jquery-ui-rails'
 
 gem 'sprockets-es6', '~> 0.6.0'

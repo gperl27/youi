@@ -16,6 +16,12 @@ class SiteController < ApplicationController
   def home
   end
 
+  def index
+    @buttons = ButtonProperty.count
+    p @buttons
+    # @h1 = H1Property.h1_properties.count
+  end
+
   def show
     @class = params[:class]
     @id = params[:id]

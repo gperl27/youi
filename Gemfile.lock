@@ -50,6 +50,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.5)
+    chartkick (2.1.1)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     erubis (2.7.0)
@@ -164,6 +165,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   byebug
+  chartkick
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails

@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   get '/train/:model/:class/:id', to: "site#show", as: :train
 
+  #stats pages
+  get '/stats', to: "site#index"
+  get '/h1/stats', to: "h1s#show"
 
+  #Extracting CSS to DB
   post '/h1/:id', to: "h1s#create", as: :train_h1
   post '/h2/:id', to: "h2s#create", as: :train_h2
   post '/h3/:id', to: "h3s#create", as: :train_h3
