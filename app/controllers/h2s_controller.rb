@@ -1,4 +1,9 @@
 class H2sController < ApplicationController
+  # before_action :font_size_stats, only: [:show]
+  # before_action :letter_spacing_stats, only: [:show]
+  # before_action :font_weight_stats, only: [:show]
+  # before_action :text_transform_stats, only: [:show]
+
   def create
     id = params[:id]
     @h2 = H2.find(params[:id])
@@ -19,5 +24,9 @@ class H2sController < ApplicationController
 
     data = "h2-selector-#{id}"
     render json: [data,id]
+  end
+
+  def show
+    
   end
 end

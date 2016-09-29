@@ -39,4 +39,18 @@ class ButtonsController < ApplicationController
     data = "button-selector-#{id}"
     render json: [data,id]
   end
+
+  def show
+    @changes = ButtonProperty.count
+
+    colors = ButtonProperty.all.map {|prop|
+      [
+        prop.color_hue, prop.color_saturation, prop.color_luminosity,
+        prop.bg_hue, prop.bg_saturation, prop.bg_luminosity,
+        prop.border_hue, prop.border_saturation, prop.border_luminosity,
+      ]
+    }
+
+    p colors 
+  end
 end

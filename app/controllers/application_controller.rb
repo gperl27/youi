@@ -72,4 +72,62 @@ class ApplicationController < ActionController::Base
     current = components.select {|k,v| k == data }
   end
 
+################################################################
+###################### Stats Methods ###########################
+################################################################
+
+  def changes(model)
+    @changes = model.count
+  end
+
+  def font_size_stats(model)
+    @fontsize_max = model.maximum(:fontsize)
+    @fontsize_min = model.minimum(:fontsize)
+
+    most = model.group("fontsize").order("count_all desc").limit(1).count
+    least = model.group("fontsize").order("count_all").limit(1).count
+
+    @fontsize_most = most.keys.join("")
+    @fontsize_least = least.keys.join("")
+
+    @fontsize = model.group(:fontsize).count
+  end
+
+  def font_weight_stats(model)
+    @letterspacing_max = model.maximum(:letterspacing)
+    @letterspacing_min = model.minimum(:letterspacing)
+
+    most = model.group("letterspacing").order("count_all desc").limit(1).count
+    least = model.group("letterspacing").order("count_all").limit(1).count
+
+    @letterspacing_most = most.keys.join("")
+    @letterspacing_least = least.keys.join("")
+
+    @letterspacing = model.group(:letterspacing).count
+  end
+
+  def letter_spacing_stats(model)
+    @fontweight_max = model.maximum(:fontweight)
+    @fontweight_min = model.minimum(:fontweight)
+
+    most = model.group("fontweight").order("count_all desc").limit(1).count
+    least = model.group("fontweight").order("count_all").limit(1).count
+
+    @fontweight_most = most.keys.join("")
+    @fontweight_least = least.keys.join("")
+
+    @fontweight = model.group(:fontweight).count
+  end
+
+  def text_transform_stats(model)
+    most = model.group("texttransformation").order("count_all desc").limit(1).count
+    least = model.group("texttransformation").order("count_all").limit(1).count
+
+    @texttransformation_most = most.keys.join("")
+    @texttransformation_least = least.keys.join("")
+
+    @texttransformation = model.group(:texttransformation).count
+  end
+
+
 end

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   #stats pages
   get '/stats', to: "site#index"
   get '/h1/stats', to: "h1s#show"
+  get '/button/stats', to: "buttons#show"
 
   #Extracting CSS to DB
   post '/h1/:id', to: "h1s#create", as: :train_h1
