@@ -41,16 +41,17 @@ class ButtonsController < ApplicationController
   end
 
   def show
+    changes(ButtonProperty)
+    font_size_stats(ButtonProperty)
+    font_weight_stats(ButtonProperty)
+    letter_spacing_stats(ButtonProperty)
+    text_transform_stats(ButtonProperty)
+
     @colors = ButtonProperty.group(:color_hue).count  
 
-    @color_hue = get_max_count(color_map(ButtonProperty, "color_hue"))[0]
-    @color_luminosity = get_max_count(color_map(ButtonProperty, "color_luminosity"))[0]
-    @color_saturation = get_max_count(color_map(ButtonProperty, "color_saturation"))[0]
+    @color_hue = median(ButtonProperty.all, "color_hue")
+    @color_hue_percent = (@color_hue/360.00)*100
+    @color_luminosity = median(ButtonProperty.all, "color_luminosity")
+    @color_saturation = median(ButtonProperty.all, "color_saturation")
   end
-
-  private
-  def color_map(model, property)
-    arr = model.all.map { |prop| prop[property ] }
-  end
-
 end

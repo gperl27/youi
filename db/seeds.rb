@@ -32,17 +32,17 @@ button_1.button_properties.create!(
 button_2 = Button.create!
 button_2.button_properties.create!(
   fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
-    border: 5, borderradius: 10, border_style: "solid", border_hue: 50, border_saturation: 50, border_luminosity: 50,
-    bg_hue: 0, bg_saturation: 100, bg_luminosity: 100,
-    color_hue: 0, color_saturation: 0, color_luminosity: 0
+    border: 5, borderradius: 10, border_style: "solid", border_hue: 51, border_saturation: 51, border_luminosity: 51,
+    bg_hue: 1, bg_saturation: 99, bg_luminosity: 99,
+    color_hue: 1, color_saturation: 1, color_luminosity: 1
   )
 
 button_3 = Button.create!
 button_3.button_properties.create!(
   fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
-    border: 5, borderradius: 10, border_style: "solid", border_hue: 50, border_saturation: 50, border_luminosity: 50,
-    bg_hue: 0, bg_saturation: 100, bg_luminosity: 100,
-    color_hue: 0, color_saturation: 0, color_luminosity: 0
+    border: 5, borderradius: 10, border_style: "solid", border_hue: 52, border_saturation: 52, border_luminosity: 52,
+    bg_hue: 2, bg_saturation: 98, bg_luminosity: 98,
+    color_hue: 2, color_saturation: 2, color_luminosity: 2
   )
 
 
@@ -67,18 +67,18 @@ section_1.section_properties.create!(
   )
 section_2 = Section.create!
 section_2.section_properties.create!(
-  color_hue: 0, color_luminosity: 0, color_saturation: 0,
-  bg_hue: 0, bg_luminosity: 100, bg_saturation: 100,
+  color_hue: 1, color_luminosity: 1, color_saturation: 1,
+  bg_hue: 1, bg_luminosity: 99, bg_saturation: 99,
   )
 section_3 = Section.create!
 section_3.section_properties.create!(
-  color_hue: 0, color_luminosity: 0, color_saturation: 0,
-  bg_hue: 0, bg_luminosity: 100, bg_saturation: 100,
+  color_hue: 2, color_luminosity: 2, color_saturation: 2,
+  bg_hue: 2, bg_luminosity: 98, bg_saturation: 98,
   )
 section_4 = Section.create!
 section_4.section_properties.create!(
-  color_hue: 0, color_luminosity: 0, color_saturation: 0,
-  bg_hue: 0, bg_luminosity: 100, bg_saturation: 100,
+  color_hue: 3, color_luminosity: 3, color_saturation: 3,
+  bg_hue: 3, bg_luminosity: 97, bg_saturation: 97,
   )
 
 body = Body.create!

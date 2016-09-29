@@ -1,9 +1,77 @@
 <%= render("show_style") %>
 
 <div class='container'>
-  <h2>Color</h2> 
+  <h1>Button Choices</h1>
+  <h2><%= @changes %> have been made to this component.</h2>
   <div class='row'>
     <div class='col-md-6'>
+      <h2>Fontsize</h2>
+      <ul>
+        <li>Max <%= @fontsize_max %>px</li>
+        <li>Min <%= @fontsize_min %>px</li>
+        <li>Most Chosen <%= @fontsize_most %>px</li>
+        <li>Least Chosen <%= @fontsize_least %>px</li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @fontsize %>    
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= column_chart @letterspacing %>
+    </div>
+    <div class='col-md-6'>
+      <h2>Letter Spacing</h2>
+      <ul>
+        <li>Max <%= @letterspacing_max %>px</li>
+        <li>Min <%= @letterspacing_min %>px</li>
+        <li>Most Chosen <%= @letterspacing_most %>px</li>
+        <li>Least Chosen <%= @letterspacing_least %>px</li>
+      </ul>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Font Weight</h2>
+      <ul>
+        <li>Max <%= @fontweight_max %>px</li>
+        <li>Min <%= @fontweight_min %>px</li>
+        <li>Most Chosen <%= @fontweight_most %>px</li>
+        <li>Least Chosen <%= @fontweight_least %>px</li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @fontweight %>    
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= column_chart @texttransformation %>
+    </div>
+    <div class='col-md-6'>
+      <h2>Text Transformation</h2>
+      <ul>
+        <li>Most Chosen <%= @texttransformation_most %>px</li>
+        <li>Least Chosen <%= @texttransformation_least %>px</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Text Color</h2>
+  <div class='row'>
+
+    <div class='col-md-4'>    
+      <div class='vert vert-block hue-bar'></div>
+          <div class="vert box-chart">
+            <div class='hue-box'></div>
+            <div class='bisector'></div>
+          </div>
+          <h3>Hue</h3>
+          <h4>Most Popular: <%= @color_hue %></h4>
+    </div>
+
+    <div class='col-md-4'>
       <div class="vert vert-block saturation-bar"></div>
       <div class='vert box-chart'>
         <div class='saturation-box'></div>
@@ -12,7 +80,8 @@
         <h3>Saturation</h3>
         <h4>Most Popular: <%= @color_saturation %>%</h4>
     </div>
-    <div class='col-md-6'>
+
+    <div class='col-md-4'>
       <div class="vert vert-block luminosity-bar"></div>
       <div class='vert box-chart'>
         <div class='luminosity-box'></div>
@@ -21,10 +90,5 @@
         <h3>Luminosity</h3>
         <h4>Most Popular: <%= @color_luminosity %>%</h4>
     </div>
-  </div>
-  <div class='hue-container'>
-      <%= column_chart @colors %>
-      <div class="block hue-bar"></div>
-      <h3>Hue</h3>
   </div>
 </div>

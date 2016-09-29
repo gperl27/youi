@@ -64,10 +64,6 @@ class ApplicationController < ActionController::Base
     array = counts.max_by {|k,v| v }
   end
 
-  # def extractRGB(rgb)
-  #   rgb.gsub!(/\D+/, "")
-  # end
-
   def check_components(data, components)
     current = components.select {|k,v| k == data }
   end
