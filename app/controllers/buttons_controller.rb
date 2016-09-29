@@ -41,16 +41,16 @@ class ButtonsController < ApplicationController
   end
 
   def show
-    @changes = ButtonProperty.count
+    @colors = ButtonProperty.group(:color_hue).count  
 
-    colors = ButtonProperty.all.map {|prop|
-      [
-        prop.color_hue, prop.color_saturation, prop.color_luminosity,
-        prop.bg_hue, prop.bg_saturation, prop.bg_luminosity,
-        prop.border_hue, prop.border_saturation, prop.border_luminosity,
-      ]
-    }
-
-    p colors 
+    @color_hue = get_max_count(color_map(ButtonProperty, "color_hue"))[0]
+    @color_luminosity = get_max_count(color_map(ButtonProperty, "color_luminosity"))[0]
+    @color_saturation = get_max_count(color_map(ButtonProperty, "color_saturation"))[0]
   end
+
+  private
+  def color_map(model, property)
+    arr = model.all.map { |prop| prop[property ] }
+  end
+
 end

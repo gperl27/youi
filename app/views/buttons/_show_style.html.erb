@@ -1,0 +1,119 @@
+<style>
+  .vert {
+    display: inline-block;
+  }
+
+  .box-chart {
+    height: 250px;
+    width: 250px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    position: relative;
+  }
+
+  .saturation-box, .luminosity-box {
+    height: 50px;
+    width: 50px;
+    z-index: 99;
+    position: absolute;
+    left: 100px;
+    transform: translateY(50%);
+  }
+
+  .saturation-box {
+    bottom: <%= @color_saturation %>%;
+    background-color: hsl(
+        <%= @color_hue %>,
+        <%= @color_saturation %>%,
+        <%= @color_luminosity %>%
+      );
+    
+  }
+
+  .luminosity-box {
+    bottom: <%= @color_luminosity %>%;
+    background-color: hsl(
+        <%= @color_hue %>,
+        <%= @color_saturation %>%,
+        <%= @color_luminosity %>%
+      );
+  }
+
+  .bisector {
+    border: 1px: solid black;
+    height: 100%;
+    position: absolute;
+    left: 125px;
+    background-color: black;
+    width: 2px;
+  }
+
+  .block {
+    height: 50px;
+  }
+
+  .vert-block {
+    height: 250px;
+    width: 50px;
+    margin-right: 15px;
+  }
+
+ .hue-container {
+  width: 100% !important;
+  position: relative;
+ }
+
+
+.hue-bar {
+  position: absolute;
+  width: 97%;
+  bottom: 37px;
+  margin-left: 28px;
+  background-image: linear-gradient(
+    to right,
+    hsl(0, 100%, 50%),
+    hsl(36, 100%, 50%),
+    hsl(72, 100%, 50%),
+    hsl(108, 100%, 50%),
+    hsl(144, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(216, 100%, 50%),
+    hsl(252, 100%, 50%),
+    hsl(288, 100%, 50%),
+    hsl(324, 100%, 50%),
+    hsl(360, 100%, 50%)
+  );
+}
+
+.saturation-bar {
+  background-image: linear-gradient(
+    hsl(<%= @color_hue %>, 0%, 50%),
+    hsl(<%= @color_hue %>, 10%, 50%),
+    hsl(<%= @color_hue %>, 20%, 50%),
+    hsl(<%= @color_hue %>, 30%, 50%),
+    hsl(<%= @color_hue %>, 40%, 50%),
+    hsl(<%= @color_hue %>, 50%, 50%),
+    hsl(<%= @color_hue %>, 60%, 50%),
+    hsl(<%= @color_hue %>, 70%, 50%),
+    hsl(<%= @color_hue %>, 80%, 50%),
+    hsl(<%= @color_hue %>, 90%, 50%),
+    hsl(<%= @color_hue %>, 100%, 50%)
+  );
+}
+
+.luminosity-bar {
+  background-image: linear-gradient(
+    hsl(<%= @color_hue %>, 50%, 0%),
+    hsl(<%= @color_hue %>, 50%, 10%),
+    hsl(<%= @color_hue %>, 50%, 20%),
+    hsl(<%= @color_hue %>, 50%, 30%),
+    hsl(<%= @color_hue %>, 50%, 40%),
+    hsl(<%= @color_hue %>, 50%, 50%),
+    hsl(<%= @color_hue %>, 50%, 60%),
+    hsl(<%= @color_hue %>, 50%, 70%),
+    hsl(<%= @color_hue %>, 50%, 80%),
+    hsl(<%= @color_hue %>, 50%, 90%),
+    hsl(<%= @color_hue %>, 50%, 100%)
+  );
+}
+</style>

@@ -1,2 +1,30 @@
-<%= @changes %>
+<%= render("show_style") %>
 
+<div class='container'>
+  <h2>Color</h2> 
+  <div class='row'>
+    <div class='col-md-6'>
+      <div class="vert vert-block saturation-bar"></div>
+      <div class='vert box-chart'>
+        <div class='saturation-box'></div>
+        <div class='bisector'></div>
+      </div>
+        <h3>Saturation</h3>
+        <h4>Most Popular: <%= @color_saturation %>%</h4>
+    </div>
+    <div class='col-md-6'>
+      <div class="vert vert-block luminosity-bar"></div>
+      <div class='vert box-chart'>
+        <div class='luminosity-box'></div>
+        <div class='bisector'></div>
+      </div>
+        <h3>Luminosity</h3>
+        <h4>Most Popular: <%= @color_luminosity %>%</h4>
+    </div>
+  </div>
+  <div class='hue-container'>
+      <%= column_chart @colors %>
+      <div class="block hue-bar"></div>
+      <h3>Hue</h3>
+  </div>
+</div>
