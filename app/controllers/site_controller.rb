@@ -11,16 +11,13 @@ class SiteController < ApplicationController
   before_action :section_props, only: [:home, :show]
   before_action :body_props, only: [:home, :show]
   before_action :li_props, only: [:home, :show]
+  before_action :model_counts, only: [:index]
+  before_action :total_count, except: [:index]
 
   def home
   end
 
   def index
-    @model_counts = {
-      :h1 => H1Property.count , :h2 => H2Property.count , :h3 => H3Property.count , :h4 => H4Property.count , :h5 => H5Property.count , :image => ImageProperty.count , :li => ListelementProperty.count , :paragraph => ParagraphProperty.count , 
-      :section => SectionProperty.count , :body => BodyProperty.count
-    }
-
   end
 
   def show
@@ -34,6 +31,25 @@ class SiteController < ApplicationController
 
   private
 
+  def model_counts
+    @model_counts = {
+      :h1 => H1Property.count , :h2 => H2Property.count , 
+      :h3 => H3Property.count , :h4 => H4Property.count , 
+      :h5 => H5Property.count , :image => ImageProperty.count , 
+      :li => ListelementProperty.count , :paragraph => ParagraphProperty.count , 
+      :section => SectionProperty.count , :body => BodyProperty.count
+    }
+  end
+
+  def total_count
+    @total_count = [
+       H1Property.count ,  H2Property.count , 
+       H3Property.count ,  H4Property.count , 
+       H5Property.count ,  ImageProperty.count , 
+       ListelementProperty.count , ParagraphProperty.count , 
+       SectionProperty.count , BodyProperty.count
+    ].reduce(:+)
+  end
 
   def h1_props
     h1 = H1.first.h1_properties
