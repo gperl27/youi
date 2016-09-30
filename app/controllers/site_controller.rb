@@ -12,12 +12,14 @@ class SiteController < ApplicationController
   before_action :body_props, only: [:home, :show]
   before_action :li_props, only: [:home, :show]
   before_action :model_counts, only: [:index]
-  before_action :total_count, except: [:index]
+  before_action :total_count
 
   def home
   end
 
   def index
+    @max = max_change[0].to_s.capitalize
+    @min = min_change[0].to_s.capitalize
   end
 
   def show
@@ -39,6 +41,16 @@ class SiteController < ApplicationController
       :li => ListelementProperty.count , :paragraph => ParagraphProperty.count , 
       :section => SectionProperty.count , :body => BodyProperty.count
     }
+  end
+
+  def max_change
+    h = model_counts
+    h.max_by{|k,v| v}
+  end
+
+  def min_change
+    h = model_counts
+    h.min_by{|k,v| v}
   end
 
   def total_count

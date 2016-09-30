@@ -2,21 +2,21 @@
 <%= render 'partials/stats_header' %>
 <div class='home-stats'>
   <div class='row'>
-    <div class='col-md-6'>
-      <%= column_chart @model_counts %>
-    </div>
-    <div class='col-md-6'>
-      <h2>Notable Facts</h2>
+    <div class='col-md-3'>
+      <h2>Fun Facts</h2>
       <ul class='fun-facts'>
-        <li>32,530 clicks</li>
-        <li>Most Changed: H1</li>
-        <li>Least Changed: H6</li>
+        <li><%= @total_count %> changes</li>
+        <li>Most Changed: <%= @max %></li>
+        <li>Least Changed: <%= @min %></li>
       </ul>
+    </div>
+    <div class='col-md-9'>
+      <%= column_chart @model_counts %>
     </div>
   </div>
 </div>
 
-<div>
+<div class='container'>
   <h2>More Choices</h2>
   <div class='container'>
     
@@ -142,7 +142,7 @@
       
     </div><!-- row -->
     
-    <h5>Copyright (c) Greg Perlman, 2016</h5>
+    <%= render 'partials/stats_footer' %>
 
   </div><!-- container -->
   
