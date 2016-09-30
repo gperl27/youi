@@ -13,4 +13,9 @@ class BodiesController < ApplicationController
     data = "body-selector-#{id}"
     render json: [data,id]
   end
+
+  def show
+    changes(BodyProperty)
+    font_family_stats(BodyProperty)
+  end
 end

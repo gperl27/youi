@@ -1,5 +1,5 @@
 class H5sController < ApplicationController
-    def create
+  def create
     id = params[:id]
     @h5 = H5.find(params[:id])
 
@@ -19,5 +19,14 @@ class H5sController < ApplicationController
 
     data = "h5-selector-#{id}"
     render json: [data,id]
+  end
+
+  def show
+    changes(H5Property)
+    font_size_stats(H5Property)
+    font_weight_stats(H5Property)
+    letter_spacing_stats(H5Property)
+    text_transform_stats(H5Property)
+    word_spacing_stats(H5Property)
   end
 end

@@ -7,7 +7,16 @@ Rails.application.routes.draw do
   #stats pages
   get '/stats', to: "site#index"
   get '/h1/stats', to: "h1s#show"
+  get '/h2/stats', to: "h2s#show"
+  get '/h3/stats', to: "h3s#show"
+  get '/h4/stats', to: "h4s#show"
+  get '/h5/stats', to: "h5s#show"
   get '/button/stats', to: "buttons#show"
+  get '/image/stats', to: "images#show"
+  get '/listelement/stats', to: "listelements#show"
+  get '/paragraph/stats', to: "paragraphs#show"
+  get '/section/stats', to: "sections#show"
+  get '/body/stats', to: "bodies#show"
 
   #Extracting CSS to DB
   post '/h1/:id', to: "h1s#create", as: :train_h1

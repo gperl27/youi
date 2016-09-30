@@ -103,16 +103,16 @@ class ApplicationController < ActionController::Base
   end
 
   def letter_spacing_stats(model)
-    @fontweight_max = model.maximum(:fontweight)
-    @fontweight_min = model.minimum(:fontweight)
+    @letterspacing_max = model.maximum(:letterspacing)
+    @letterspacing_min = model.minimum(:letterspacing)
 
-    most = model.group("fontweight").order("count_all desc").limit(1).count
-    least = model.group("fontweight").order("count_all").limit(1).count
+    most = model.group("letterspacing").order("count_all desc").limit(1).count
+    least = model.group("letterspacing").order("count_all").limit(1).count
 
-    @fontweight_most = most.keys.join("")
-    @fontweight_least = least.keys.join("")
+    @letterspacing_most = most.keys.join("")
+    @letterspacing_least = least.keys.join("")
 
-    @fontweight = model.group(:fontweight).count
+    @letterspacing = model.group(:letterspacing).count
   end
 
   def text_transform_stats(model)
@@ -123,6 +123,29 @@ class ApplicationController < ActionController::Base
     @texttransformation_least = least.keys.join("")
 
     @texttransformation = model.group(:texttransformation).count
+  end
+
+  def font_family_stats(model)
+    most = model.group("fontfamily").order("count_all desc").limit(1).count
+    least = model.group("fontfamily").order("count_all").limit(1).count
+
+    @fontfamily_most = most.keys.join("")
+    @fontfamily_least = least.keys.join("")
+
+    @fontfamily = model.group(:fontfamily).count
+  end
+
+  def word_spacing_stats(model)
+    @wordspacing_max = model.maximum(:wordspacing)
+    @wordspacing_min = model.minimum(:wordspacing)
+
+    most = model.group("wordspacing").order("count_all desc").limit(1).count
+    least = model.group("wordspacing").order("count_all").limit(1).count
+
+    @wordspacing_most = most.keys.join("")
+    @wordspacing_least = least.keys.join("")
+
+    @wordspacing = model.group(:wordspacing).count
   end
 
   def border_style(model)
@@ -161,25 +184,90 @@ class ApplicationController < ActionController::Base
     @border = model.group(:border).count
   end
 
+  def height_stats(model)
+    @height_max = model.maximum(:height)
+    @height_min = model.minimum(:height)
+
+    most = model.group("height").order("count_all desc").limit(1).count
+    least = model.group("height").order("count_all").limit(1).count
+
+    @height_most = most.keys.join("")
+    @height_least = least.keys.join("")
+
+    @height = model.group(:height).count
+  end
+
+  def width_stats(model)
+    @width_max = model.maximum(:width)
+    @width_min = model.minimum(:width)
+
+    most = model.group("width").order("count_all desc").limit(1).count
+    least = model.group("width").order("count_all").limit(1).count
+
+    @width_most = most.keys.join("")
+    @width_least = least.keys.join("")
+
+    @width = model.group(:width).count
+  end
+
+  def padding_stats(model)
+    @padding_max = model.maximum(:padding)
+    @padding_min = model.minimum(:padding)
+
+    most = model.group("padding").order("count_all desc").limit(1).count
+    least = model.group("padding").order("count_all").limit(1).count
+
+    @padding_most = most.keys.join("")
+    @padding_least = least.keys.join("")
+
+    @padding = model.group(:padding).count
+  end
+
+  def indent_stats(model)
+    @indent_max = model.maximum(:indent)
+    @indent_min = model.minimum(:indent)
+
+    most = model.group("indent").order("count_all desc").limit(1).count
+    least = model.group("indent").order("count_all").limit(1).count
+
+    @indent_most = most.keys.join("")
+    @indent_least = least.keys.join("")
+
+    @indent = model.group(:indent).count
+  end
+
+  def text_align_stats(model)
+    @textalign_max = model.maximum(:textalign)
+    @textalign_min = model.minimum(:textalign)
+
+    most = model.group("textalign").order("count_all desc").limit(1).count
+    least = model.group("textalign").order("count_all").limit(1).count
+
+    @textalign_most = most.keys.join("")
+    @textalign_least = least.keys.join("")
+
+    @textalign = model.group(:textalign).count
+  end
+
   def color_stats(model)
-    @color_hue = median(ButtonProperty.all, "color_hue")
+    @color_hue = median(model.all, "color_hue")
     @color_hue_percent = (@color_hue/360.00)*100
-    @color_luminosity = median(ButtonProperty.all, "color_luminosity")
-    @color_saturation = median(ButtonProperty.all, "color_saturation")
+    @color_luminosity = median(model.all, "color_luminosity")
+    @color_saturation = median(model.all, "color_saturation")
   end
 
   def bg_stats(model)
-    @bg_color_hue = median(ButtonProperty.all, "bg_hue")
+    @bg_color_hue = median(model.all, "bg_hue")
     @bg_color_hue_percent = (@bg_color_hue/360.00)*100
-    @bg_color_luminosity = median(ButtonProperty.all, "bg_luminosity")
-    @bg_color_saturation = median(ButtonProperty.all, "bg_saturation")
+    @bg_color_luminosity = median(model.all, "bg_luminosity")
+    @bg_color_saturation = median(model.all, "bg_saturation")
   end
 
   def border_color_stats(model)
-    @border_color_hue = median(ButtonProperty.all, "border_hue")
+    @border_color_hue = median(model.all, "border_hue")
     @border_color_hue_percent = (@border_color_hue/360.00)*100
-    @border_color_luminosity = median(ButtonProperty.all, "border_luminosity")
-    @border_color_saturation = median(ButtonProperty.all, "border_saturation")
+    @border_color_luminosity = median(model.all, "border_luminosity")
+    @border_color_saturation = median(model.all, "border_saturation")
   end
 
 

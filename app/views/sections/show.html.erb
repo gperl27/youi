@@ -1,0 +1,74 @@
+<%= render("partials/show_style") %>
+
+<div class='container'>
+  <h1>Section Choices</h1>
+  <h2><%= @changes %> have been made to this component.</h2>
+
+  <div class='row text-color'>
+    <h2>Text Color</h2>
+
+    <div class='col-md-4'>    
+      <div class='vert vert-block hue-bar'></div>
+          <div class="vert box-chart">
+            <div class='hue-box'></div>
+            <div class='bisector'></div>
+          </div>
+          <h3>Hue</h3>
+          <h4>Most Popular: <%= @color_hue %></h4>
+    </div>
+
+    <div class='col-md-4'>
+      <div class="vert vert-block saturation-bar"></div>
+      <div class='vert box-chart'>
+        <div class='saturation-box'></div>
+        <div class='bisector'></div>
+      </div>
+        <h3>Saturation</h3>
+        <h4>Most Popular: <%= @color_saturation %>%</h4>
+    </div>
+
+    <div class='col-md-4'>
+      <div class="vert vert-block luminosity-bar"></div>
+      <div class='vert box-chart'>
+        <div class='luminosity-box'></div>
+        <div class='bisector'></div>
+      </div>
+        <h3>Luminosity</h3>
+        <h4>Most Popular: <%= @color_luminosity %>%</h4>
+    </div>
+  </div>
+
+    <div class='row bg-color'>
+    <h2>Background-Color</h2>
+
+    <div class='col-md-4'>    
+      <div class='vert vert-block hue-bar'></div>
+          <div class="vert box-chart">
+            <div class='hue-box'></div>
+            <div class='bisector'></div>
+          </div>
+          <h3>Hue</h3>
+          <h4>Most Popular: <%= @bg_color_hue %></h4>
+    </div>
+
+    <div class='col-md-4'>
+      <div class="vert vert-block saturation-bar"></div>
+      <div class='vert box-chart'>
+        <div class='saturation-box'></div>
+        <div class='bisector'></div>
+      </div>
+        <h3>Saturation</h3>
+        <h4>Most Popular: <%= @bg_color_saturation %>%</h4>
+    </div>
+
+    <div class='col-md-4'>
+      <div class="vert vert-block luminosity-bar"></div>
+      <div class='vert box-chart'>
+        <div class='luminosity-box'></div>
+        <div class='bisector'></div>
+      </div>
+        <h3>Luminosity</h3>
+        <h4>Most Popular: <%= @bg_color_luminosity %>%</h4>
+    </div>
+  </div>
+</div>

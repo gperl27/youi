@@ -19,4 +19,12 @@ class ListelementsController < ApplicationController
     data = "li-selector-#{id}"
     render json: [data,id]
   end
+
+  def show
+    changes(ListelementProperty)
+    font_size_stats(ListelementProperty)
+    font_style_stats(ListelementProperty)
+    letter_spacing_stats(ListelementProperty)
+    text_transform_stats(ListelementProperty)
+  end
 end

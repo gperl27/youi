@@ -1,0 +1,115 @@
+<%= render("partials/show_style") %>
+
+<div class='container'>
+  <h1>Image Choices</h1>
+  <h2><%= @changes %> changes have been made to this component.</h2>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Border-Size</h2>
+      <ul>
+        <li>Max <%= @border_max %>px</li>
+        <li>Min <%= @border_min %>px</li>
+        <li>Most Chosen <%= @border_most %>px</li>
+        <li>Least Chosen <%= @border_least %>px</li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @border %>    
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= column_chart @height %>
+    </div>
+    <div class='col-md-6'>
+      <h2>Height</h2>
+      <ul>
+        <li>Max <%= @height_max %>px</li>
+        <li>Min <%= @height_min %>px</li>
+        <li>Most Chosen <%= @height_most %>px</li>
+        <li>Least Chosen <%= @height_least %>px</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Border-Radius</h2>
+      <ul>
+        <li>Max <%= @borderradius_max %>px</li>
+        <li>Min <%= @borderradius_min %>px</li>
+        <li>Most Chosen <%= @borderradius_most %>px</li>
+        <li>Least Chosen <%= @borderradius_least %>px</li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @borderradius %>    
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= column_chart @width %>
+    </div>
+    <div class='col-md-6'>
+      <h2>Width</h2>
+      <ul>
+        <li>Max <%= @width_max %>px</li>
+        <li>Min <%= @width_min %>px</li>
+        <li>Most Chosen <%= @width_most %>px</li>
+        <li>Least Chosen <%= @width_least %>px</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Padding</h2>
+      <ul>
+        <li>Max <%= @padding_max %>px</li>
+        <li>Min <%= @padding_min %>px</li>
+        <li>Most Chosen <%= @padding_most %>px</li>
+        <li>Least Chosen <%= @padding_least %>px</li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @padding %>    
+    </div>
+  </div>
+
+  <div class='row border-color'>
+    <h2>Border-Color</h2>
+
+    <div class='col-md-4'>    
+      <div class='vert vert-block hue-bar'></div>
+          <div class="vert box-chart">
+            <div class='hue-box'></div>
+            <div class='bisector'></div>
+          </div>
+          <h3>Hue</h3>
+          <h4>Most Popular: <%= @border_color_hue %></h4>
+    </div>
+
+    <div class='col-md-4'>
+      <div class="vert vert-block saturation-bar"></div>
+      <div class='vert box-chart'>
+        <div class='saturation-box'></div>
+        <div class='bisector'></div>
+      </div>
+        <h3>Saturation</h3>
+        <h4>Most Popular: <%= @border_color_saturation %>%</h4>
+    </div>
+
+    <div class='col-md-4'>
+      <div class="vert vert-block luminosity-bar"></div>
+      <div class='vert box-chart'>
+        <div class='luminosity-box'></div>
+        <div class='bisector'></div>
+      </div>
+        <h3>Luminosity</h3>
+        <h4>Most Popular: <%= @border_color_luminosity %>%</h4>
+    </div>
+  </div>
+</div>

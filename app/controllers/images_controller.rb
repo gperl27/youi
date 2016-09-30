@@ -27,4 +27,14 @@ class ImagesController < ApplicationController
     data = "image-selector-#{id}"
     render json: [data, id]
   end
+
+  def show
+    changes(ImageProperty)
+    padding_stats(ImageProperty)
+    height_stats(ImageProperty)
+    width_stats(ImageProperty)
+    border_stats(ImageProperty)
+    border_radius(ImageProperty)
+    border_color_stats(ImageProperty)
+  end
 end

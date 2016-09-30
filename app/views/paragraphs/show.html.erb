@@ -1,0 +1,73 @@
+
+<div class='container'>
+  <h1>Pargraph Choices</h1>
+  <h2><%= @changes %> have been made to this component.</h2>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Fontsize</h2>
+      <ul>
+        <li>Max <%= @fontsize_max %>px</li>
+        <li>Min <%= @fontsize_min %>px</li>
+        <li>Most Chosen <%= @fontsize_most %>px</li>
+        <li>Least Chosen <%= @fontsize_least %>px</li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @fontsize %>    
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= column_chart @textalign %>
+    </div>
+    <div class='col-md-6'>
+      <h2>Text-align</h2>
+      <ul>
+        <li>Most Chosen <%= @textalign_most %>px</li>
+        <li>Least Chosen <%= @textalign_least %>px</li>
+      </ul>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Indent</h2>
+      <ul>
+        <li>Max <%= @indent_max %>px</li>
+        <li>Min <%= @indent_min %>px</li>
+        <li>Most Chosen <%= @indent_most %>px</li>
+        <li>Least Chosen <%= @indent_least %>px</li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @indent %>    
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= column_chart @padding %>
+    </div>
+    <div class='col-md-6'>
+      <h2>Padding</h2>
+      <ul>
+        <li>Max <%= @padding_max %>px</li>
+        <li>Min <%= @padding_min %>px</li>
+        <li>Most Chosen <%= @padding_most %>px</li>
+        <li>Least Chosen <%= @padding_least %>px</li>
+      </ul>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Word Spacing</h2>
+      <ul>
+        <li>Max <%= @wordspacing_max %>px</li>
+        <li>Min <%= @wordspacing_min %>px</li>
+        <li>Most Chosen <%= @wordspacing_most %>px</li>
+        <li>Least Chosen <%= @wordspacing_least %>px</li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @wordspacing %>    
+    </div>
+  </div>
+</div>

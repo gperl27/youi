@@ -20,4 +20,13 @@ class H3sController < ApplicationController
     data = "h3-selector-#{id}"
     render json: [data,id]
   end
+
+  def show
+    changes(H3Property)
+    font_size_stats(H3Property)
+    font_weight_stats(H3Property)
+    letter_spacing_stats(H3Property)
+    text_transform_stats(H3Property)
+    word_spacing_stats(H3Property)
+  end
 end

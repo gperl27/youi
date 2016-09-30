@@ -27,6 +27,11 @@ class H2sController < ApplicationController
   end
 
   def show
-    
+    changes(H2Property)
+    font_size_stats(H2Property)
+    font_weight_stats(H2Property)
+    letter_spacing_stats(H2Property)
+    text_transform_stats(H2Property)
+    word_spacing_stats(H2Property)
   end
 end

@@ -20,4 +20,13 @@ class ParagraphsController < ApplicationController
     data = "paragraph-selector-#{id}"
     render json: [data, id]
   end
+
+  def show
+    changes(ParagraphProperty)
+    padding_stats(ParagraphProperty)
+    text_align_stats(ParagraphProperty)
+    indent_stats(ParagraphProperty)
+    word_spacing_stats(ParagraphProperty)
+    font_size_stats(ParagraphProperty)
+  end
 end

@@ -20,4 +20,13 @@ class H4sController < ApplicationController
     data = "h4-selector-#{id}"
     render json: [data,id]
   end
+
+  def show
+    changes(H4Property)
+    font_size_stats(H4Property)
+    font_weight_stats(H4Property)
+    letter_spacing_stats(H4Property)
+    text_transform_stats(H4Property)
+    word_spacing_stats(H4Property)
+  end
 end

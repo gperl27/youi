@@ -1,0 +1,57 @@
+
+<div class='container'>
+  <h1>Navbar Choices</h1>
+  <h2><%= @changes %> have been made to this component.</h2>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Fontsize</h2>
+      <ul>
+        <li>Max <%= @fontsize_max %>px</li>
+        <li>Min <%= @fontsize_min %>px</li>
+        <li>Most Chosen <%= @fontsize_most %>px</li>
+        <li>Least Chosen <%= @fontsize_least %>px</li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @fontsize %>    
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= column_chart @letterspacing %>
+    </div>
+    <div class='col-md-6'>
+      <h2>Letter Spacing</h2>
+      <ul>
+        <li>Max <%= @letterspacing_max %>px</li>
+        <li>Min <%= @letterspacing_min %>px</li>
+        <li>Most Chosen <%= @letterspacing_most %>px</li>
+        <li>Least Chosen <%= @letterspacing_least %>px</li>
+      </ul>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2>Font Style</h2>
+      <ul>
+        <li>Most Chosen <%= @fontstyle_most %></li>
+        <li>Least Chosen <%= @fontstyle_least %></li>
+      </ul>
+    </div>
+    <div class='col-md-6'>
+        <%= column_chart @fontstyle %>    
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= column_chart @texttransformation %>
+    </div>
+    <div class='col-md-6'>
+      <h2>Text Transformation</h2>
+      <ul>
+        <li>Most Chosen <%= @texttransformation_most %></li>
+        <li>Least Chosen <%= @texttransformation_least %></li>
+      </ul>
+    </div>
+  </div>
+</div>

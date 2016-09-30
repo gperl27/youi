@@ -21,4 +21,10 @@ class SectionsController < ApplicationController
     data = "section-selector-#{id}"
     render json: [data,id]
   end
+
+  def show
+    changes(SectionProperty)
+    color_stats(SectionProperty)
+    bg_stats(SectionProperty)
+  end
 end
