@@ -135,6 +135,16 @@ class ApplicationController < ActionController::Base
     @fontfamily = model.group(:fontfamily).count
   end
 
+  def font_style_stats(model)
+    most = model.group("fontstyle").order("count_all desc").limit(1).count
+    least = model.group("fontstyle").order("count_all").limit(1).count
+
+    @fontstyle_most = most.keys.join("")
+    @fontstyle_least = least.keys.join("")
+
+    @fontstyle = model.group(:fontstyle).count
+  end
+
   def word_spacing_stats(model)
     @wordspacing_max = model.maximum(:wordspacing)
     @wordspacing_min = model.minimum(:wordspacing)

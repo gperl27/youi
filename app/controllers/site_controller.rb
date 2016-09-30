@@ -1,6 +1,5 @@
 class SiteController < ApplicationController
   # $count = 0
-
   before_action :h1_props, only: [:home, :show]
   before_action :h2_props, only: [:home, :show]
   before_action :h3_props, only: [:home, :show]
@@ -17,9 +16,11 @@ class SiteController < ApplicationController
   end
 
   def index
-    @buttons = ButtonProperty.count
-    p @buttons
-    # @h1 = H1Property.h1_properties.count
+    @model_counts = {
+      :h1 => H1Property.count , :h2 => H2Property.count , :h3 => H3Property.count , :h4 => H4Property.count , :h5 => H5Property.count , :image => ImageProperty.count , :li => ListelementProperty.count , :paragraph => ParagraphProperty.count , 
+      :section => SectionProperty.count , :body => BodyProperty.count
+    }
+
   end
 
   def show

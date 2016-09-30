@@ -25,7 +25,7 @@
 <div class='home-stats'>
   <div class='row'>
     <div class='col-md-6'>
-      <chart>Chart Here</chart>
+      <%= column_chart @model_counts %>
     </div>
     <div class='col-md-6'>
       <h2>Notable Facts</h2>
@@ -44,94 +44,116 @@
     
     <div class='row'>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>H1</h3>
-          <p>H1 is the blah</p>
+      <%= link_to h1_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>H1</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>H2</h3>
-          <p>H1 is the blah</p>
+      <%= link_to h2_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>H2</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>H3</h3>
-          <p>H1 is the blah</p>
+      <%= link_to h3_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>H3</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
     </div><!-- row -->
     
     <div class='row'>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>H4</h3>
-          <p>H1 is the blah</p>
-        </div>
+      <%= link_to h4_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>H4</h3>
+            <p>H1 is the blah</p>
+          </div>
       </div>
+      <% end %>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>H5</h3>
-          <p>H1 is the blah</p>
+      <%= link_to h5_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>H5</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>Images</h3>
-          <p>H1 is the blah</p>
+      <%= link_to image_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>Images</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
     </div><!-- row -->
     
     <div class='row'>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>List Elements</h3>
-          <p>H1 is the blah</p>
+      <%= link_to listelement_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>List Elements</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>Paragraphs</h3>
-          <p>H1 is the blah</p>
+      <%= link_to paragraph_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>Paragraphs</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>Sections</h3>
-          <p>H1 is the blah</p>
+      <%= link_to section_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>Sections</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
     </div><!-- row -->
     
     <div class='row'>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>Fonts</h3>
-          <p>H1 is the blah</p>
+      <%= link_to body_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>Page-wide Stats (fonts, etc.)</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>H2</h3>
-          <p>H1 is the blah</p>
+      <%= link_to button_stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab'>
+            <h3>Buttons</h3>
+            <p>H1 is the blah</p>
+          </div>
         </div>
-      </div>
+      <% end %>
       
       <div class='col-md-4'>
         <div class='tab'>
