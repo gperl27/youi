@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "site#home"
-
   get '/train/:model/:class/:id', to: "site#show", as: :train
+
+  #sessions => CALL THIS CUSTOM
+  resources :sessions, only: [:create, :destroy]
 
   #stats pages
   get '/stats', to: "site#index"

@@ -85,3 +85,8 @@ body = Body.create!
 heading = Body.create!
 bodyfont = body.body_properties.create!(fontfamily: "Times New Roman")
 headingfont = heading.body_properties.create!(fontfamily: "Helvetica")
+
+
+#SecureRandom.urlsafe_base64)
+user_1 = User.create!(cookie_id: 1)
+user_2 = User.create!(cookie_id: 2)
