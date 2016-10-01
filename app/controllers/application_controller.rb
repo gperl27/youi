@@ -16,11 +16,6 @@ class ApplicationController < ActionController::Base
     str.match(/\w+ ?\w+/)[0]
   end
 
-  # def vote_count(component)
-  #   p component.count
-  #   p $count
-  #   $count += component.count
-  # end
   def which_component_is_editing(data)
     component_hash = {
       "h1-selector-1" => "Heading 1",

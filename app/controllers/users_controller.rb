@@ -13,7 +13,6 @@ class UsersController < ApplicationController
   before_action :li_props, only: [:index, :show]
 
   def index
-    @h1_selector_id = @user.h1s[0].id
   end
 
   def create
@@ -43,7 +42,8 @@ class UsersController < ApplicationController
   def h1_props
     h1 = @user.h1s[0].h1_properties
 
-    # vote_count(h1)
+    @h1_selector_id_1 = @user.h1s[0].id
+
     @h1_font_size = average(h1, "fontsize")
     @h1_font_weight = median(h1, "fontweight")
     @h1_text_transform = median(h1, "texttransformation")
@@ -52,7 +52,8 @@ class UsersController < ApplicationController
 
   def h2_props
     h2 = @user.h2s[0].h2_properties
-    # vote_count(h2)
+
+    @h2_selector_id_1 = @user.h2s[0].id
 
     @h2_font_size = average(h2, "fontsize")
     @h2_font_weight = median(h2, "fontweight")
@@ -63,7 +64,7 @@ class UsersController < ApplicationController
 
   def h3_props
     h3 = @user.h3s[0].h3_properties
-    # vote_count(h3)
+    @h3_selector_id_1 = @user.h3s[0].id
 
     @h3_font_size = average(h3, "fontsize")
     @h3_font_weight = median(h3, "fontweight")
@@ -74,7 +75,7 @@ class UsersController < ApplicationController
 
   def h4_props
     h4 = @user.h4s[0].h4_properties
-    # vote_count(h4)
+    @h4_selector_id_1 = @user.h4s[0].id
 
     @h4_font_size = average(h4, "fontsize")
     @h4_font_weight = median(h4, "fontweight")
@@ -85,7 +86,7 @@ class UsersController < ApplicationController
 
   def h5_props
     h5 = @user.h5s[0].h5_properties
-    # vote_count(h5)
+    @h5_selector_id_1 = @user.h5s[0].id
 
     @h5_font_size = average(h5, "fontsize")
     @h5_font_weight = median(h5, "fontweight")
@@ -99,7 +100,10 @@ class UsersController < ApplicationController
     button_2 = @user.buttons[1].button_properties
     button_3 = @user.buttons[2].button_properties
 
-      # vote_count(button)
+    @button_selector_id_1 = @user.buttons[0].id
+    @button_selector_id_2 = @user.buttons[1].id
+    @button_selector_id_3 = @user.buttons[2].id
+
 
     @button_1_font_size = average(button_1, "fontsize")
     @button_1_font_weight = median(button_1, "fontweight")
@@ -159,8 +163,9 @@ class UsersController < ApplicationController
   def paragraph_props
     paragraph_1 = @user.paragraphs[0].paragraph_properties
     paragraph_2 = @user.paragraphs[1].paragraph_properties
-    # vote_count(paragraph_1)
-    # vote_count(paragraph_2)
+
+    @paragraph_selector_id_1 = @user.paragraphs[0].id
+    @paragraph_selector_id_2 = @user.paragraphs[1].id
 
     @paragraph_1_font_size = average(paragraph_1, "fontsize")
     @paragraph_1_text_align = median(paragraph_1, "textalign")
@@ -177,7 +182,7 @@ class UsersController < ApplicationController
 
   def image_props
     image = @user.images[0].image_properties
-    # vote_count(image)
+    @image_selector_id_1 = @user.images[0].id
 
     @image_padding = average(image, "padding")
     @image_border = average(image, "border")
@@ -191,7 +196,7 @@ class UsersController < ApplicationController
 
   def li_props
     li = @user.listelements[0].listelement_properties
-    # vote_count(li)
+    @li_selector_id_1 = @user.listelements[0].id
 
     @li_font_size = average(li, "fontsize")
     @li_text_transform = median(li, "texttransformation")
@@ -204,6 +209,11 @@ class UsersController < ApplicationController
     section_2 = @user.sections[1].section_properties
     section_3 = @user.sections[2].section_properties
     section_4 = @user.sections[3].section_properties
+
+    @section_selector_id_1 = @user.sections[0].id
+    @section_selector_id_2 = @user.sections[1].id
+    @section_selector_id_3 = @user.sections[2].id
+    @section_selector_id_4 = @user.sections[3].id
 
     @section_1_color_hue = median(section, "color_hue")
     @section_1_color_saturation = median(section, "color_saturation")
@@ -237,6 +247,9 @@ class UsersController < ApplicationController
   def body_props
     headingfont = @user.bodies[0].body_properties
     bodyfont = @user.bodies[1].body_properties
+
+    @body_selector_id_1 = @user.bodies[0].id
+    @body_selector_id_2 = @user.bodies[1].id
 
     heading_font = median(headingfont, "fontfamily")
     body_font = median(bodyfont, "fontfamily")

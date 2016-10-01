@@ -1,0 +1,254 @@
+<style>
+  /** Universal CSS **/
+
+  .body-selector-<%= @body_selector_id_1 %> {
+    font-family: <%= @heading_font %>;
+  }
+
+  .body-selector-<%= @body_selector_id_2 %> {
+    font-family: <%= @body_font %>;
+  }
+
+  /** Individual CSS **/
+  .h1-selector-<%= @h1_selector_id_1 %> {
+    font-size: <%= @h1_font_size %>px;
+    text-transform: <%= @h1_text_transform %>;
+    letter-spacing: <%= @h1_letter_spacing %>px;
+    font-weight: <%= @h1_font_weight %>;
+  }
+
+  .h2-selector-<%= @h2_selector_id_1 %> {
+    font-size: <%= @h2_font_size %>px;
+    text-transform: <%= @h2_text_transform %>;
+    letter-spacing: <%= @h2_letter_spacing %>px;
+    font-weight: <%= @h2_font_weight %>;
+    word-spacing: <%= @h2_word_spacing %>px;
+  }
+
+  .h3-selector-<%= @h3_selector_id_1 %> {
+    font-size: <%= @h3_font_size %>px;
+    text-transform: <%= @h3_text_transform %>;
+    letter-spacing: <%= @h3_letter_spacing %>px;
+    font-weight: <%= @h3_font_weight %>;
+    word-spacing: <%= @h3_word_spacing %>px;
+  }
+
+  .h4-selector-<%= @h4_selector_id_1 %> {
+    font-size: <%= @h4_font_size %>px;
+    text-transform: <%= @h4_text_transform %>;
+    letter-spacing: <%= @h4_letter_spacing %>px;
+    font-weight: <%= @h4_font_weight %>;
+    word-spacing: <%= @h4_word_spacing %>px;
+  }
+
+  .h5-selector-<%= @h5_selector_id_1 %> {
+    font-size: <%= @h5_font_size %>px;
+    text-transform: <%= @h5_text_transform %>;
+    letter-spacing: <%= @h5_letter_spacing %>px;
+    font-weight: <%= @h5_font_weight %>;
+    word-spacing: <%= @h5_word_spacing %>px;
+  }
+
+  .button-selector-<%= @button_selector_id_1 %> {
+    font-size: <%= @button_1_font_size %>px;
+    font-weight: <%= @button_1_font_weight %>;
+    text-transform: <%= @button_1_text_transform %>;
+    letter-spacing: <%= @button_1_letter_spacing %>px;
+    padding: <%= @button_1_padding %>px;
+    border: <%= @button_1_border %>px;
+    border-radius: <%= @button_1_border_radius %>px;
+    border-style: <%= @button_1_border_style %>;
+    color: hsl(
+      <%= @button_1_color_hue %>, 
+      <%= @button_1_color_saturation %>%, 
+      <%= @button_1_color_luminosity %>%);
+    border-color: hsl(
+      <%= @button_1_border_color_hue %>, 
+      <%= @button_1_border_color_saturation %>%, 
+      <%= @button_1_border_color_luminosity %>%);
+    background-color: hsl(
+      <%= @button_1_bg_color_hue %>, 
+      <%= @button_1_bg_color_saturation %>%, 
+      <%= @button_1_bg_color_luminosity %>%);
+  }
+
+  .button-selector-<%= @button_selector_id_1 %>:hover {
+    border: <%= @button_1_border %>px;
+    border-radius: <%= @button_1_border_radius %>px;
+    border-style: <%= @button_1_border_style %>;
+    color: hsl(
+      <%= @button_1_color_hue %>, 
+      <%= @button_1_color_saturation %>%, 
+      <%= @button_1_color_luminosity %>%);
+    border-color: hsl(
+      <%= @button_1_border_color_hue %>, 
+      <%= @button_1_border_color_saturation %>%, 
+      <%= @button_1_border_color_luminosity %>%);
+    background-color: hsl(
+      <%= @button_1_bg_color_hue %>, 
+      <%= @button_1_bg_color_saturation %>%, 
+      <%= @button_1_bg_color_luminosity %>%);
+  }
+
+  .button-selector-<%= @button_selector_id_2 %> {
+    font-size: <%= @button_2_font_size %>px;
+    font-weight: <%= @button_2_font_weight %>;
+    text-transform: <%= @button_2_text_transform %>;
+    letter-spacing: <%= @button_2_letter_spacing %>px;
+    padding: <%= @button_2_padding %>px;
+    border: <%= @button_2_border %>px;
+    border-radius: <%= @button_2_border_radius %>px;
+    border-style: <%= @button_2_border_style %>;
+    color: hsl(
+      <%= @button_2_color_hue %>, 
+      <%= @button_2_color_saturation %>%, 
+      <%= @button_2_color_luminosity %>%);
+    border-color: hsl(
+      <%= @button_2_border_color_hue %>, 
+      <%= @button_2_border_color_saturation %>%, 
+      <%= @button_2_border_color_luminosity %>%);
+    background-color: hsl(
+      <%= @button_2_bg_color_hue %>, 
+      <%= @button_2_bg_color_saturation %>%, 
+      <%= @button_2_bg_color_luminosity %>%);
+  }
+
+  .button-selector-<%= @button_selector_id_2 %>:hover {
+    border: <%= @button_2_border %>px;
+    border-radius: <%= @button_2_border_radius %>px;
+    border-style: <%= @button_2_border_style %>;
+    color: hsl(
+      <%= @button_2_color_hue %>, 
+      <%= @button_2_color_saturation %>%, 
+      <%= @button_2_color_luminosity %>%);
+    border-color: hsl(
+      <%= @button_2_border_color_hue %>, 
+      <%= @button_2_border_color_saturation %>%, 
+      <%= @button_2_border_color_luminosity %>%);
+    background-color: hsl(
+      <%= @button_2_bg_color_hue %>, 
+      <%= @button_2_bg_color_saturation %>%, 
+      <%= @button_2_bg_color_luminosity %>%);
+  }
+
+    .button-selector-<%= @button_selector_id_3 %> {
+    font-size: <%= @button_3_font_size %>px;
+    font-weight: <%= @button_3_font_weight %>;
+    text-transform: <%= @button_3_text_transform %>;
+    letter-spacing: <%= @button_3_letter_spacing %>px;
+    padding: <%= @button_3_padding %>px;
+    border: <%= @button_3_border %>px;
+    border-radius: <%= @button_3_border_radius %>px;
+    border-style: <%= @button_3_border_style %>;
+    color: hsl(
+      <%= @button_3_color_hue %>, 
+      <%= @button_3_color_saturation %>%, 
+      <%= @button_3_color_luminosity %>%);
+    border-color: hsl(
+      <%= @button_3_border_color_hue %>, 
+      <%= @button_3_border_color_saturation %>%, 
+      <%= @button_3_border_color_luminosity %>%);
+    background-color: hsl(
+      <%= @button_3_bg_color_hue %>, 
+      <%= @button_3_bg_color_saturation %>%, 
+      <%= @button_3_bg_color_luminosity %>%);
+  }
+
+  .button-selector-<%= @button_selector_id_3 %>:hover {
+    border: <%= @button_3_border %>px;
+    border-radius: <%= @button_3_border_radius %>px;
+    border-style: <%= @button_3_border_style %>;
+    color: hsl(
+      <%= @button_3_color_hue %>, 
+      <%= @button_3_color_saturation %>%, 
+      <%= @button_3_color_luminosity %>%);
+    border-color: hsl(
+      <%= @button_3_border_color_hue %>, 
+      <%= @button_3_border_color_saturation %>%, 
+      <%= @button_3_border_color_luminosity %>%);
+    background-color: hsl(
+      <%= @button_3_bg_color_hue %>, 
+      <%= @button_3_bg_color_saturation %>%, 
+      <%= @button_3_bg_color_luminosity %>%);
+  }
+
+  .paragraph-selector-<%= @paragraph_selector_id_1 %> {
+    font-size: <%= @paragraph_1_font_size %>px;
+    text-align: <%= @paragraph_1_text_align %>;
+    padding: <%= @paragraph_1_padding %>px;
+    text-indent: <%= @paragraph_1_indent %>px;
+    word-spacing: <%= @paragraph_1_word_spacing %>px;
+  }
+
+  .paragraph-selector-<%= @paragraph_selector_id_2 %> {
+    font-size: <%= @paragraph_2_font_size %>px;
+    text-align: <%= @paragraph_2_text_align %>;
+    padding: <%= @paragraph_2_padding %>px;
+    text-indent: <%= @paragraph_2_indent %>px;
+    word-spacing: <%= @paragraph_2_word_spacing %>px;
+  }
+
+  .image-selector-<%= @image_selector_id_1 %> {
+    padding: <%= @image_padding %>px;
+    border: <%= @image_border %>px;
+    border-radius: <%= @image_border_radius %>px;
+    height: <%= @image_height %>px;
+    width: <%= @image_width %>px;
+    border-color: hsl(
+      <%= @image_border_color_hue %>, 
+      <%= @image_border_color_saturation %>%, 
+      <%= @image_border_color_luminosity %>%);
+  }
+
+  .section-selector-<%= @section_selector_id_1 %> {
+    color: hsl(
+      <%= @section_1_color_hue %>,
+      <%= @section_1_color_saturation %>%,
+      <%= @section_1_color_luminosity %>%);
+    background-color: hsl(
+      <%= @section_1_bg_color_hue %>,
+      <%= @section_1_bg_color_saturation %>%,
+      <%= @section_1_bg_color_luminosity %>%);
+  }
+
+  .section-selector-<%= @section_selector_id_2 %> {
+    color: hsl(
+      <%= @section_2_color_hue %>,
+      <%= @section_2_color_saturation %>%,
+      <%= @section_2_color_luminosity %>%);
+    background-color: hsl(
+      <%= @section_2_bg_color_hue %>,
+      <%= @section_2_bg_color_saturation %>%,
+      <%= @section_2_bg_color_luminosity %>%);
+  }
+
+  .section-selector-<%= @section_selector_id_3 %> {
+    color: hsl(
+      <%= @section_3_color_hue %>,
+      <%= @section_3_color_saturation %>%,
+      <%= @section_3_color_luminosity %>%);
+    background-color: hsl(
+      <%= @section_3_bg_color_hue %>,
+      <%= @section_3_bg_color_saturation %>%,
+      <%= @section_3_bg_color_luminosity %>%);
+  }
+
+  .section-selector-<%= @section_selector_id_4 %> {
+    color: hsl(
+      <%= @section_4_color_hue %>,
+      <%= @section_4_color_saturation %>%,
+      <%= @section_4_color_luminosity %>%);
+    background-color: hsl(
+      <%= @section_4_bg_color_hue %>,
+      <%= @section_4_bg_color_saturation %>%,
+      <%= @section_4_bg_color_luminosity %>%);
+  }
+
+  .li-selector-<%= @li_selector_id_1 %> {
+    font-size: <%= @li_font_size %>px;
+    text-transform: <%= @li_text_transform %>;
+    letter-spacing: <%= @li_letter_spacing %>px;
+    font-style: <%= @li_font_style %>;
+  }
+
+</style>

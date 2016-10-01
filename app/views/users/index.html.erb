@@ -1,6 +1,179 @@
 <%= link_to "Clear Session", user_create_path, :method => :post %>
+<%= render 'home_style' %>
 
+<div class="container-fluid body">
+  
+  <header class="header section active-section section-selector-<%= @section_selector_id_1 %>">
+    <div class="row">
+      
+      <div class="col-md-2">
+        <%= link_to user_train_path("h1", "h1-selector", @h1_selector_id_1) do %>
+          <h1 class="h1-selector-<%= @h1_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">youi</h1>
+        <% end %>
+      </div>      
+      <div class="col-md-10">
+        <nav class="nav">
+          <ul class="body-selector-<%= @body_selector_id_2 %>">
+            <li class="li-selector-<%= @li_selector_id_1 %>">
+              <button class="edit button-selector-<%= @button_selector_id_2 %>">Edit Mode</button><span class="edit-mode">On</span>
+            </li>
+            <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
+            <%= link_to stats_path do %>
+              <li class="li-selector-<%= @li_selector_id_1 %>">
+                Stats
+              </li>
+            <% end %>
+            <li class="li-selector-<%= @li_selector_id_1 %>">
+              Login
+            </li>
+          </ul>
+        </nav>
+      </div>      
+    </div>
+  </header>
+  
+  
+  <section class="instructions active-section container">
+    <%= render "partials/instructions" %>
+    <div class="component active try-me">
+      <%= link_to user_train_path("button", "button-selector", @button_selector_id_1) do %>
+      <button class="button-selector-<%= @button_selector_id_1 %> button-selector body-selector-<%= @body_selector_id_2 %>">Try Me</button>
+      <% end %>
+    </div>
+  </section>
+  
+  <div class="site-editables section-selector-<%= @section_selector_id_2 %>">
 
-<%= link_to user_train_path("h1", "h1-selector", @h1_selector_id) do %>
-    <h1 class="h1-selector-<%= @h1_selector_id %> component active body-selector-1">youi</h1>
-<% end %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1) do %>
+            <h2 class="h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Section Colors</h2>
+          <% end %>
+          <ul class="body-selector-<%= @body_selector_id_2 %>">
+            <%= link_to user_train_path("section", "section-selector", @section_selector_id_1) do %>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the heading"s colors">Heading</button>
+            <% end %>
+            <%= link_to user_train_path("section", "section-selector", @section_selector_id_2) do %>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change this section"s colors">This Section</button>
+            <% end %>
+            <%= link_to user_train_path("section", "section-selector", @section_selector_id_3) do %>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the about section"s colors">About</button>
+            <% end %>
+            <%= link_to user_train_path("section", "section-selector", @section_selector_id_4) do %>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the footer"s colors">Footer</button>
+            <% end %>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1) do %>
+            <h2 class="h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Fonts</h2>
+          <% end %>
+          <ul class="body-selector-<%= @body_selector_id_2 %>">
+            <%= link_to user_train_path("body", "body-selector", @body_selector_id_1) do %>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="bottom" title="Change page"s heading fonts">Heading Fonts</button>
+            <% end %>
+            <%= link_to user_train_path("body", "body-selector", @body_selector_id_2) do %>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="bottom" title="Change page"s body font">Body Fonts</button>
+            <% end %>
+            <!-- <button>
+              Line Height
+            </button> -->
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1) do %>
+            <h2 class="h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Other Editables</h2>
+          <% end %>
+          <ul class="body-selector-<%= @body_selector_id_2 %>">
+            <%= link_to user_train_path("button", "button-selector", @button_selector_id_2) do %>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the edit button">Edit Button</button>
+            <% end %>
+            <%= link_to user_train_path("button", "button-selector", @button_selector_id_3) do %>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change this section"s buttons">This Section"s Buttons</button>
+            <% end %>
+            <%= link_to user_train_path("li", "li-selector", @li_selector_id_1) do %>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the navigation element styles from the top-right corner">Top-right Navbar</button>
+            <% end %>
+          </ul>
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  <section class="info section active-section section-selector-<%= @section_selector_id_3 %>">
+    <div class="container">
+      <%= link_to user_train_path("h3", "h3-selector", @h3_selector_id_1) do %>
+        <h3 class="h3-selector-<%= @h3_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">About</h3>
+      <% end %>
+      
+      <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_1) do %>
+        <p class="paragraph-selector-<%= @paragraph_selector_id_1 %> component active body-selector-<%= @body_selector_id_2 %>">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <% end %>
+      
+      <div class="inspirations">
+        <%= link_to user_train_path("h3", "h3-selector", @h3_selector_id_1) do %>
+          <h3 class="h3-selector-<%= @h3_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Inspirations</h3>
+        <% end %>
+      <div class="row">
+        
+        <div class="col-md-6">
+          <figure>
+            <div class="component">
+              <%= link_to user_train_path("image", "image-selector", @image_selector_id_1) do %>
+                <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/twitch.jpg" alt="Twitch Plays Pokemon">
+              <% end %>
+            </div>
+            <%= link_to user_train_path("h4", "h4-selector", @h4_selector_id_1) do %>
+              <h4 class="h4-selector-<%= @h4_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Twtich Plays Pokemon</h4>
+            <% end %>
+          </figure>
+          
+          <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2) do %>
+            <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <% end %>
+        </div>
+        
+        <div class="col-md-6">
+           <figure>
+            <div class="component">
+              <%= link_to user_train_path("image", "image-selector", @image_selector_id_1) do %>
+                <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/faces.jpg" alt="Average of women"s faces">
+              <% end %>
+            </div>
+            <%= link_to user_train_path("h4", "h4-selector", @h4_selector_id_1) do %>
+              <h4 class="h4-selector-<%= @h4_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Average Faces of Women</h4>
+            <% end %>
+          </figure>
+          <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2) do %>
+            <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <% end %>
+        </div>
+        
+      </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <footer class="footer section active-section section-selector-<%= @section_selector_id_4 %>">
+    <%= link_to train_path("h5", "h5-selector", @h5_selector_id_1) do %>
+      <h5 class="h5-selector-<%= @h5_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Curated by Greg Perlman. Copyright 2016</h5>
+    <% end %>
+  </footer> 
+</div>
