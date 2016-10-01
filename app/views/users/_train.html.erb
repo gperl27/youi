@@ -1,0 +1,128 @@
+<%= render("home_style") %>
+
+<div class="container-fluid">
+  <header class="header section-selector-<%= @section_selector_id_1 %>">
+    <div class="row">
+      
+      <div class="col-md-2">
+        <h1 class="h1-selector-<%= @h1_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">youi</h1>
+      </div>
+      
+      <div class="col-md-10">
+        <nav class="nav">
+          <ul class="body-selector-<%= @body_selector_id_2 %>">
+            <li class="li-selector-<%= @li_selector_id_1 %>">
+              <button class="button-selector-<%= @button_selector_id_2 %>">Edit Mode</button><span class="edit-mode">On</span>
+            </li>
+            <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
+            <li class="li-selector-<%= @li_selector_id_1 %>">
+              Stats
+            </li>
+            <li class="li-selector-<%= @li_selector_id_1 %>">
+              Login
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+    </div>
+  </header>
+  
+  <section class="instructions container">
+    <%= render "partials/instructions" %>
+    <button class="button-selector-<%= @button_selector_id_1 %>">
+      Try Me
+    </button>
+  </section>
+
+  <div class="site-editables section-selector-<%= @section_selector_id_2 %>">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="h2-selector-<%= @h2_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">Section Colors</h2>
+          <ul class="body-selector-<%= @body_selector_id_2 %>">
+            <button class="button-selector-<%= @button_selector_id_3 %>">
+              Heading
+            </button>
+             <button class="button-selector-<%= @button_selector_id_3 %>">
+              This section
+            </button>
+            <button class="button-selector-<%= @button_selector_id_3 %>">
+              About
+            </button>
+            <button class="button-selector-<%= @button_selector_id_3 %>">
+              Footer
+            </button>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2 class="h2-selector-<%= @h2_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">Fonts</h2>
+          <ul class="body-selector-<%= @body_selector_id_2 %>">
+            <button class="button-selector-<%= @button_selector_id_3 %>">
+              Heading Fonts
+            </button>
+            <button class="button-selector-<%= @button_selector_id_3 %>">
+              Body Fonts
+            </button>
+          </ul>
+        </div>
+          <div class="col-md-4">
+          <h2 class="h2-selector-<%= @h2_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">Other Editables</h2>
+          <ul class="body-selector-<%= @body_selector_id_2 %>">
+            <button class="button-selector-<%= @button_selector_id_3 %>">
+              Edit Button
+            </button>
+            <button class="button-selector-<%= @button_selector_id_3 %>">
+              This section"s buttons
+            </button>
+            <button class="button-selector-<%= @button_selector_id_3 %>">
+              Top-right Nav Bar
+            </button>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="info section-selector-<%= @section_selector_id_3 %>">
+    <div class="container">
+       <h3 class="h3-selector-<%= @h3_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">About</h3>
+      <p class="paragraph-selector-<%= @paragraph_selector_id_1 %> body-selector-<%= @body_selector_id_2 %>">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ratione labore fuga harum ad laboriosam dicta veritatis temporibus obcaecati libero optio non alias fugiat mollitia iure, iusto porro itaque rerum!
+      </p>
+      
+      <div class="inspirations">
+      <h3 class="h3-selector-<%= @h3_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">Inspirations</h3>
+      <div class="row">
+        
+        <div class="col-md-6">
+          <figure>
+            <img class="image-selector-<%= @image_selector_id_1 %>" src="/twitch.jpg" alt="Twitch Plays Pokemon" />
+            <h4 class="h4-selector-<%= @h4_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">Twitch plays pokemon</h4>
+          </figure>
+          
+          <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> body-selector-<%= @body_selector_id_2 %>">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quibusdam cupiditate harum nesciunt placeat, accusantium at voluptatem itaque adipisci, nulla tenetur explicabo unde. Autem blanditiis, qui non rerum eveniet praesentium.
+          </p>
+        </div>
+        
+        <div class="col-md-6">
+           <figure>
+            <img class="image-selector-<%= @image_selector_id_1 %>" src="/faces.jpg" alt="Average of women"s faces" />
+            <h4 class="h4-selector-<%= @h4_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">Average Face Experiment</h4>
+          </figure>
+          <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> body-selector-<%= @body_selector_id_2 %>">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quibusdam cupiditate harum nesciunt placeat, accusantium at voluptatem itaque adipisci, nulla tenetur explicabo unde. Autem blanditiis, qui non rerum eveniet praesentium.
+          </p>
+        </div>
+        
+      </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <footer class="footer section-selector-<%= @section_selector_id_4 %>">
+    <h5 class="h5-selector-<%= @h5_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">Curated by Greg Perlman. Copyright 2016</h5>
+  </footer>
+</div>
