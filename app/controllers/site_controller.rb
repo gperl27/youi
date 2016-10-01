@@ -15,6 +15,9 @@ class SiteController < ApplicationController
   before_action :total_count
 
   def home
+    rand = Random.new(10000)
+    user = User.create(cookie_id: rand)
+    session[:user_id] = user.id
   end
 
   def index

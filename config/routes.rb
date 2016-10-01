@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get '/train/:model/:class/:id', to: "site#show", as: :train
 
   #sessions => CALL THIS CUSTOM
-  resources :sessions, only: [:create, :destroy]
+  # resources :sessions, only: [:create, :destroy]
+
+  resources :users, only: [:index, :show]
 
   #stats pages
   get '/stats', to: "site#index"
