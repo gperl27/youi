@@ -3,10 +3,16 @@ Rails.application.routes.draw do
   root "site#home"
   get '/train/:model/:class/:id', to: "site#show", as: :train
 
-  #sessions => CALL THIS CUSTOM
-  # resources :sessions, only: [:create, :destroy]
+  # sessions => CALL THIS CUSTOM?
+  # resources :sessions, only: [:destroy]
+  # delete '/clear', to: "sessions#destroy"
 
-  resources :users, only: [:index, :show]
+  #users
+  post '/user', to: "users#create", as: :user_create
+  get '/user', to: "users#index", as: :user
+  get '/user/:model/:class/:id', to: "users#show", as: :user_train
+  
+
 
   #stats pages
   get '/stats', to: "site#index"

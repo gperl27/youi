@@ -16,10 +16,12 @@ class SiteController < ApplicationController
 
   def home
     rand = Random.new(10000)
-    user = User.create(cookie_id: rand)
-    session[:user_id] = user.id
-    
-    user.initialize_user
+
+    if session[:user_id].nil?
+      user = User.create(cookie_id: rand)
+      session[:user_id] = user.id
+      user.initialize_user
+    end
   end
 
   def index
