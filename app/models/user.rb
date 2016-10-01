@@ -1,6 +1,17 @@
 class User < ApplicationRecord
   # cookie_id uniqueness: :true
   has_many :h1s
+  has_many :h2s
+  has_many :h3s
+  has_many :h4s
+  has_many :h5s
+  has_many :bodies
+  has_many :buttons
+  has_many :images
+  has_many :listelements
+  has_many :paragraphs
+  has_many :sections
+
 
   def initialize_user
     h1 = self.h1s.create!
