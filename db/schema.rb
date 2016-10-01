@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161001002413) do
+ActiveRecord::Schema.define(version: 20161001134604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "bodies", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_bodies_on_user_id", using: :btree
   end
 
   create_table "body_properties", force: :cascade do |t|
@@ -55,6 +57,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "buttons", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_buttons_on_user_id", using: :btree
   end
 
   create_table "h1_properties", force: :cascade do |t|
@@ -90,6 +94,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "h2s", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_h2s_on_user_id", using: :btree
   end
 
   create_table "h3_properties", force: :cascade do |t|
@@ -107,6 +113,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "h3s", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_h3s_on_user_id", using: :btree
   end
 
   create_table "h4_properties", force: :cascade do |t|
@@ -124,6 +132,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "h4s", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_h4s_on_user_id", using: :btree
   end
 
   create_table "h5_properties", force: :cascade do |t|
@@ -141,6 +151,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "h5s", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_h5s_on_user_id", using: :btree
   end
 
   create_table "image_properties", force: :cascade do |t|
@@ -161,6 +173,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "images", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_images_on_user_id", using: :btree
   end
 
   create_table "listelement_properties", force: :cascade do |t|
@@ -177,6 +191,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "listelements", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_listelements_on_user_id", using: :btree
   end
 
   create_table "paragraph_properties", force: :cascade do |t|
@@ -194,6 +210,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "paragraphs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_paragraphs_on_user_id", using: :btree
   end
 
   create_table "section_properties", force: :cascade do |t|
@@ -212,6 +230,8 @@ ActiveRecord::Schema.define(version: 20161001002413) do
   create_table "sections", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -220,5 +240,15 @@ ActiveRecord::Schema.define(version: 20161001002413) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bodies", "users"
+  add_foreign_key "buttons", "users"
   add_foreign_key "h1s", "users"
+  add_foreign_key "h2s", "users"
+  add_foreign_key "h3s", "users"
+  add_foreign_key "h4s", "users"
+  add_foreign_key "h5s", "users"
+  add_foreign_key "images", "users"
+  add_foreign_key "listelements", "users"
+  add_foreign_key "paragraphs", "users"
+  add_foreign_key "sections", "users"
 end
