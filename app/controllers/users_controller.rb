@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   before_action :section_props, only: [:index, :show]
   before_action :body_props, only: [:index, :show]
   before_action :li_props, only: [:index, :show]
+  before_action :total_count, only: [:index, :show]
 
   def index
   end
@@ -37,6 +38,22 @@ class UsersController < ApplicationController
   private
   def find_user
     @user = User.find_by(id: session[:user_id])
+  end
+
+  def total_count
+    @total_count = [
+       @user.h1s[0].h1_properties.count ,  @user.h2s[0].h2_properties.count , 
+       @user.h3s[0].h3_properties.count ,  @user.h4s[0].h4_properties.count , 
+       @user.h5s[0].h5_properties.count ,  @user.images[0].image_properties.count , 
+       @user.listelements[0].listelement_properties.count , 
+       @user.paragraphs[0].paragraph_properties.count, @user.paragraphs[1].paragraph_properties.count,
+       @user.sections[0].section_properties.count, @user.sections[1].section_properties.count,
+       @user.sections[2].section_properties.count, @user.sections[3].section_properties.count,
+       @user.bodies[0].body_properties.count, @user.bodies[1].body_properties.count,
+       @user.buttons[0].button_properties.count, @user.buttons[1].button_properties.count,
+       @user.buttons[2].button_properties.count
+    ].reduce(:+)
+    @total_count -= 18
   end
 
   def h1_props

@@ -45,8 +45,8 @@ class SiteController < ApplicationController
       :h1 => H1Property.count , :h2 => H2Property.count , 
       :h3 => H3Property.count , :h4 => H4Property.count , 
       :h5 => H5Property.count , :image => ImageProperty.count , 
-      :li => ListelementProperty.count , :paragraph => ParagraphProperty.count , 
-      :section => SectionProperty.count , :body => BodyProperty.count
+      :li => ListelementProperty.count , :paragraph => ParagraphProperty.count,
+      :button => ButtonProperty.count,:section => SectionProperty.count , :body => BodyProperty.count
     }
   end
 
@@ -66,7 +66,7 @@ class SiteController < ApplicationController
        H3Property.count ,  H4Property.count , 
        H5Property.count ,  ImageProperty.count , 
        ListelementProperty.count , ParagraphProperty.count , 
-       SectionProperty.count , BodyProperty.count
+       SectionProperty.count , BodyProperty.count, ButtonProperty.count
     ].reduce(:+)
   end
 
