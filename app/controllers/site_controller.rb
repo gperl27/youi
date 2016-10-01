@@ -35,7 +35,7 @@ class SiteController < ApplicationController
     @class << "-#{@id}"
     @model = params[:model]
 
-    @currently_editing = which_component_is_editing(@class)
+    @currently_editing = which_component_is_editing(@class, @id)
   end
 
   private

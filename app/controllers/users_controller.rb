@@ -32,7 +32,11 @@ class UsersController < ApplicationController
     @class << "-#{@id}"
     @model = params[:model]
 
+    p @class
+
     @currently_editing = which_component_is_editing(@class)
+
+    p @currently_editing
   end
 
   private
@@ -54,6 +58,32 @@ class UsersController < ApplicationController
        @user.buttons[2].button_properties.count
     ].reduce(:+)
     @total_count -= 18
+  end
+
+  def which_component_is_editing(data)
+    component_hash = {
+      "h1-selector-#{@h1_selector_id_1}" => "Heading 1",
+      "h2-selector-#{@h2_selector_id_1}" => "Heading 2",
+      "h3-selector-#{@h3_selector_id_1}" => "Heading 3",
+      "h4-selector-#{@h4_selector_id_1}" => "Heading 4",
+      "h5-selector-#{@h5_selector_id_1}" => "Heading 5",
+      "body-selector-#{@body_selector_id_1}" => "Heading Fonts",
+      "body-selector-#{@body_selector_id_2}" => "Body Fonts",
+      "button-selector-#{@button_selector_id_1}" => "Try Me Button",
+      "button-selector-#{@button_selector_id_2}"  => "Selection Buttons",
+      "button-selector-#{@button_selector_id_3}" => "Edit Button",
+      "paragraph-selector-#{@paragraph_selector_id_1}" => "About Paragraph",
+      "paragraph-selector-#{@paragraph_selector_id_2}" => "Image Paragraphs",
+      "image-selector-#{@image_selector_id_2}" => "Images",
+      "section-selector-#{@section_selector_id_1}" => "Header Colors",
+      "section-selector-#{@section_selector_id_2}"  => "Property Section Colors",
+      "section-selector-#{@section_selector_id_3}"  => "About Section Colors",
+      "section-selector-#{@section_selector_id_4}" => "Footer Colors",
+      "li-selector-#{@li_selector_id_1}" => "List Elements"
+    }
+    current = check_components(data , component_hash)
+    p current
+    current = current[data]
   end
 
   def h1_props
