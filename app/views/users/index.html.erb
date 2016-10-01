@@ -1,5 +1,6 @@
+<%= link_to "Clear Session", user_create_path, :method => :post %>
+
+
 <%= link_to user_train_path("h1", "h1-selector", @h1_selector_id) do %>
     <h1 class="h1-selector-<%= @h1_selector_id %> component active body-selector-1">youi</h1>
 <% end %>
-  
-<%= link_to "Clear Session", user_create_path, :method => :post %>
