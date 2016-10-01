@@ -18,6 +18,8 @@ class SiteController < ApplicationController
     rand = Random.new(10000)
     user = User.create(cookie_id: rand)
     session[:user_id] = user.id
+    
+    user.initialize_user
   end
 
   def index
