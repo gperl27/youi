@@ -1,4 +1,5 @@
 <%= link_to "Clear Session", user_create_path, :method => :post %>
+<%= link_to "Download your styles", download_path %>
 <%= render 'home_style' %>
 
 <div class="container-fluid body">
@@ -18,14 +19,21 @@
               <button class="edit button-selector-<%= @button_selector_id_2 %>">Edit Mode</button><span class="edit-mode">On</span>
             </li>
             <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
+            <%= link_to root_path do %>
+              <li class="li-selector-<%= @li_selector_id_1 %>">
+                Home
+              </li>
+            <% end %>
             <%= link_to stats_path do %>
               <li class="li-selector-<%= @li_selector_id_1 %>">
                 Stats
               </li>
             <% end %>
-            <li class="li-selector-<%= @li_selector_id_1 %>">
-              Login
-            </li>
+            <%= link_to user_path(@cookie) do %>
+              <li class="li-selector-<%= @li_selector_id_1 %>">
+                Custom
+              </li>
+            <% end %>
           </ul>
         </nav>
       </div>      

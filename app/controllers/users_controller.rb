@@ -11,19 +11,32 @@ class UsersController < ApplicationController
   before_action :section_props, only: [:index, :show]
   before_action :body_props, only: [:index, :show]
   before_action :li_props, only: [:index, :show]
-  before_action :total_count, only: [:index, :show]
+  before_action :total_count, only: [:index,:show]
 
   def index
+    current_cookie = User.find_by(id: session[:user_id]).cookie_id
+    cookie = params[:cookie_id]
+    if cookie == current_cookie
+      @cookie = cookie
+    else
+      session.clear
+      user = User.find_by(cookie_id: cookie)
+      session[:user_id] = user.id
+      @cookie = user.cookie_id
+    end
   end
 
   def create
     session.clear
 
-    user = User.create(cookie_id: 2)
+    rand = SecureRandom.urlsafe_base64
+    user = User.create(cookie_id: rand)
     session[:user_id] = user.id
     user.initialize_user
 
-    redirect_to user_path
+    @cookie = user.cookie_id
+
+    redirect_to user_path(@cookie)
   end
 
   def show
@@ -32,11 +45,13 @@ class UsersController < ApplicationController
     @class << "-#{@id}"
     @model = params[:model]
 
-    p @class
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
 
     @currently_editing = which_component_is_editing(@class)
+  end
 
-    p @currently_editing
+  def download
+    send_file '/app/views/users/_home_style.html.erb'
   end
 
   private

@@ -15,12 +15,22 @@
               <button class="button-selector-<%= @button_selector_id_2 %>">Edit Mode</button><span class="edit-mode">On</span>
             </li>
             <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
+            <%= link_to root_path do %>
+              <li class="li-selector-<%= @li_selector_id_1 %>">
+                Home
+              </li>
+            <% end %>
+            <%= link_to stats_path do %>
             <li class="li-selector-<%= @li_selector_id_1 %>">
               Stats
             </li>
+            <% end %>
+            
+            <%= link_to user_path(@cookie) do %>
             <li class="li-selector-<%= @li_selector_id_1 %>">
-              Login
+              Custom
             </li>
+            <% end %>
           </ul>
         </nav>
       </div>

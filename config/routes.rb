@@ -7,11 +7,13 @@ Rails.application.routes.draw do
   # resources :sessions, only: [:destroy]
   # delete '/clear', to: "sessions#destroy"
 
+  #css user download
+  get '/user/download', to: "users#download",  as: :download
+
   #users
   post '/user', to: "users#create", as: :user_create
-  get '/user', to: "users#index", as: :user
-  get '/user/:model/:class/:id', to: "users#show", as: :user_train
-  
+  get '/user/:cookie_id', to: "users#index", as: :user
+  get '/user/:model/:class/:id', to: "users#show", as: :user_train  
 
 
   #stats pages

@@ -15,12 +15,16 @@ class SiteController < ApplicationController
   before_action :total_count
 
   def home
-    rand = Random.new(10000)
-
+    
     if session[:user_id].nil?
+      rand = SecureRandom.urlsafe_base64
       user = User.create(cookie_id: rand)
       session[:user_id] = user.id
       user.initialize_user
+      @cookie = user.cookie_id
+    else
+      current_user = User.find_by(id: session[:user_id])
+      @cookie = current_user.cookie_id
     end
   end
 
@@ -35,7 +39,9 @@ class SiteController < ApplicationController
     @class << "-#{@id}"
     @model = params[:model]
 
-    @currently_editing = which_component_is_editing(@class, @id)
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
+
+    @currently_editing = which_component_is_editing(@class)
   end
 
   private
