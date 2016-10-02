@@ -1,10 +1,13 @@
-<%= link_to "Clear Session", user_create_path, :method => :post %>
 <%= link_to "Download your styles", download_url %>
 <%= render 'home_style' %>
 
 <div class="container-fluid body">
   
   <header class="header section active-section section-selector-<%= @section_selector_id_1 %>">
+    <div class='edit-container'>
+      <button class="edit button-selector-<%= @button_selector_id_2 %>">Edit Mode</button>
+      <span class="edit-mode">On</span>
+    </div>
     <div class="row">
       
       <div class="col-md-2">
@@ -15,10 +18,9 @@
       <div class="col-md-10">
         <nav class="nav">
           <ul class="body-selector-<%= @body_selector_id_2 %>">
-            <li class="li-selector-<%= @li_selector_id_1 %>">
-              <button class="edit button-selector-<%= @button_selector_id_2 %>">Edit Mode</button><span class="edit-mode">On</span>
-            </li>
-            <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
+            <!-- <li class="li-selector-<%= @li_selector_id_1 %>">
+              
+            </li> -->
             <%= link_to root_path do %>
               <li class="li-selector-<%= @li_selector_id_1 %>">
                 Home
@@ -34,11 +36,22 @@
                 Custom
               </li>
             <% end %>
+            <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
+            <%= link_to user_create_path(@cookie), :method => :post do %>
+              <li class="li-selector-<%= @li_selector_id_1 %>">
+                New Session
+              </li>
+            <% end %>
+            <li class="li-selector-<%= @li_selector_id_1 %> save" data-toggle="modal" data-target="#save">
+              Save
+            </li>
           </ul>
         </nav>
       </div>      
     </div>
   </header>
+
+  <%= render 'custom_modal' %>
   
   
   <section class="instructions active-section container">
@@ -60,16 +73,16 @@
           <% end %>
           <ul class="body-selector-<%= @body_selector_id_2 %>">
             <%= link_to user_train_path("section", "section-selector", @section_selector_id_1) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the heading"s colors">Heading</button>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the heading's colors">Heading</button>
             <% end %>
             <%= link_to user_train_path("section", "section-selector", @section_selector_id_2) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change this section"s colors">This Section</button>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change this section's colors">This Section</button>
             <% end %>
             <%= link_to user_train_path("section", "section-selector", @section_selector_id_3) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the about section"s colors">About</button>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the about section's colors">About</button>
             <% end %>
             <%= link_to user_train_path("section", "section-selector", @section_selector_id_4) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the footer"s colors">Footer</button>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the footer's colors">Footer</button>
             <% end %>
           </ul>
         </div>
@@ -79,10 +92,10 @@
           <% end %>
           <ul class="body-selector-<%= @body_selector_id_2 %>">
             <%= link_to user_train_path("body", "body-selector", @body_selector_id_1) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="bottom" title="Change page"s heading fonts">Heading Fonts</button>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="bottom" title="Change page's heading fonts">Heading Fonts</button>
             <% end %>
             <%= link_to user_train_path("body", "body-selector", @body_selector_id_2) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="bottom" title="Change page"s body font">Body Fonts</button>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="bottom" title="Change page's body font">Body Fonts</button>
             <% end %>
             <!-- <button>
               Line Height
@@ -98,7 +111,7 @@
               <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the edit button">Edit Button</button>
             <% end %>
             <%= link_to user_train_path("button", "button-selector", @button_selector_id_3) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change this section"s buttons">This Section"s Buttons</button>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change this section's buttons">This Section's Buttons</button>
             <% end %>
             <%= link_to user_train_path("li", "li-selector", @li_selector_id_1) do %>
               <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the navigation element styles from the top-right corner">Top-right Navbar</button>
@@ -156,7 +169,7 @@
            <figure>
             <div class="component active">
               <%= link_to user_train_path("image", "image-selector", @image_selector_id_1) do %>
-                <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/faces.jpg" alt="Average of women"s faces">
+                <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/faces.jpg" alt="Average of women's faces">
               <% end %>
             </div>
             <%= link_to user_train_path("h4", "h4-selector", @h4_selector_id_1) do %>

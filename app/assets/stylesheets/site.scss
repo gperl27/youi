@@ -25,12 +25,18 @@ $neon-green-border: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00F
   margin-left: 15px;
 }
 
-.header h1 {
-  margin-left: 50px;
+.edit-container {
+  position: absolute;
+  bottom:-125px;
+  right: 40px;
 }
 
-.nav {
-  // margin-top: -10px;
+.header {
+  position:relative;
+}
+
+.header h1 {
+  margin-left: 50px;
 }
 
 .nav {
@@ -39,9 +45,19 @@ $neon-green-border: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00F
 }
 
 .nav li {
+  opacity: .6;  
   display: inline-block;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.nav li:hover {
+  transition: .2s;
+  opacity: 1;
+}
+
+.save:hover {
+  cursor: pointer;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
