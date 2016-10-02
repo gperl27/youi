@@ -30,5 +30,7 @@ class H1sController < ApplicationController
     font_weight_stats(H1Property)
     letter_spacing_stats(H1Property)
     text_transform_stats(H1Property)
+
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
   end
 end

@@ -28,5 +28,7 @@ class H3sController < ApplicationController
     letter_spacing_stats(H3Property)
     text_transform_stats(H3Property)
     word_spacing_stats(H3Property)
+
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
   end
 end

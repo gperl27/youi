@@ -26,5 +26,7 @@ class ListelementsController < ApplicationController
     font_style_stats(ListelementProperty)
     letter_spacing_stats(ListelementProperty)
     text_transform_stats(ListelementProperty)
+
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
   end
 end

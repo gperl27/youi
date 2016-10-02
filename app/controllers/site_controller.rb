@@ -31,6 +31,8 @@ class SiteController < ApplicationController
   def index
     @max = max_change[0].to_s.capitalize
     @min = min_change[0].to_s.capitalize
+
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
   end
 
   def show

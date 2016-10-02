@@ -36,5 +36,7 @@ class ImagesController < ApplicationController
     border_stats(ImageProperty)
     border_radius(ImageProperty)
     border_color_stats(ImageProperty)
+
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
   end
 end

@@ -28,5 +28,7 @@ class ParagraphsController < ApplicationController
     indent_stats(ParagraphProperty)
     word_spacing_stats(ParagraphProperty)
     font_size_stats(ParagraphProperty)
+
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
   end
 end

@@ -26,5 +26,7 @@ class SectionsController < ApplicationController
     changes(SectionProperty)
     color_stats(SectionProperty)
     bg_stats(SectionProperty)
+
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
   end
 end

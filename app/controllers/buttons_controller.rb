@@ -52,5 +52,7 @@ class ButtonsController < ApplicationController
     color_stats(ButtonProperty)
     bg_stats(ButtonProperty)
     border_color_stats(ButtonProperty)
+    
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
   end
 end

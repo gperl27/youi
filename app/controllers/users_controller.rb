@@ -24,6 +24,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       @cookie = user.cookie_id
     end
+    
   end
 
   def create
@@ -51,7 +52,7 @@ class UsersController < ApplicationController
   end
 
   def download
-    send_file '/app/views/users/_home_style.html.erb'
+    send_file "/#{Rails.root}/app/views/users/_home_style.html.erb"
   end
 
   private

@@ -1,5 +1,5 @@
 <%= link_to "Clear Session", user_create_path, :method => :post %>
-<%= link_to "Download your styles", download_path %>
+<%= link_to "Download your styles", download_url %>
 <%= render 'home_style' %>
 
 <div class="container-fluid body">
@@ -132,7 +132,7 @@
         
         <div class="col-md-6">
           <figure>
-            <div class="component">
+            <div class="component active">
               <%= link_to user_train_path("image", "image-selector", @image_selector_id_1) do %>
                 <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/twitch.jpg" alt="Twitch Plays Pokemon">
               <% end %>
@@ -154,7 +154,7 @@
         
         <div class="col-md-6">
            <figure>
-            <div class="component">
+            <div class="component active">
               <%= link_to user_train_path("image", "image-selector", @image_selector_id_1) do %>
                 <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/faces.jpg" alt="Average of women"s faces">
               <% end %>

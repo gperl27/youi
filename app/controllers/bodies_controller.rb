@@ -17,5 +17,7 @@ class BodiesController < ApplicationController
   def show
     changes(BodyProperty)
     font_family_stats(BodyProperty)
+
+    @cookie = User.find_by(id: session[:user_id]).cookie_id
   end
 end
