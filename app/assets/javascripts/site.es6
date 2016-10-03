@@ -3,6 +3,7 @@
 
 $(document).on('turbolinks:load', function(){
    $('.edit').on('click', toggleEdit);
+   $('.explore').on('click', toggleExplore);
 });
 
 
@@ -15,4 +16,19 @@ function toggleEdit(){
     text == "On" ? "Off" : "On");
      $('.active').toggleClass('component');
      //$('.active-section').toggleClass('section');
+}
+
+function toggleExplore(){
+  var text = $('.explore-mode').text();
+     $('.explore-mode').text(
+    text == "On" ? "Off" : "On");
+     $('.active').toggleClass('exploring');
+
+      if($('.active').hasClass('exploring')){
+        console.log('yes');
+        $('.active').tooltip();
+      } else {
+        console.log('no');
+        $('.active').tooltip('destroy');
+      }
 }

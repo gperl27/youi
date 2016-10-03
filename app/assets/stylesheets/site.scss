@@ -49,11 +49,11 @@ html {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** header **/
-.edit {
+.edit, .explore {
   outline: none;
 }
 
-.edit-mode {
+.edit-mode, .explore-mode {
   font-weight: bold;
   margin-left: 15px;
 }
