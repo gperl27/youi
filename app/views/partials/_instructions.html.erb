@@ -27,11 +27,19 @@
     </div>
     <div class='col-md-5'>
       <div class='edit-container'>
-        <button class="edit button-selector-2 button-selector-<%= @button_selector_id_2%>">Edit Mode</button>
-        <span class="edit-mode">On</span>
-         <button class='button-selector-2 button-selector-<%= @button_selector_id_2%>' data-toggle="modal" data-target="#current-CSS">
-            Current CSS
-        </button>
+        <ul>
+          <li>
+            <button class="edit button-selector-2 button-selector-<%= @button_selector_id_2%>">
+              Edit Mode
+            </button>
+            <span class="edit-mode">On</span>
+          </li>
+          <li>
+            <button class='button-selector-2 button-selector-<%= @button_selector_id_2%>' data-toggle="modal" data-target="#current-CSS">
+              Current CSS
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
