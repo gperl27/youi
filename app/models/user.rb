@@ -91,7 +91,7 @@ class User < ApplicationRecord
 
     body = self.bodies.create!
     heading = self.bodies.create!
-    bodyfont = body.body_properties.create!(fontfamily: "Times New Roman")
-    headingfont = heading.body_properties.create!(fontfamily: "Helvetica")
+    bodyfont = body.body_properties.create!(fontfamily: "Georgia")
+    headingfont = heading.body_properties.create!(fontfamily: "Arial")
   end
 end

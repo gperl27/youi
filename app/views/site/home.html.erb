@@ -1,9 +1,6 @@
 <%= render("home_style") %>
-
+<%= render "partials/current_modal" %>
 <div class='container-fluid body'>
-
-  <%= render "partials/current_modal" %>
-  
   <header class='header section active-section section-selector-1'>
 
     <div class='row'>
@@ -14,7 +11,7 @@
         <% end %>
       </div>      
       <div class='col-md-10'>
-        <nav class='nav'>
+        <nav class='custom-nav'>
           <ul class='body-selector-2'>
             <%= link_to root_path do %>
               <li class="li-selector-1">
@@ -88,17 +85,17 @@
         </div>
         <div class='col-md-4'>
           <%= link_to train_path("h2", "h2-selector", 1) do %>
-            <h2 class='h2-selector-1 component active body-selector-1'>Other Editables</h2>
+            <h2 class='h2-selector-1 component active body-selector-1'>Misc</h2>
           <% end %>
           <ul class='body-selector-2'>
             <%= link_to train_path("button", "button-selector", 2) do %>
-              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="right" title="Change the edit button">Edit Button</button>
+              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="right" title="Change the edit and CSS buttons">Instruction Buttons</button>
             <% end %>
             <%= link_to train_path("button", "button-selector", 3) do %>
               <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="right" title="Change this section's buttons">This Section's Buttons</button>
             <% end %>
             <%= link_to train_path("li", "li-selector", 1) do %>
-              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="right" title="Change the navigation element styles from the top-right corner">Top-right Navbar</button>
+              <button class='button-selector-3 button-selector' data-toggle="tooltip" data-placement="right" title="Change the navigation element styles in the top-right corner">Navbar</button>
             <% end %>
           </ul>
         </div> 

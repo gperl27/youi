@@ -1,9 +1,8 @@
 <%= render 'home_style' %>
-
+<%= render "partials/current_modal" %>
 <div class="container-fluid body">
   <%= render 'custom_modal' %>
   <header class="header section active-section section-selector-<%= @section_selector_id_1 %>">
-    <%= render "partials/current_modal" %>
 
     <div class="row">
       
@@ -13,7 +12,7 @@
         <% end %>
       </div>      
       <div class="col-md-10">
-        <nav class="nav">
+        <nav class="custom-nav">
           <ul class="body-selector-<%= @body_selector_id_2 %>">
             <!-- <li class="li-selector-<%= @li_selector_id_1 %>">
               
@@ -101,17 +100,17 @@
         </div>
         <div class="col-md-4">
           <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1) do %>
-            <h2 class="h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Other Editables</h2>
+            <h2 class="h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Misc</h2>
           <% end %>
           <ul class="body-selector-<%= @body_selector_id_2 %>">
             <%= link_to user_train_path("button", "button-selector", @button_selector_id_2) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the edit button">Edit Button</button>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the edit and CSS buttons">Instruction Buttons</button>
             <% end %>
             <%= link_to user_train_path("button", "button-selector", @button_selector_id_3) do %>
               <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change this section's buttons">This Section's Buttons</button>
             <% end %>
             <%= link_to user_train_path("li", "li-selector", @li_selector_id_1) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the navigation element styles from the top-right corner">Top-right Navbar</button>
+              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the navigation element styles in the top-right corner">Navbar</button>
             <% end %>
           </ul>
         </div> 

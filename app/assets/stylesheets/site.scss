@@ -9,10 +9,30 @@ $neon-green-border: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00F
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** Universal **/
 
+body,
+html {
+  overflow-x: hidden;
+}
+
+//Bootstrap container reset
+.container, .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .button-selector:hover, .image-selector:hover {
   opacity: .8;
   transition: .3s;
 }
+
+.site-editables, .footer, .instructions, .info {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+// #current-CSS {
+  
+// }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** header **/
@@ -25,6 +45,16 @@ $neon-green-border: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00F
   margin-left: 15px;
 }
 
+.special-buttons {
+  ul {
+    margin-top: 65px;
+    li {
+      margin-bottom: 25px;
+      list-style-type: none;
+    }
+  }
+}
+
 .header {
   position:relative;
 }
@@ -33,22 +63,22 @@ $neon-green-border: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00F
   margin-left: 50px;
 }
 
-.nav {
+.custom-nav {
+  margin-top: 25px;
   float: right;
   margin-right: 50px;
+  li {
+    opacity: .6;  
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  li:hover {
+    transition: .2s;
+    opacity: 1;
+  }
 }
 
-.nav li {
-  opacity: .6;  
-  display: inline-block;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.nav li:hover {
-  transition: .2s;
-  opacity: 1;
-}
 
 .save:hover {
   cursor: pointer;
@@ -123,6 +153,7 @@ $neon-green-border: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00F
 
 .footer {
   text-align: center;
+  padding: 25px;  
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
