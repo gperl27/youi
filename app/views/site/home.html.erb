@@ -7,7 +7,26 @@
       
       <div class='col-md-2'>
         <%= link_to train_path("h1", "h1-selector", 1) do %>
-          <h1 class='h1-selector-1 component active body-selector-1'>youi</h1>
+          <h1 class='h1-selector-1 component active body-selector-1'
+          data-toggle="tooltip" data-placement="right" data-html="true"
+          title="
+          <div class='big-tips'>
+            <ul>
+              <li>
+                Font Size: <%= @h1_font_size %>px
+              </li>
+              <li>
+                Text Transformation: <%= @h1_text_transform %>
+              </li>
+              <li>
+                Letter Spacing <%= @h1_letter_spacing %>px
+              </li>
+              <li>
+                Font Weight: <%= @h1_font_weight %>
+              </li>
+            </ul>
+          </div>"
+          >youi</h1>
         <% end %>
       </div>      
       <div class='col-md-10'>

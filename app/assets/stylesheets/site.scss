@@ -30,9 +30,22 @@ html {
   padding-bottom: 25px;
 }
 
-// #current-CSS {
-  
-// }
+.tooltip-inner { 
+  max-width: 500px;
+}
+
+
+.big-tips {
+  width: 250px;
+  ul {
+    text-align: left;
+    padding-left: 0;
+    li {
+      font-size: 14px;
+    }
+  }
+  padding: 25px;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** header **/
