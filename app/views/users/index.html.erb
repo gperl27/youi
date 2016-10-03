@@ -129,12 +129,9 @@
       <% end %>
       
       <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_1) do %>
-        <p class="paragraph-selector-<%= @paragraph_selector_id_1 %> component active body-selector-<%= @body_selector_id_2 %>">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="paragraph-selector-<%= @paragraph_selector_id_1 %> component active body-selector-<%= @body_selector_id_2 %>">
+          <%= render "partials/about_info" %>
+        </p>
       <% end %>
       
       <div class="inspirations">
@@ -156,12 +153,9 @@
           </figure>
           
           <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2) do %>
-            <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>">
+              <%= render "partials/twitch_info" %>
+            </p>
           <% end %>
         </div>
         
@@ -177,12 +171,9 @@
             <% end %>
           </figure>
           <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2) do %>
-            <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>">
+              <%= render "partials/faces_info" %>
+            </p>
           <% end %>
         </div>
         
