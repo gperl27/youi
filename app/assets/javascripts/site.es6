@@ -13,7 +13,7 @@ $(document).on('turbolinks:load', function(){
 function toggleEdit(){
   var text = $('.edit-mode').text();
      $('.edit-mode').text(
-    text == "On" ? "Off" : "On");
+      text == "On" ? "Off" : "On");
      $('.active').toggleClass('component');
      //$('.active-section').toggleClass('section');
 }
@@ -21,14 +21,14 @@ function toggleEdit(){
 function toggleExplore(){
   var text = $('.explore-mode').text();
      $('.explore-mode').text(
-    text == "On" ? "Off" : "On");
-     $('.active').toggleClass('exploring');
+      text == "On" ? "Off" : "On");
+     $('.can-explore').toggleClass('exploring');
 
-      if($('.active').hasClass('exploring')){
+      if($('.can-explore').hasClass('exploring')){
         console.log('yes');
-        $('.active').tooltip();
+        $('.can-explore').tooltip();
       } else {
         console.log('no');
-        $('.active').tooltip('destroy');
+        $('.can-explore').tooltip('destroy');
       }
 }

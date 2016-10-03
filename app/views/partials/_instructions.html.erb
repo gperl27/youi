@@ -28,13 +28,113 @@
       <div class='special-buttons'>
         <ul>
           <li>
-            <button class="edit button-selector-2 button-selector-<%= @button_selector_id_2%>">
+            <button class="edit can-explore button-selector-2 button-selector-<%= @button_selector_id_2 %>"
+                data-toggle="tooltip" data-placement="right" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <ul>
+                    <li>
+                  Font Size: <%= @button_2_font_size %>px
+                    </li>
+                    <li>
+                  Font Weight: <%= @button_2_font_weight %>
+                    </li>
+                    <li>
+                  Text Transformation: <%= @button_2_text_transform %>
+                    </li>
+                    <li>
+                  Letter Spacing: <%= @button_2_letter_spacing %>px
+                    </li>
+                    <li>
+                  Padding: <%= @button_2_padding %>px
+                    </li>
+                    <li>
+                  Border Size: <%= @button_2_border %>px
+                    </li>
+                    <li>
+                  Border-Radius: <%= @button_2_border_radius %>px
+                    </li>
+                    <li>
+                  Border-Style: <%= @button_2_border_style %>
+                    </li>
+                    <li>
+                  Color(HSL = Hue, Saturation, Luminosity):
+                    <%= @button_2_color_hue %>, 
+                    <%= @button_2_color_saturation %>%, 
+                    <%= @button_2_color_luminosity %>%)
+                    </li>
+                    <li>
+                  Border-color(HSL = Hue, Saturation, Luminosity):
+                    <%= @button_2_border_color_hue %>, 
+                    <%= @button_2_border_color_saturation %>%, 
+                    <%= @button_2_border_color_luminosity %>%)
+                    </li>
+                    <li>
+                  Background-Color: (HSL = Hue, Saturation, Luminosity):
+                    <%= @button_2_bg_color_hue %>, 
+                    <%= @button_2_bg_color_saturation %>%, 
+                    <%= @button_2_bg_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+                >
               Edit Mode
             </button>
             <span class="edit-mode">On</span>
           </li>
           <li>
-            <button class="explore button-selector-2 button-selector-<%= @button_selector_id_2%>">
+            <button class="explore can-explore button-selector-2 button-selector-<%= @button_selector_id_2 %>"
+                data-toggle="tooltip" data-placement="right" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <ul>
+                    <li>
+                  Font Size: <%= @button_2_font_size %>px
+                    </li>
+                    <li>
+                  Font Weight: <%= @button_2_font_weight %>
+                    </li>
+                    <li>
+                  Text Transformation: <%= @button_2_text_transform %>
+                    </li>
+                    <li>
+                  Letter Spacing: <%= @button_2_letter_spacing %>px
+                    </li>
+                    <li>
+                  Padding: <%= @button_2_padding %>px
+                    </li>
+                    <li>
+                  Border Size: <%= @button_2_border %>px
+                    </li>
+                    <li>
+                  Border-Radius: <%= @button_2_border_radius %>px
+                    </li>
+                    <li>
+                  Border-Style: <%= @button_2_border_style %>
+                    </li>
+                    <li>
+                  Color(HSL = Hue, Saturation, Luminosity):
+                    <%= @button_2_color_hue %>, 
+                    <%= @button_2_color_saturation %>%, 
+                    <%= @button_2_color_luminosity %>%)
+                    </li>
+                    <li>
+                  Border-color(HSL = Hue, Saturation, Luminosity):
+                    <%= @button_2_border_color_hue %>, 
+                    <%= @button_2_border_color_saturation %>%, 
+                    <%= @button_2_border_color_luminosity %>%)
+                    </li>
+                    <li>
+                  Background-Color: (HSL = Hue, Saturation, Luminosity):
+                    <%= @button_2_bg_color_hue %>, 
+                    <%= @button_2_bg_color_saturation %>%, 
+                    <%= @button_2_bg_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+              >
               Explore Mode
             </button>
             <span class="explore-mode">Off</span>

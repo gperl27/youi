@@ -14,9 +14,7 @@
       <div class="col-md-10">
         <nav class="custom-nav">
           <ul class="body-selector-<%= @body_selector_id_2 %>">
-            <!-- <li class="li-selector-<%= @li_selector_id_1 %>">
-              
-            </li> -->
+          
             <%= link_to root_path do %>
               <li class="li-selector-<%= @li_selector_id_1 %>">
                 Home
@@ -52,10 +50,15 @@
   
   <section class="instructions active-section container">
     <%= render "partials/instructions"  %>
-    <div class="component active try-me">
-      <%= link_to user_train_path("button", "button-selector", @button_selector_id_1) do %>
-      <button class="button-selector-<%= @button_selector_id_1 %> button-selector body-selector-<%= @body_selector_id_2 %>">Try Me</button>
-      <% end %>
+    <div class='row'>
+      <div class='col-md-7'>
+        <div class="component active try-me">
+          <%= link_to user_train_path("button", "button-selector", @button_selector_id_1) do %>
+          <button class="button-selector-<%= @button_selector_id_1 %> button-selector body-selector-<%= @body_selector_id_2 %>">Try Me</button>
+          <% end %>
+        </div>
+      </div>
+      <div class='col-md-5'></div>
     </div>
   </section>
   

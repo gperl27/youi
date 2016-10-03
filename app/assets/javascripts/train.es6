@@ -11,7 +11,8 @@ $(document).on('turbolinks:load', function(){
     $('[data-toggle="tooltip"]').tooltip()
   });
 
-  $('.active').tooltip('destroy');
+  //don't show tooltips until 'explore-mode' is clicked
+  $('.can-explore').tooltip('destroy');
 
   //grab id of selector to set first component change on load
   var id = $('.good').data("id");
