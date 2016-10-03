@@ -3,10 +3,8 @@
 <div class="container-fluid body">
   <%= render 'custom_modal' %>
   <header class="header section active-section section-selector-<%= @section_selector_id_1 %>">
-    <div class='edit-container'>
-      <button class="edit button-selector-<%= @button_selector_id_2 %>">Edit Mode</button>
-      <span class="edit-mode">On</span>
-    </div>
+    <%= render "partials/current_modal" %>
+
     <div class="row">
       
       <div class="col-md-2">
@@ -54,7 +52,7 @@
   
   
   <section class="instructions active-section container">
-    <%= render "partials/instructions" %>
+    <%= render "partials/instructions"  %>
     <div class="component active try-me">
       <%= link_to user_train_path("button", "button-selector", @button_selector_id_1) do %>
       <button class="button-selector-<%= @button_selector_id_1 %> button-selector body-selector-<%= @body_selector_id_2 %>">Try Me</button>

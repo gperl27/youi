@@ -2,21 +2,37 @@
   <span class='loud'>
       You've made <%= @total_count %> changes
   </span>
-  <h2>Instructions:</h2>
-  <ul>
-    <li>Most of what you see on this page CAN be changed!</li>
-    <li>
-      Individual components (like the 'Youi' text in the top-left corner of the page) are changeable if they have a  <span class='green'>green</span> border when you <strong>hover over them</strong>.
-    </li>
-    <li>
-      Sections such as the footer can be changed using the <strong>set of buttons below</strong>.
-    </li>
-    <li>
-      Click the <strong>'Edit Mode'</strong> button at the top to turn off the hover interactions so you can see your <em>beautiful</em> site!
-    </li>
-    <li>
-      To learn more, please scroll below and read the "About" section.
-    </li>
-    <li>Oh, and don't forget to read the directions!</li>
-  </ul>
+  <div class='row'>
+    <div class='col-md-7'>
+      <h2>Instructions:</h2>
+      <ul>
+        <li>Most of what you see on this page CAN be changed!</li>
+        <li>
+          Individual components (like the 'Youi' text in the top-left corner of the page) are changeable if they have a  <span class='green'>green</span> border when you <strong>hover over them</strong>.
+        </li>
+        <li>
+          Sections such as the footer can be changed using the <strong>set of buttons below</strong>.
+        </li>
+        <li>
+          Click the <strong>'Edit Mode'</strong> button to the right to turn off the hover interactions so you can see your <em>beautiful</em> site!
+        </li>
+        <li>
+          Click the <strong>'Generate CSS'</strong> button to view the styles for the current website.
+        </li>
+        <li>
+          To learn more, please scroll below and read the "About" section.
+        </li>
+        <li>Oh, and don't forget to read the directions!</li>
+      </ul>
+    </div>
+    <div class='col-md-5'>
+      <div class='edit-container'>
+        <button class="edit button-selector-2 button-selector-<%= @button_selector_id_2%>">Edit Mode</button>
+        <span class="edit-mode">On</span>
+         <button class='button-selector-2 button-selector-<%= @button_selector_id_2%>' data-toggle="modal" data-target="#current-CSS">
+            Current CSS
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

@@ -83,7 +83,7 @@ section_4.section_properties.create!(
 
 body = Body.create!
 heading = Body.create!
-bodyfont = body.body_properties.create!(fontfamily: "Times New Roman")
+bodyfont = body.body_properties.create!(fontfamily: "Arial")
 headingfont = heading.body_properties.create!(fontfamily: "Helvetica")
 
 
