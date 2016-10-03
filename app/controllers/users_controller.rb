@@ -1,17 +1,17 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:index, :show]
-  before_action :h1_props, only: [:index, :show]
-  before_action :h2_props, only: [:index, :show]
-  before_action :h3_props, only: [:index, :show]
-  before_action :h4_props, only: [:index, :show]
-  before_action :h5_props, only: [:index, :show]
-  before_action :button_props, only: [:index, :show]
-  before_action :paragraph_props, only: [:index, :show]
-  before_action :image_props, only: [:index, :show]
-  before_action :section_props, only: [:index, :show]
-  before_action :body_props, only: [:index, :show]
-  before_action :li_props, only: [:index, :show]
-  before_action :total_count, only: [:index,:show]
+  before_action :find_user, only: [:index, :show, :download]
+  before_action :h1_props, only: [:index, :show, :download]
+  before_action :h2_props, only: [:index, :show, :download]
+  before_action :h3_props, only: [:index, :show, :download]
+  before_action :h4_props, only: [:index, :show, :download]
+  before_action :h5_props, only: [:index, :show, :download]
+  before_action :button_props, only: [:index, :show, :download]
+  before_action :paragraph_props, only: [:index, :show, :download]
+  before_action :image_props, only: [:index, :show, :download]
+  before_action :section_props, only: [:index, :show, :download]
+  before_action :body_props, only: [:index, :show, :download]
+  before_action :li_props, only: [:index, :show, :download]
+  before_action :total_count, only: [:index,:show, :download]
 
   def index
     current_cookie = User.find_by(id: session[:user_id]).cookie_id
@@ -51,9 +51,12 @@ class UsersController < ApplicationController
     @currently_editing = which_component_is_editing(@class)
   end
 
-  def download
-    send_file "/#{Rails.root}/app/views/users/_home_style.html.erb"
-  end
+  # def download
+  #   # send_file "/#{Rails.root}/app/views/users/_home_style.html.erb"
+  #   @cookie = User.find_by(id: session[:user_id]).cookie_id
+  #   response.headers['Content-Disposition'] = 'attachment; filename=yourpage.css'
+  #   render 'show'
+  # end
 
   private
   def find_user

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # delete '/clear', to: "sessions#destroy"
 
   #css user download
-  get '/user/download', to: "users#download",  as: :download
+  # get '/user/download', to: "users#download",  as: :download
 
   #users
   post '/user', to: "users#create", as: :user_create

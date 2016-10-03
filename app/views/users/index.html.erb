@@ -1,8 +1,7 @@
-<%= link_to "Download your styles", download_url %>
 <%= render 'home_style' %>
 
 <div class="container-fluid body">
-  
+  <%= render 'custom_modal' %>
   <header class="header section active-section section-selector-<%= @section_selector_id_1 %>">
     <div class='edit-container'>
       <button class="edit button-selector-<%= @button_selector_id_2 %>">Edit Mode</button>
@@ -51,7 +50,7 @@
     </div>
   </header>
 
-  <%= render 'custom_modal' %>
+  
   
   
   <section class="instructions active-section container">

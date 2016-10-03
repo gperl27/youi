@@ -1,0 +1,507 @@
+<div class="modal fade" id='current-CSS' tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Current Styles</h4>
+      </div>
+      <div class="modal-body">
+
+<div>
+  <h3>Fonts</h3>
+  <ul>
+    <li>
+      Heading Fonts: <%= @heading_font %>  
+    </li>
+    <li>
+      Body Font: <%= @body_font %>;
+    </li>
+  </ul>
+
+  <h3>Heading 1</h3>
+    <ul>
+      <li>
+    Font Size: <%= @h1_font_size %>px;
+        
+      </li>
+      <li>
+        
+    Text Transformation: <%= @h1_text_transform %>;
+      </li>
+      <li>
+        
+    Letter Spacing <%= @h1_letter_spacing %>px;
+      </li>
+      <li>
+        
+    Font Weight: <%= @h1_font_weight %>;
+      </li>
+    </ul>
+
+    <h3>H3 Selector</h3>
+    <ul>
+      <li>
+        
+    Font Size: <%= @h2_font_size %>px;
+      </li>
+      <li>
+    Text Transformation: <%= @h2_text_transform %>;
+        
+      </li>
+      <li>
+        
+    Letter Spacing: <%= @h2_letter_spacing %>px;
+      </li>
+      <li>
+        
+    Font Weight: <%= @h2_font_weight %>;
+      </li>
+      <li>
+        
+    word-spacing: <%= @h2_word_spacing %>px;
+      </li>
+    </ul>
+
+    <h3>H3 Heading</h3>
+    <ul>
+      <li>
+        
+    Font Size: <%= @h3_font_size %>px;
+      </li>
+      <li>
+    Text Transformation: <%= @h3_text_transform %>;
+        
+      </li>
+      <li>
+        
+    Letter Spacing: <%= @h3_letter_spacing %>px;
+      </li>
+      <li>
+        
+    Font Weight: <%= @h3_font_weight %>;
+      </li>
+      <li>
+        
+    word-spacing: <%= @h3_word_spacing %>px;
+      </li>
+    </ul>
+
+    <h3>H4 Heading</h3>
+    <ul>
+      <li>
+        
+    Font Size: <%= @h4_font_size %>px;
+      </li>
+      <li>
+    Text Transformation: <%= @h4_text_transform %>;
+        
+      </li>
+      <li>
+        
+    Letter Spacing: <%= @h4_letter_spacing %>px;
+      </li>
+      <li>
+        
+    Font Weight: <%= @h4_font_weight %>;
+      </li>
+      <li>
+        
+    word-spacing: <%= @h4_word_spacing %>px;
+      </li>
+    </ul>
+
+
+    <h3>H5 Heading</h3>
+    <ul>
+      <li>
+        
+    Font Size: <%= @h5_font_size %>px;
+      </li>
+      <li>
+    Text Transformation: <%= @h5_text_transform %>;
+        
+      </li>
+      <li>
+        
+    Letter Spacing: <%= @h5_letter_spacing %>px;
+      </li>
+      <li>
+        
+    Font Weight: <%= @h5_font_weight %>;
+      </li>
+      <li>
+        
+    word-spacing: <%= @h5_word_spacing %>px;
+      </li>
+    </ul>
+
+    <h3>Try Me Button</h3>
+    <ul>
+      <li>
+        
+    Font Size: <%= @button_1_font_size %>px;
+      </li>
+      <li>
+        
+      </li>
+      <li>
+        
+    Font Weight: <%= @button_1_font_weight %>;
+      </li>
+      <li>
+    Text Transformation: <%= @button_1_text_transform %>;
+        
+      </li>
+      <li>
+    Letter Spacing: <%= @button_1_letter_spacing %>px;
+        
+      </li>
+      <li>
+        
+    Padding: <%= @button_1_padding %>px;
+      </li>
+      <li>
+        
+      </li>
+      <li>
+    Border Size: <%= @button_1_border %>px;
+        
+      </li>
+      <li>
+        
+    Border-Radius: <%= @button_1_border_radius %>px;
+      </li>
+      <li>
+    Border-Style: <%= @button_1_border_style %>;
+        
+      </li>
+      <li>
+        
+    Color(HSL = Hue, Saturation, Luminosity):
+      <%= @button_1_color_hue %>, 
+      <%= @button_1_color_saturation %>%, 
+      <%= @button_1_color_luminosity %>%);
+      </li>
+      <li>
+    Border-color(HSL = Hue, Saturation, Luminosity):
+      <%= @button_1_border_color_hue %>, 
+      <%= @button_1_border_color_saturation %>%, 
+      <%= @button_1_border_color_luminosity %>%);
+        
+      </li>
+      <li>
+    Background-Color: (HSL = Hue, Saturation, Luminosity):
+      <%= @button_1_bg_color_hue %>, 
+      <%= @button_1_bg_color_saturation %>%, 
+      <%= @button_1_bg_color_luminosity %>%);
+        
+      </li>
+    </ul>
+
+<h3>Edit Button</h3>
+    <ul>
+      <li>
+        
+    Font Size: <%= @button_2_font_size %>px;
+      </li>
+      <li>
+        
+      </li>
+      <li>
+        
+    Font Weight: <%= @button_2_font_weight %>;
+      </li>
+      <li>
+    Text Transformation: <%= @button_2_text_transform %>;
+        
+      </li>
+      <li>
+    Letter Spacing: <%= @button_2_letter_spacing %>px;
+        
+      </li>
+      <li>
+        
+    Padding: <%= @button_2_padding %>px;
+      </li>
+      <li>
+        
+      </li>
+      <li>
+    Border Size: <%= @button_2_border %>px;
+        
+      </li>
+      <li>
+        
+    Border-Radius: <%= @button_2_border_radius %>px;
+      </li>
+      <li>
+    Border-Style: <%= @button_2_border_style %>;
+        
+      </li>
+      <li>
+        
+    Color(HSL = Hue, Saturation, Luminosity):
+      <%= @button_2_color_hue %>, 
+      <%= @button_2_color_saturation %>%, 
+      <%= @button_2_color_luminosity %>%);
+      </li>
+      <li>
+    Border-color(HSL = Hue, Saturation, Luminosity):
+      <%= @button_2_border_color_hue %>, 
+      <%= @button_2_border_color_saturation %>%, 
+      <%= @button_2_border_color_luminosity %>%);
+        
+      </li>
+      <li>
+    Background-Color: (HSL = Hue, Saturation, Luminosity):
+      <%= @button_2_bg_color_hue %>, 
+      <%= @button_2_bg_color_saturation %>%, 
+      <%= @button_2_bg_color_luminosity %>%);
+        
+      </li>
+    </ul>
+
+   <h3>Section Buttons</h3>
+    <ul>
+      <li>
+        
+    Font Size: <%= @button_3_font_size %>px;
+      </li>
+      <li>
+        
+      </li>
+      <li>
+        
+    Font Weight: <%= @button_3_font_weight %>;
+      </li>
+      <li>
+    Text Transformation: <%= @button_3_text_transform %>;
+        
+      </li>
+      <li>
+    Letter Spacing: <%= @button_3_letter_spacing %>px;
+        
+      </li>
+      <li>
+        
+    Padding: <%= @button_3_padding %>px;
+      </li>
+      <li>
+        
+      </li>
+      <li>
+    Border Size: <%= @button_3_border %>px;
+        
+      </li>
+      <li>
+        
+    Border-Radius: <%= @button_3_border_radius %>px;
+      </li>
+      <li>
+    Border-Style: <%= @button_3_border_style %>;
+        
+      </li>
+      <li>
+        
+    Color(HSL = Hue, Saturation, Luminosity):
+      <%= @button_3_color_hue %>, 
+      <%= @button_3_color_saturation %>%, 
+      <%= @button_3_color_luminosity %>%);
+      </li>
+      <li>
+    Border-color(HSL = Hue, Saturation, Luminosity):
+      <%= @button_3_border_color_hue %>, 
+      <%= @button_3_border_color_saturation %>%, 
+      <%= @button_3_border_color_luminosity %>%);
+        
+      </li>
+      <li>
+    Background-Color: (HSL = Hue, Saturation, Luminosity):
+      <%= @button_3_bg_color_hue %>, 
+      <%= @button_3_bg_color_saturation %>%, 
+      <%= @button_3_bg_color_luminosity %>%);
+        
+      </li>
+    </ul>
+
+    <h3>About Paragraph</h3>
+    <ul>
+      <li>
+    Font Size: <%= @paragraph_1_font_size %>px;
+        
+      </li>
+      <li>
+    text-align: <%= @paragraph_1_text_align %>;
+        
+      </li>
+      <li>
+        
+    Padding: <%= @paragraph_1_padding %>px;
+      </li>
+      <li>
+    text-indent: <%= @paragraph_1_indent %>px;
+        
+      </li>
+      <li>
+        
+    word-spacing: <%= @paragraph_1_word_spacing %>px;
+      </li>
+    </ul>
+
+    <h3>Inspiration Paragraphs</h3>
+        <ul>
+      <li>
+    Font Size: <%= @paragraph_2_font_size %>px;
+        
+      </li>
+      <li>
+    text-align: <%= @paragraph_2_text_align %>;
+        
+      </li>
+      <li>
+        
+    Padding: <%= @paragraph_2_padding %>px;
+      </li>
+      <li>
+    text-indent: <%= @paragraph_2_indent %>px;
+        
+      </li>
+      <li>
+        
+    word-spacing: <%= @paragraph_2_word_spacing %>px;
+      </li>
+    </ul>
+
+  <h3>Image</h3>
+  <ul>
+    <li>
+    Padding: <%= @image_padding %>px;
+      
+    </li>
+    <li>
+    Border Size: <%= @image_border %>px;
+      
+    </li>
+    <li>
+      
+    Border-Radius: <%= @image_border_radius %>px;
+    </li>
+    <li>
+      
+    height: <%= @image_height %>px;
+    </li>
+    <li>
+      
+    width: <%= @image_width %>px;
+    </li>
+    <li>
+      
+    Border-color: hsl(
+      <%= @image_border_color_hue %>, 
+      <%= @image_border_color_saturation %>%, 
+      <%= @image_border_color_luminosity %>%);
+    </li>
+  </ul>
+
+  <h3>Heading Section</h3>
+  <ul>
+    <li>
+      
+    color: hsl(
+      <%= @section_1_color_hue %>,
+      <%= @section_1_color_saturation %>%,
+      <%= @section_1_color_luminosity %>%);
+    </li>
+    <li>
+      
+    Background-Color: hsl(
+      <%= @section_1_bg_color_hue %>,
+      <%= @section_1_bg_color_saturation %>%,
+      <%= @section_1_bg_color_luminosity %>%);
+    </li>
+  </ul>
+
+    <h3>Button Section</h3>
+  <ul>
+    <li>
+      
+    color: hsl(
+      <%= @section_2_color_hue %>,
+      <%= @section_2_color_saturation %>%,
+      <%= @section_2_color_luminosity %>%);
+    </li>
+    <li>
+      
+    Background-Color: hsl(
+      <%= @section_2_bg_color_hue %>,
+      <%= @section_2_bg_color_saturation %>%,
+      <%= @section_2_bg_color_luminosity %>%);
+    </li>
+  </ul>
+
+    <h3>Info Section</h3>
+  <ul>
+    <li>
+      
+    color: hsl(
+      <%= @section_3_color_hue %>,
+      <%= @section_3_color_saturation %>%,
+      <%= @section_3_color_luminosity %>%);
+    </li>
+    <li>
+      
+    Background-Color: hsl(
+      <%= @section_3_bg_color_hue %>,
+      <%= @section_3_bg_color_saturation %>%,
+      <%= @section_3_bg_color_luminosity %>%);
+    </li>
+  </ul>
+
+    <h3>Footer Section</h3>
+  <ul>
+    <li>
+      
+    color: hsl(
+      <%= @section_4_color_hue %>,
+      <%= @section_4_color_saturation %>%,
+      <%= @section_4_color_luminosity %>%);
+    </li>
+    <li>
+      
+    Background-Color: hsl(
+      <%= @section_4_bg_color_hue %>,
+      <%= @section_4_bg_color_saturation %>%,
+      <%= @section_4_bg_color_luminosity %>%);
+    </li>
+  </ul>
+
+  <li>Navbar</li>
+  <ul>
+    <li>
+      
+    Font Size: <%= @li_font_size %>px;
+    </li>
+    <li>
+    Text Transformation: <%= @li_text_transform %>;
+      
+    </li>
+    <li>
+    Letter Spacing: <%= @li_letter_spacing %>px;
+      
+    </li>
+    <li>
+    Font-Style: <%= @li_font_style %>;
+      
+    </li>
+  </ul>
+
+
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Got It</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

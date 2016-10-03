@@ -2,9 +2,9 @@
 
 $(document).on('turbolinks:load', function(){
     //make voting Gui draggable
-    $("#dragme").draggable({
-      cursor: "crosshair"
-    });
+  $("#dragme").draggable({
+    cursor: "crosshair"
+  });
 
   //bootstrap tooltip 'opt-in'
   $(function () {
