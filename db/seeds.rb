@@ -88,5 +88,5 @@ headingfont = heading.body_properties.create!(fontfamily: "Georgia")
 
 
 #SecureRandom.urlsafe_base64)
-user_1 = User.create!(cookie_id: 1)
-user_2 = User.create!(cookie_id: 2)
+# user_1 = User.create!(cookie_id: 1)
+# user_2 = User.create!(cookie_id: 2)
