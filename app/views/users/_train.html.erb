@@ -2,34 +2,37 @@
 
 <div class="container-fluid">
   <header class="header section-selector-<%= @section_selector_id_1 %>">
-    <div class="row">
-      
-      <div class="col-md-2">
-        <h1 class="h1-selector-<%= @h1_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">youi</h1>
-      </div>
-      
-      <div class="col-md-10">
-        <nav class="custom-nav">
-          <ul class="body-selector-<%= @body_selector_id_2 %>">
-            <%= link_to root_path do %>
-              <li class="li-selector-<%= @li_selector_id_1 %>">
-                Home
+    <div class='container'>
+    
+      <div class="row">
+        
+        <div class="col-md-2">
+          <h1 class="h1-selector-<%= @h1_selector_id_1 %> body-selector-<%= @body_selector_id_1 %>">youi</h1>
+        </div>
+        
+        <div class="col-md-10">
+          <nav class="custom-nav">
+            <ul class="body-selector-<%= @body_selector_id_2 %>">
+              <%= link_to root_path do %>
+                <li class="li-selector-<%= @li_selector_id_1 %>">
+                  Home
+                </li>
+              <% end %>
+              <%= link_to user_path(@cookie) do %>
+              <li class="where-am-i li-selector-<%= @li_selector_id_1 %>">
+                Custom
               </li>
-            <% end %>
-            <%= link_to user_path(@cookie) do %>
-            <li class="where-am-i li-selector-<%= @li_selector_id_1 %>">
-              Custom
-            </li>
-            <% end %>
-            <%= link_to stats_path do %>
-            <li class="li-selector-<%= @li_selector_id_1 %>">
-              Stats
-            </li>
-            <% end %>
-          </ul>
-        </nav>
+              <% end %>
+              <%= link_to stats_path do %>
+              <li class="li-selector-<%= @li_selector_id_1 %>">
+                Stats
+              </li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
+        
       </div>
-      
     </div>
   </header>
   

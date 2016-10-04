@@ -3,86 +3,86 @@
 <div class="container-fluid body">
   <%= render 'custom_modal' %>
   <header class="header section active-section section-selector-<%= @section_selector_id_1 %>">
-
-    <div class="row">
-      
-      <div class="col-md-2">
-        <%= link_to user_train_path("h1", "h1-selector", @h1_selector_id_1) do %>
-          <h1 class="h1-selector-<%= @h1_selector_id_1 %> component active can-explore body-selector-<%= @body_selector_id_1 %>"
-            data-toggle="tooltip" data-placement="right" 
-            data-html="true"
-            title="
-            <div class='big-tips'>
-              <h3>Heading 1</h3>
-              <ul>
-                <li>
-                  Font Size: <%= @h1_font_size %>px
+    <div class='container'>
+      <div class="row">
+          <div class="col-md-2">
+          <%= link_to user_train_path("h1", "h1-selector", @h1_selector_id_1) do %>
+            <h1 class="h1-selector-<%= @h1_selector_id_1 %> component active can-explore body-selector-<%= @body_selector_id_1 %>"
+              data-toggle="tooltip" data-placement="right" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h3>Heading 1</h3>
+                <ul>
+                  <li>
+                    Font Size: <%= @h1_font_size %>px
+                  </li>
+                  <li>
+                    Text Transformation: <%= @h1_text_transform %>
+                  </li>
+                  <li>
+                    Letter Spacing <%= @h1_letter_spacing %>px
+                  </li>
+                  <li>
+                    Font Weight: <%= @h1_font_weight %>
+                  </li>
+                </ul>
+              </div>"
+            >youi</h1>
+          <% end %>
+        </div>      
+        <div class="col-md-10">
+          <nav class="custom-nav can-explore">
+            <ul class="can-explore body-selector-<%= @body_selector_id_2 %>"
+              data-toggle="tooltip" data-placement="bottom" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h3>Navbar</h3>
+                <ul>
+                  <li>
+                    Font Size: <%= @li_font_size %>px
+                  </li>
+                  <li>
+                    Text Transformation: <%= @li_text_transform %>
+                  </li>
+                  <li>
+                    Letter Spacing: <%= @li_letter_spacing %>px
+                  </li>
+                  <li>
+                    Font-Style: <%= @li_font_style %>
+                  </li>
+                </ul>
+              </div>"
+              >
+              <%= link_to root_path do %>
+                <li class="li-selector-<%= @li_selector_id_1 %>">
+                  Home
                 </li>
-                <li>
-                  Text Transformation: <%= @h1_text_transform %>
+              <% end %>
+              <%= link_to user_path(@cookie) do %>
+                <li class="where-am-i li-selector-<%= @li_selector_id_1 %>">
+                  Custom
                 </li>
-                <li>
-                  Letter Spacing <%= @h1_letter_spacing %>px
+              <% end %>
+              <%= link_to stats_path do %>
+                <li class="li-selector-<%= @li_selector_id_1 %>">
+                  Stats
                 </li>
-                <li>
-                  Font Weight: <%= @h1_font_weight %>
+              <% end %>
+              <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
+              <%= link_to user_create_path(@cookie), :method => :post do %>
+                <li class="li-selector-<%= @li_selector_id_1 %>">
+                  New Session
                 </li>
-              </ul>
-            </div>"
-          >youi</h1>
-        <% end %>
-      </div>      
-      <div class="col-md-10">
-        <nav class="custom-nav can-explore">
-          <ul class="can-explore body-selector-<%= @body_selector_id_2 %>"
-            data-toggle="tooltip" data-placement="bottom" 
-            data-html="true"
-            title="
-            <div class='big-tips'>
-              <h3>Navbar</h3>
-              <ul>
-                <li>
-                  Font Size: <%= @li_font_size %>px
-                </li>
-                <li>
-                  Text Transformation: <%= @li_text_transform %>
-                </li>
-                <li>
-                  Letter Spacing: <%= @li_letter_spacing %>px
-                </li>
-                <li>
-                  Font-Style: <%= @li_font_style %>
-                </li>
-              </ul>
-            </div>"
-            >
-            <%= link_to root_path do %>
-              <li class="li-selector-<%= @li_selector_id_1 %>">
-                Home
+              <% end %>
+              <li class="li-selector-<%= @li_selector_id_1 %> save" data-toggle="modal" data-target="#save">
+                Save
               </li>
-            <% end %>
-            <%= link_to user_path(@cookie) do %>
-              <li class="where-am-i li-selector-<%= @li_selector_id_1 %>">
-                Custom
-              </li>
-            <% end %>
-            <%= link_to stats_path do %>
-              <li class="li-selector-<%= @li_selector_id_1 %>">
-                Stats
-              </li>
-            <% end %>
-            <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
-            <%= link_to user_create_path(@cookie), :method => :post do %>
-              <li class="li-selector-<%= @li_selector_id_1 %>">
-                New Session
-              </li>
-            <% end %>
-            <li class="li-selector-<%= @li_selector_id_1 %> save" data-toggle="modal" data-target="#save">
-              Save
-            </li>
-          </ul>
-        </nav>
-      </div>      
+            </ul>
+          </nav>
+        </div>      
+      </div>
     </div>
   </header>
 

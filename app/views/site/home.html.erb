@@ -2,77 +2,78 @@
 <%= render "partials/current_modal" %>
 <div class='container-fluid body'>
   <header class='header section section-selector-1'>
-
-    <div class='row'>
-      
-      <div class='col-md-2'>
-        <%= link_to train_path("h1", "h1-selector", 1) do %>
-          <h1 class='h1-selector-1 component active can-explore body-selector-1'
-            data-toggle="tooltip" data-placement="right" 
-            data-html="true"
-            title="
-            <div class='big-tips'>
-              <h3>Heading 1</h3>
-              <ul>
-                <li>
-                  Font Size: <%= @h1_font_size %>px
+    <div class='container'> 
+      <div class='row'>
+        
+        <div class='col-md-2'>
+          <%= link_to train_path("h1", "h1-selector", 1) do %>
+            <h1 class='h1-selector-1 component active can-explore body-selector-1'
+              data-toggle="tooltip" data-placement="right" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h3>Heading 1</h3>
+                <ul>
+                  <li>
+                    Font Size: <%= @h1_font_size %>px
+                  </li>
+                  <li>
+                    Text Transformation: <%= @h1_text_transform %>
+                  </li>
+                  <li>
+                    Letter Spacing <%= @h1_letter_spacing %>px
+                  </li>
+                  <li>
+                    Font Weight: <%= @h1_font_weight %>
+                  </li>
+                </ul>
+              </div>"
+            >youi</h1>
+          <% end %>
+        </div>      
+        <div class='col-md-10'>
+          <nav class='custom-nav'>
+            <ul class='body-selector-2 can-explore'
+              data-toggle="tooltip" data-placement="bottom" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h3>Navbar</h3>
+                <ul>
+                  <li>
+                    Font Size: <%= @li_font_size %>px
+                  </li>
+                  <li>
+                    Text Transformation: <%= @li_text_transform %>
+                  </li>
+                  <li>
+                    Letter Spacing: <%= @li_letter_spacing %>px
+                  </li>
+                  <li>
+                    Font-Style: <%= @li_font_style %>
+                  </li>
+                </ul>
+              </div>"
+              >
+              <%= link_to root_path do %>
+                <li class="li-selector-1 where-am-i">
+                  Home
                 </li>
-                <li>
-                  Text Transformation: <%= @h1_text_transform %>
+              <% end %>
+              <%= link_to user_path(@cookie) do %>
+                <li class='li-selector-1'>
+                  Custom
                 </li>
-                <li>
-                  Letter Spacing <%= @h1_letter_spacing %>px
+              <% end %>
+              <%= link_to stats_path do %>
+                <li class='li-selector-1'>
+                  Stats
                 </li>
-                <li>
-                  Font Weight: <%= @h1_font_weight %>
-                </li>
-              </ul>
-            </div>"
-          >youi</h1>
-        <% end %>
-      </div>      
-      <div class='col-md-10'>
-        <nav class='custom-nav'>
-          <ul class='body-selector-2 can-explore'
-            data-toggle="tooltip" data-placement="bottom" 
-            data-html="true"
-            title="
-            <div class='big-tips'>
-              <h3>Navbar</h3>
-              <ul>
-                <li>
-                  Font Size: <%= @li_font_size %>px
-                </li>
-                <li>
-                  Text Transformation: <%= @li_text_transform %>
-                </li>
-                <li>
-                  Letter Spacing: <%= @li_letter_spacing %>px
-                </li>
-                <li>
-                  Font-Style: <%= @li_font_style %>
-                </li>
-              </ul>
-            </div>"
-            >
-            <%= link_to root_path do %>
-              <li class="li-selector-1 where-am-i">
-                Home
-              </li>
-            <% end %>
-            <%= link_to user_path(@cookie) do %>
-              <li class='li-selector-1'>
-                Custom
-              </li>
-            <% end %>
-            <%= link_to stats_path do %>
-              <li class='li-selector-1'>
-                Stats
-              </li>
-            <% end %>
-          </ul>
-        </nav>
-      </div>      
+              <% end %>
+            </ul>
+          </nav>
+        </div>      
+      </div>
     </div>
   </header>
   
