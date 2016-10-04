@@ -30,6 +30,7 @@ html {
   padding-bottom: 25px;
 }
 
+//tooltips
 .tooltip-inner { 
   max-width: 500px;
 }
@@ -44,7 +45,17 @@ html {
       font-size: 14px;
     }
   }
-  padding: 25px;
+  padding: 10px 25px 25px 25px;
+}
+
+.tooltip-special {
+  ul {
+    margin: auto !important;
+    li {
+      margin: auto !important;
+      list-style-type: disc !important;
+    }
+  }
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
