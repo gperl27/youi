@@ -85,16 +85,16 @@ class ApplicationController < ActionController::Base
   end
 
   def font_weight_stats(model)
-    @letterspacing_max = model.maximum(:letterspacing)
-    @letterspacing_min = model.minimum(:letterspacing)
+    @fontweight_max = model.maximum(:fontweight)
+    @fontweight_min = model.minimum(:fontweight)
 
-    most = model.group("letterspacing").order("count_all desc").limit(1).count
-    least = model.group("letterspacing").order("count_all").limit(1).count
+    most = model.group("fontweight").order("count_all desc").limit(1).count
+    least = model.group("fontweight").order("count_all").limit(1).count
 
-    @letterspacing_most = most.keys.join("")
-    @letterspacing_least = least.keys.join("")
+    @fontweight_most = most.keys.join("")
+    @fontweight_least = least.keys.join("")
 
-    @letterspacing = model.group(:letterspacing).count
+    @fontweight = model.group(:fontweight).count
   end
 
   def letter_spacing_stats(model)

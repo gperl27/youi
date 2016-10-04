@@ -4,16 +4,128 @@
 
 
 .home-stats {
-  text-align: center;
+  padding: 25px;
+}
+
+.stat-text {
+  padding: 5px;
+  margin-top: 10px;
+
+  h2 {
+    font-size: 42px;
+    text-align: center;
+  }
+}
+
+.stats-nav {
+  background-color: #225378;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand  {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-brand:hover {
+  color: #ACF0F2;
+  transition: .2s;
 }
 
 .fun-facts {
   text-align: center;
+  padding-left: 0;
+  li {
+    font-size: 20px;
+    list-style-type: none;
+  }
+}
+
+.stats-footer {
+  background-color: #1695A3;
+  h2 {
+    color: #fff;
+  }
+}
+
+.footer-line {
+  color: #f3ffe2;
 }
 
 .tab {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: 1px solid black;
+  background-color: #F3fFE2;
+  border-radius: 8px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: auto;
+  border: 2px solid #e6e3df;
   text-align:center;
+  border-left: 5px solid #EB7F00;
+
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+   -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: 0 10px 6px -6px #777;
+  h3 {
+    margin-bottom: 20px;
+  }
 }
+
+.tab:hover {
+  border-left: 15px solid #EB7F00;
+  transition: .3s;
+}
+
+.tab:active {
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+  -webkit-box-shadow: 0 5px 3px -3px #777;
+  -moz-box-shadow: 0 5px 3px -3px #777;
+  box-shadow: 0 5px 3px -3px #777;
+}
+
+.home-tab, .home-tab:hover, .home-tab:active {
+  border-left-color: #FFE11A;
+}
+
+
+/** Individual stats pages **/
+
+.stats-sub-heading {
+  padding: 25px;
+  text-align: center;
+  color: #fff;
+  background-color: #1695A3;
+}
+
+.graph-div {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 25px;
+  }
+  ul {
+    margin-top: 25px;
+    padding-left: 0;
+    li {
+      margin-top: 5px;
+      list-style-type: none;
+      font-size: 20px;
+    }
+  }
+}
+
+.orange {
+  font-weight: bold;
+  color: #eb7f00;
+}
+
+.blue-line {
+  background-color: #225378;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+

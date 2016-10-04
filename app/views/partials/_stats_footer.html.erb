@@ -1,14 +1,13 @@
-<div class='container'>
-  <h2>More Choices</h2>
+<div class='container-fluid stats-footer'>
   <div class='container'>
-    
+    <h2>More Choices</h2>
+    <hr class='line'>
     <div class='row'>
       
       <%= link_to h1_stats_path do %>
         <div class='col-md-4'>
           <div class='tab'>
             <h3>H1</h3>
-            <p>H1 is the blah</p>
           </div>
         </div>
       <% end %>
@@ -17,7 +16,6 @@
         <div class='col-md-4'>
           <div class='tab'>
             <h3>H2</h3>
-            <p>H1 is the blah</p>
           </div>
         </div>
       <% end %>
@@ -26,7 +24,6 @@
         <div class='col-md-4'>
           <div class='tab'>
             <h3>H3</h3>
-            <p>H1 is the blah</p>
           </div>
         </div>
       <% end %>
@@ -39,7 +36,6 @@
         <div class='col-md-4'>
           <div class='tab'>
             <h3>H4</h3>
-            <p>H1 is the blah</p>
           </div>
       </div>
       <% end %>
@@ -48,7 +44,6 @@
         <div class='col-md-4'>
           <div class='tab'>
             <h3>H5</h3>
-            <p>H1 is the blah</p>
           </div>
         </div>
       <% end %>
@@ -57,7 +52,6 @@
         <div class='col-md-4'>
           <div class='tab'>
             <h3>Images</h3>
-            <p>H1 is the blah</p>
           </div>
         </div>
       <% end %>
@@ -70,7 +64,6 @@
         <div class='col-md-4'>
           <div class='tab'>
             <h3>List Elements</h3>
-            <p>H1 is the blah</p>
           </div>
         </div>
       <% end %>
@@ -79,7 +72,6 @@
         <div class='col-md-4'>
           <div class='tab'>
             <h3>Paragraphs</h3>
-            <p>H1 is the blah</p>
           </div>
         </div>
       <% end %>
@@ -88,7 +80,6 @@
         <div class='col-md-4'>
           <div class='tab'>
             <h3>Sections</h3>
-            <p>H1 is the blah</p>
           </div>
         </div>
       <% end %>
@@ -100,8 +91,7 @@
       <%= link_to body_stats_path do %>
         <div class='col-md-4'>
           <div class='tab'>
-            <h3>Page-wide Stats (fonts, etc.)</h3>
-            <p>H1 is the blah</p>
+            <h3>Body</h3>
           </div>
         </div>
       <% end %>
@@ -110,17 +100,17 @@
         <div class='col-md-4'>
           <div class='tab'>
             <h3>Buttons</h3>
-            <p>H1 is the blah</p>
           </div>
         </div>
       <% end %>
       
-      <div class='col-md-4'>
-        <div class='tab'>
-          <h3>H3</h3>
-          <p>H1 is the blah</p>
+      <%= link_to stats_path do %>
+        <div class='col-md-4'>
+          <div class='tab home-tab'>
+            <h3>Site Stats</h3>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div><!-- row -->
       
     <h5>Copyright (c) Greg Perlman, 2016</h5>

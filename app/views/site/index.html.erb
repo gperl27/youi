@@ -1,14 +1,17 @@
 
 <%= render 'partials/stats_header' %>
-<div class='home-stats'>
+<div class='home-stats container'>
   <div class='row'>
     <div class='col-md-3'>
-      <h2>Fun Facts</h2>
-      <ul class='fun-facts'>
-        <li><%= @total_count %> changes</li>
-        <li>Most Changed: <%= @max %></li>
-        <li>Least Changed: <%= @min %></li>
-      </ul>
+      <div class='stat-text'>
+        <h2>Fun Facts</h2>
+        <ul class='fun-facts'>
+          <li><%= @total_count %> changes</li>
+          <li>Most Changed: <%= @max %></li>
+          <li>Least Changed: <%= @min %></li>
+        </ul>
+      </div>
+
     </div>
     <div class='col-md-9'>
       <%= column_chart @model_counts %>
