@@ -11,7 +11,7 @@ class RandomColor {
     g = this.colorArray[1];
     b = this.colorArray[2];
 
-    var html = `<p>${this.propName}: rgb(${r}, ${g}, ${b})</p>`
+    var html = `<p>${this.propName}: <span class='properties'>rgb(${r}, ${g}, ${b})</span></p>`
     $('.current-styles').append(html);
     return $(`.${this.selector}`).css(`${this.propName}`, 
                                   `rgb(${r},

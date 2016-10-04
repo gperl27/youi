@@ -1,16 +1,14 @@
 <div class='vote-gui' id='dragme'>
   <span class='how-to-use' data-toggle="modal" data-target="#instructions">How to use?</span>
   <hr>
-  <h3>Now Editing: <%= @currently_editing %></h3>
+  <h3>Now Editing: <span class='properties'><%= @currently_editing %></span></h3>
   <span class='glyphicon glyphicon-move move'></span>
-  <button class='good glyphicon glyphicon-ok' data-id="<%= @id %>" data-selector="<%= @class %>" data-model="<%= @model %>"></button>
-  <button class='bad glyphicon glyphicon-remove' data-selector='<%= @class %>'></button>
+  <button class='btn btn-success good glyphicon glyphicon-ok' data-id="<%= @id %>" data-selector="<%= @class %>" data-model="<%= @model %>"></button>
+  <button class='btn btn-danger bad glyphicon glyphicon-remove' data-selector='<%= @class %>'></button>
   <hr>
-  <div class='current-styles'>
-    <h4>Current Styles</h4>
-  </div>
+  <div class='current-styles'></div>
   <%= link_to path do %>
-    <button>DONE!</button>
+    <button class='btn btn-primary'>DONE!</button>
   <% end %>
 </div>
 
@@ -19,32 +17,33 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">How to Use</h4>
+        <h2 class="modal-title">How to Use</h2>
       </div>
       <div class="modal-body">
         <ul>
-          <li>Use the square you just clicked on to like or dislike the element you are editing</li>
-          <li>The <span class='glyphicon glyphicon-ok'></span> means you like the current style for the element you are editing</li>
+          <li>Use the square you just clicked on to like or dislike the component you are editing</li>
+          <li>The <span id='green' class='glyphicon glyphicon-ok'></span> means you like the change</li>
           <div>
             <ul>
-              <li>Clicking this button will implement a change to the current website</li>
+              <li>This will have an impact on the overall website</li>
+              <li>If you are doing a custom session, your choices affect both your individual page and the overall website</li>
             </ul>
           </div>
-          <li>The <span class='glyphicon glyphicon-remove'></span> means you do not like the current style of the element you are editing</li>
+          <li>The <span id='red' class='glyphicon glyphicon-remove'></span> means you do not like the changes</li>
           <div>
             <ul>
               <li>
-                This means you want skip to the next options
+                This will not have an impact on the overall website
               </li>
             </ul>
           </div>
           <li>You can like or dislike styles any amount of times</li>
           <li>When you want to see your changes, click the 'DONE' button</li>
-          <li>The changes you make will be forever saved to this crowd-sourced website.</li>
+          <li>The changes you make will be forever saved to this crowd-sourced website</li>
         </ul>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-dismiss="modal">Got It</button>
+        <button type="button" class="btn btn-warning center-block" data-dismiss="modal">Got It</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

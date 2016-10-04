@@ -12,18 +12,18 @@
         <nav class='custom-nav'>
           <ul class='body-selector-2'>
             <%= link_to root_path do %>
-              <li class="li-selector-1">
+              <li class="li-selector-1 where-am-i">
                 Home
               </li>
-            <% end %>
-            <%= link_to stats_path do %>
-            <li class="li-selector-1">
-              Stats
-            </li>
             <% end %>
             <%= link_to user_path(@cookie) do %>
             <li class="li-selector-1">
               Custom
+            </li>
+            <% end %>
+            <%= link_to stats_path do %>
+            <li class="li-selector-1">
+              Stats
             </li>
             <% end %>
           </ul>

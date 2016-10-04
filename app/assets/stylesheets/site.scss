@@ -60,6 +60,7 @@ html {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** header **/
+
 .edit, .explore {
   outline: none;
 }
@@ -103,9 +104,14 @@ html {
   }
 }
 
-
 .save:hover {
   cursor: pointer;
+}
+
+//bold to say where user is
+.where-am-i {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

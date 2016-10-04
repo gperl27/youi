@@ -16,15 +16,14 @@
                 Home
               </li>
             <% end %>
+            <%= link_to user_path(@cookie) do %>
+            <li class="where-am-i li-selector-<%= @li_selector_id_1 %>">
+              Custom
+            </li>
+            <% end %>
             <%= link_to stats_path do %>
             <li class="li-selector-<%= @li_selector_id_1 %>">
               Stats
-            </li>
-            <% end %>
-            
-            <%= link_to user_path(@cookie) do %>
-            <li class="li-selector-<%= @li_selector_id_1 %>">
-              Custom
             </li>
             <% end %>
           </ul>

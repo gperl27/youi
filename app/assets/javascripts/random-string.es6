@@ -7,7 +7,7 @@ class RandomString {
   }
   random(){
     var randomStr = this.stringArray[randomNumber(this.length)];
-    var html = `<p>${this.propName}: ${randomStr}</p>`
+    var html = `<p>${this.propName}: <span class='properties'>${randomStr}</span></p>`
     $('.current-styles').append(html);
     return $(`.${this.selector}`).css(`${this.propName}`, 
                                       `${randomStr}`);

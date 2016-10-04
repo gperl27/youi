@@ -61,14 +61,14 @@
                 Home
               </li>
             <% end %>
+            <%= link_to user_path(@cookie) do %>
+              <li class="where-am-i li-selector-<%= @li_selector_id_1 %>">
+                Custom
+              </li>
+            <% end %>
             <%= link_to stats_path do %>
               <li class="li-selector-<%= @li_selector_id_1 %>">
                 Stats
-              </li>
-            <% end %>
-            <%= link_to user_path(@cookie) do %>
-              <li class="li-selector-<%= @li_selector_id_1 %>">
-                Custom
               </li>
             <% end %>
             <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
@@ -127,19 +127,19 @@
               Border-Style: <%= @button_1_border_style %>
                 </li>
                 <li>
-              Color(HSL = Hue, Saturation, Luminosity):
+              Color (hsl): (
                 <%= @button_1_color_hue %>, 
                 <%= @button_1_color_saturation %>%, 
                 <%= @button_1_color_luminosity %>%)
                 </li>
                 <li>
-              Border-color(HSL = Hue, Saturation, Luminosity):
+              Border-color (hsl): (
                 <%= @button_1_border_color_hue %>, 
                 <%= @button_1_border_color_saturation %>%, 
                 <%= @button_1_border_color_luminosity %>%)
                 </li>
                 <li>
-              Background-Color: (HSL = Hue, Saturation, Luminosity):
+              Background-Color (hsl): (
                 <%= @button_1_bg_color_hue %>, 
                 <%= @button_1_bg_color_saturation %>%, 
                 <%= @button_1_bg_color_luminosity %>%)
@@ -195,13 +195,13 @@
                   <h3>Header Section</h3>
                   <ul>
                     <li>
-                    color: hsl(
+                    Color (hsl): (
                       <%= @section_1_color_hue %>,
                       <%= @section_1_color_saturation %>%,
                       <%= @section_1_color_luminosity %>%)
                     </li>
                     <li>
-                    Background-Color: hsl(
+                    Background-Color (hsl): (
                       <%= @section_1_bg_color_hue %>,
                       <%= @section_1_bg_color_saturation %>%,
                       <%= @section_1_bg_color_luminosity %>%)
@@ -218,13 +218,13 @@
                   <h3>Button Section</h3>
                   <ul>
                     <li>
-                    color: hsl(
+                    Color (hsl): (
                       <%= @section_2_color_hue %>,
                       <%= @section_2_color_saturation %>%,
                       <%= @section_2_color_luminosity %>%)
                     </li>
                     <li>
-                    Background-Color: hsl(
+                    Background-Color (hsl): (
                       <%= @section_2_bg_color_hue %>,
                       <%= @section_2_bg_color_saturation %>%,
                       <%= @section_2_bg_color_luminosity %>%)
@@ -241,13 +241,13 @@
                   <h3>Header Section</h3>
                   <ul>
                     <li>
-                    color: hsl(
+                    Color (hsl): (
                       <%= @section_3_color_hue %>,
                       <%= @section_3_color_saturation %>%,
                       <%= @section_3_color_luminosity %>%)
                     </li>
                     <li>
-                    Background-Color: hsl(
+                    Background-Color (hsl): (
                       <%= @section_3_bg_color_hue %>,
                       <%= @section_3_bg_color_saturation %>%,
                       <%= @section_3_bg_color_luminosity %>%)
@@ -264,13 +264,13 @@
                   <h3>Header Section</h3>
                   <ul>
                     <li>
-                    color: hsl(
+                    Color (hsl): (
                       <%= @section_4_color_hue %>,
                       <%= @section_4_color_saturation %>%,
                       <%= @section_4_color_luminosity %>%)
                     </li>
                     <li>
-                    Background-Color: hsl(
+                    Background-Color (hsl): (
                       <%= @section_4_bg_color_hue %>,
                       <%= @section_4_bg_color_saturation %>%,
                       <%= @section_4_bg_color_luminosity %>%)
@@ -398,19 +398,19 @@
                   Border-Style: <%= @button_3_border_style %>
                     </li>
                     <li>
-                  Color(HSL = Hue, Saturation, Luminosity):
+                  Color (hsl): (
                     <%= @button_3_color_hue %>, 
                     <%= @button_3_color_saturation %>%, 
                     <%= @button_3_color_luminosity %>%)
                     </li>
                     <li>
-                  Border-color(HSL = Hue, Saturation, Luminosity):
+                  Border-color (hsl): (
                     <%= @button_3_border_color_hue %>, 
                     <%= @button_3_border_color_saturation %>%, 
                     <%= @button_3_border_color_luminosity %>%)
                     </li>
                     <li>
-                  Background-Color: (HSL = Hue, Saturation, Luminosity):
+                  Background-Color (hsl): (
                     <%= @button_3_bg_color_hue %>, 
                     <%= @button_3_bg_color_saturation %>%, 
                     <%= @button_3_bg_color_luminosity %>%)
@@ -543,7 +543,7 @@
                       width: <%= @image_width %>px
                     </li>
                     <li>
-                    Border-color: hsl(
+                    Border-color (hsl): (
                       <%= @image_border_color_hue %>, 
                       <%= @image_border_color_saturation %>%, 
                       <%= @image_border_color_luminosity %>%)
@@ -640,7 +640,7 @@
                       width: <%= @image_width %>px
                     </li>
                     <li>
-                    Border-color: hsl(
+                    Border-color (hsl): (
                       <%= @image_border_color_hue %>, 
                       <%= @image_border_color_saturation %>%, 
                       <%= @image_border_color_luminosity %>%)

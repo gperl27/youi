@@ -6,7 +6,7 @@ class RandomPx {
   }
 
   random(){
-    var html = `<p>${this.propName}: ${this.pixels}px</p>`
+    var html = `<p>${this.propName}: <span class='properties'>${this.pixels}px</span></p>`
     $('.current-styles').append(html);
     return $(`.${this.selector}`).css(`${this.propName}`, `${this.pixels}px`);
   }
