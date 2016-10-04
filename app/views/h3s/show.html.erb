@@ -1,7 +1,11 @@
 <%= render 'partials/stats_header' %>
 
-<div class='container'>
-  <h1>Heading 3 Choices</h1>
-  <%= render("partials/show_stats") %>
-  <%= render 'partials/stats_footer' %>
+<div class='stats-sub-heading'>
+  <h1>Heading 3 Choices</h2>
+  <h2><%= @changes %> changes have been made to this component.</h2>
 </div>
+
+<div class='container graph-div'>
+  <%= render("partials/show_stats") %>
+</div>
+  <%= render 'partials/stats_footer' %>
