@@ -19,8 +19,6 @@ $(document).on('turbolinks:load', function(){
   //     $(this).tooltip('toggle');
   //   });
 
-
-
   //don't show tooltips until 'explore-mode' is clicked
   $('.can-explore').tooltip('destroy');
   //same with 'copy'

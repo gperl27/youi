@@ -37,6 +37,8 @@
   }
 
 
+
+
 .hue-bar {
   background-image: linear-gradient(
     hsl(360, 100%, 50%),
@@ -51,6 +53,32 @@
     hsl(36, 100%, 50%),
     hsl(0, 100%, 50%)
   );
+}
+
+/** General Color Boxes **/
+
+.border-color-title .box {
+  background-color: hsl(
+      <%= @border_color_hue %>,
+      <%= @border_color_saturation %>%,
+      <%= @border_color_luminosity %>%
+    );
+}
+
+.color-title .box {
+  background-color: hsl(
+      <%= @color_hue %>,
+      <%= @color_saturation %>%,
+      <%= @color_luminosity %>%
+    );
+}
+
+.bg-color-title .box {
+  background-color: hsl(
+      <%= @bg_color_hue %>,
+      <%= @bg_color_saturation %>%,
+      <%= @bg_color_luminosity %>%
+    );
 }
 
 

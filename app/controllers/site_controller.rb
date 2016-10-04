@@ -1,5 +1,4 @@
 class SiteController < ApplicationController
-  # $count = 0
   before_action :h1_props, only: [:home, :show]
   before_action :h2_props, only: [:home, :show]
   before_action :h3_props, only: [:home, :show]
@@ -16,7 +15,6 @@ class SiteController < ApplicationController
   before_action :crowd_count, only: [:home, :show]
 
   def home
-    
     if session[:user_id].nil?
       rand = SecureRandom.urlsafe_base64
       user = User.create(cookie_id: rand)
@@ -97,7 +95,6 @@ class SiteController < ApplicationController
   def h1_props
     h1 = H1.first.h1_properties
 
-    # vote_count(h1)
     @h1_font_size = average(h1, "fontsize")
     @h1_font_weight = median(h1, "fontweight")
     @h1_text_transform = median(h1, "texttransformation")
@@ -106,7 +103,6 @@ class SiteController < ApplicationController
 
   def h2_props
     h2 = H2.first.h2_properties
-    # vote_count(h2)
 
     @h2_font_size = average(h2, "fontsize")
     @h2_font_weight = median(h2, "fontweight")
@@ -117,7 +113,6 @@ class SiteController < ApplicationController
 
   def h3_props
     h3 = H3.first.h3_properties
-    # vote_count(h3)
 
     @h3_font_size = average(h3, "fontsize")
     @h3_font_weight = median(h3, "fontweight")
@@ -128,7 +123,6 @@ class SiteController < ApplicationController
 
   def h4_props
     h4 = H4.first.h4_properties
-    # vote_count(h4)
 
     @h4_font_size = average(h4, "fontsize")
     @h4_font_weight = median(h4, "fontweight")
@@ -139,7 +133,6 @@ class SiteController < ApplicationController
 
   def h5_props
     h5 = H5.first.h5_properties
-    # vote_count(h5)
 
     @h5_font_size = average(h5, "fontsize")
     @h5_font_weight = median(h5, "fontweight")
@@ -153,7 +146,6 @@ class SiteController < ApplicationController
     button_2 = Button.find(2).button_properties
     button_3 = Button.find(3).button_properties
 
-      # vote_count(button)
 
     @button_1_font_size = average(button_1, "fontsize")
     @button_1_font_weight = median(button_1, "fontweight")
@@ -213,8 +205,6 @@ class SiteController < ApplicationController
   def paragraph_props
     paragraph_1 = Paragraph.first.paragraph_properties
     paragraph_2 = Paragraph.find(2).paragraph_properties
-    # vote_count(paragraph_1)
-    # vote_count(paragraph_2)
 
     @paragraph_1_font_size = average(paragraph_1, "fontsize")
     @paragraph_1_text_align = median(paragraph_1, "textalign")
@@ -231,7 +221,6 @@ class SiteController < ApplicationController
 
   def image_props
     image = Image.first.image_properties
-    # vote_count(image)
 
     @image_padding = average(image, "padding")
     @image_border = average(image, "border")
@@ -245,7 +234,6 @@ class SiteController < ApplicationController
 
   def li_props
     li = Listelement.find(1).listelement_properties
-    # vote_count(li)
 
     @li_font_size = average(li, "fontsize")
     @li_text_transform = median(li, "texttransformation")

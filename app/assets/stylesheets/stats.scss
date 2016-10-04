@@ -151,3 +151,19 @@
     margin-left: 65px;
   }
 }
+
+
+.border-color-title {
+  margin-bottom: 25px;
+  .box, h2 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.box {
+  margin-left: 15px;
+  margin-top: 10px;
+  height: 50px;
+  width: 50px;
+}
