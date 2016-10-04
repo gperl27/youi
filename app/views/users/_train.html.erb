@@ -37,7 +37,8 @@
   </header>
   
   <section class="instructions container">
-    <%= render "partials/instructions" %>
+    <p class='you'>**Only YOU can see this page</p>
+    <%= render "partials/instructions", count: @total_count %>
       <div class='row'>
         <div class='col-md-7'>
           <button class="button-selector-<%= @button_selector_id_1 %>">

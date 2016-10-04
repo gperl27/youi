@@ -12,7 +12,8 @@ class SiteController < ApplicationController
   before_action :body_props, only: [:home, :show]
   before_action :li_props, only: [:home, :show]
   before_action :model_counts, only: [:index]
-  before_action :total_count
+  before_action :total_count, only: [:index]
+  before_action :crowd_count, only: [:home, :show]
 
   def home
     
@@ -66,6 +67,21 @@ class SiteController < ApplicationController
   def min_change
     h = model_counts
     h.min_by{|k,v| v}
+  end
+
+  def crowd_count
+    @crowd_count = [
+       H1.first.h1_properties.count ,  H2.first.h2_properties.count , 
+       H3.first.h3_properties.count ,  H4.first.h4_properties.count , 
+       H5.first.h5_properties.count ,  Image.first.image_properties.count , 
+       Listelement.first.listelement_properties.count , 
+       Paragraph.first.paragraph_properties.count, Paragraph.second.paragraph_properties.count,
+       Section.first.section_properties.count, Section.second.section_properties.count,
+       Section.third.section_properties.count, Section.fourth.section_properties.count,
+       Body.first.body_properties.count, Body.second.body_properties.count,
+       Button.first.button_properties.count, Button.second.button_properties.count,
+       Button.third.button_properties.count
+    ].reduce(:+)
   end
 
   def total_count

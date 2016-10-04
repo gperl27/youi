@@ -90,7 +90,8 @@
   
   
   <section class="instructions active-section container">
-    <%= render "partials/instructions"  %>
+    <p class='you'>**Only YOU can see this page</p>
+    <%= render "partials/instructions", count: @total_count  %>
     <div class='row'>
       <div class='col-md-7'>
         <div class="component active try-me">
@@ -718,7 +719,7 @@
   </section>
   
   <footer class="footer section active-section section-selector-<%= @section_selector_id_4 %>">
-    <%= link_to train_path("h5", "h5-selector", @h5_selector_id_1) do %>
+    <%= link_to user_train_path("h5", "h5-selector", @h5_selector_id_1) do %>
       <h5 class="can-explore h5-selector-<%= @h5_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
         data-toggle="tooltip" data-placement="top" 
           data-html="true"
