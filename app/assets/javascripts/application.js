@@ -15,6 +15,7 @@
 //= require jquery-ui
 //= require Chart.bundle
 //= require chartkick
+//= require clipboard
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
@@ -46,25 +47,6 @@ jQuery.fn.css = function() {
     return obj;
 }
 
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/** Alter jQuery CSS function to extract all CSS properties of any element **/
-/** This is the key to sending properties to the server **/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-jQuery.expr[':'].regex = function(elem, index, match) {
-    var matchParams = match[3].split(','),
-        validLabels = /^(data|css):/,
-        attr = {
-            method: matchParams[0].match(validLabels) ? 
-                        matchParams[0].split(':')[0] : 'attr',
-            property: matchParams.shift().replace(validLabels,'')
-        },
-        regexFlags = 'ig',
-        regex = new RegExp(matchParams.join('').replace(/^\s+|\s+$/g,''), regexFlags);
-    return regex.test(jQuery(elem)[attr.method](attr.property));
-}
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** RGB to HSL converter function for adequate backend processing **/
 /** Source: http://stackoverflow.com/questions/2353211/hsl-to-rgb-color-conversion
@@ -90,3 +72,20 @@ function rgbToHsl(r, g, b){
 
   return [h, s, l];
 }
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/** Potentially need this for frontend hovering
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+// jQuery.expr[':'].regex = function(elem, index, match) {
+//     var matchParams = match[3].split(','),
+//         validLabels = /^(data|css):/,
+//         attr = {
+//             method: matchParams[0].match(validLabels) ? 
+//                         matchParams[0].split(':')[0] : 'attr',
+//             property: matchParams.shift().replace(validLabels,'')
+//         },
+//         regexFlags = 'ig',
+//         regex = new RegExp(matchParams.join('').replace(/^\s+|\s+$/g,''), regexFlags);
+//     return regex.test(jQuery(elem)[attr.method](attr.property));
+// }

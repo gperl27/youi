@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'clipboard-rails'
 gem "chartkick"
 gem 'jquery-ui-rails'
 
