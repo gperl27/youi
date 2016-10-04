@@ -8,13 +8,54 @@
       
       <div class="col-md-2">
         <%= link_to user_train_path("h1", "h1-selector", @h1_selector_id_1) do %>
-          <h1 class="h1-selector-<%= @h1_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">youi</h1>
+          <h1 class="h1-selector-<%= @h1_selector_id_1 %> component active can-explore body-selector-<%= @body_selector_id_1 %>"
+            data-toggle="tooltip" data-placement="right" 
+            data-html="true"
+            title="
+            <div class='big-tips'>
+              <h3>Heading 1</h3>
+              <ul>
+                <li>
+                  Font Size: <%= @h1_font_size %>px
+                </li>
+                <li>
+                  Text Transformation: <%= @h1_text_transform %>
+                </li>
+                <li>
+                  Letter Spacing <%= @h1_letter_spacing %>px
+                </li>
+                <li>
+                  Font Weight: <%= @h1_font_weight %>
+                </li>
+              </ul>
+            </div>"
+          >youi</h1>
         <% end %>
       </div>      
       <div class="col-md-10">
-        <nav class="custom-nav">
-          <ul class="body-selector-<%= @body_selector_id_2 %>">
-
+        <nav class="custom-nav can-explore">
+          <ul class="can-explore body-selector-<%= @body_selector_id_2 %>"
+            data-toggle="tooltip" data-placement="bottom" 
+            data-html="true"
+            title="
+            <div class='big-tips'>
+              <h3>Navbar</h3>
+              <ul>
+                <li>
+                  Font Size: <%= @li_font_size %>px
+                </li>
+                <li>
+                  Text Transformation: <%= @li_text_transform %>
+                </li>
+                <li>
+                  Letter Spacing: <%= @li_letter_spacing %>px
+                </li>
+                <li>
+                  Font-Style: <%= @li_font_style %>
+                </li>
+              </ul>
+            </div>"
+            >
             <%= link_to root_path do %>
               <li class="li-selector-<%= @li_selector_id_1 %>">
                 Home
@@ -54,7 +95,58 @@
       <div class='col-md-7'>
         <div class="component active try-me">
           <%= link_to user_train_path("button", "button-selector", @button_selector_id_1) do %>
-          <button class="button-selector-<%= @button_selector_id_1 %> button-selector body-selector-<%= @body_selector_id_2 %>">Try Me</button>
+          <button class="can-explore button-selector-<%= @button_selector_id_1 %> button-selector body-selector-<%= @body_selector_id_2 %>"
+            data-toggle="tooltip" data-placement="right" 
+            data-html="true"
+            title="
+            <div class='big-tips'>
+              <h3>Try Me Button</h3>
+              <ul>
+                <li>
+              Font Size: <%= @button_1_font_size %>px
+                </li>
+                <li>
+              Font Weight: <%= @button_1_font_weight %>
+                </li>
+                <li>
+              Text Transformation: <%= @button_1_text_transform %>
+                </li>
+                <li>
+              Letter Spacing: <%= @button_1_letter_spacing %>px
+                </li>
+                <li>
+              Padding: <%= @button_1_padding %>px
+                </li>
+                <li>
+              Border Size: <%= @button_1_border %>px
+                </li>
+                <li>
+              Border-Radius: <%= @button_1_border_radius %>px
+                </li>
+                <li>
+              Border-Style: <%= @button_1_border_style %>
+                </li>
+                <li>
+              Color(HSL = Hue, Saturation, Luminosity):
+                <%= @button_1_color_hue %>, 
+                <%= @button_1_color_saturation %>%, 
+                <%= @button_1_color_luminosity %>%)
+                </li>
+                <li>
+              Border-color(HSL = Hue, Saturation, Luminosity):
+                <%= @button_1_border_color_hue %>, 
+                <%= @button_1_border_color_saturation %>%, 
+                <%= @button_1_border_color_luminosity %>%)
+                </li>
+                <li>
+              Background-Color: (HSL = Hue, Saturation, Luminosity):
+                <%= @button_1_bg_color_hue %>, 
+                <%= @button_1_bg_color_saturation %>%, 
+                <%= @button_1_bg_color_luminosity %>%)
+                </li>
+              </ul>
+            </div>"
+          >Try Me</button>
           <% end %>
         </div>
       </div>
@@ -68,33 +160,173 @@
       <div class="row">
         <div class="col-md-4">
           <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1) do %>
-            <h2 class="h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Section Colors</h2>
+            <h2 class="can-explore h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
+              data-toggle="tooltip" data-placement="right" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h3>Heading 2</h3>
+                <ul>
+                  <li>
+                    Font Size: <%= @h2_font_size %>px
+                  </li>
+                  <li>
+                    Text Transformation: <%= @h2_text_transform %>
+                  </li>
+                  <li>
+                    Letter Spacing: <%= @h2_letter_spacing %>px
+                  </li>
+                  <li>
+                    Font Weight: <%= @h2_font_weight %>
+                  </li>
+                  <li>
+                    word-spacing: <%= @h2_word_spacing %>px
+                  </li>
+                </ul>
+              </div>"
+            >Section Colors</h2>
           <% end %>
           <ul class="body-selector-<%= @body_selector_id_2 %>">
             <%= link_to user_train_path("section", "section-selector", @section_selector_id_1) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the heading's colors">Heading</button>
+              <button class="can-explore button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" 
+              data-html="true" 
+              title="
+                <div class='big-tips'>
+                  <h3>Header Section</h3>
+                  <ul>
+                    <li>
+                    color: hsl(
+                      <%= @section_1_color_hue %>,
+                      <%= @section_1_color_saturation %>%,
+                      <%= @section_1_color_luminosity %>%)
+                    </li>
+                    <li>
+                    Background-Color: hsl(
+                      <%= @section_1_bg_color_hue %>,
+                      <%= @section_1_bg_color_saturation %>%,
+                      <%= @section_1_bg_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+              >Heading</button>
             <% end %>
             <%= link_to user_train_path("section", "section-selector", @section_selector_id_2) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change this section's colors">This Section</button>
+              <button class="can-explore button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right"
+              data-html="true" 
+              title="
+                <div class='big-tips'>
+                  <h3>Button Section</h3>
+                  <ul>
+                    <li>
+                    color: hsl(
+                      <%= @section_2_color_hue %>,
+                      <%= @section_2_color_saturation %>%,
+                      <%= @section_2_color_luminosity %>%)
+                    </li>
+                    <li>
+                    Background-Color: hsl(
+                      <%= @section_2_bg_color_hue %>,
+                      <%= @section_2_bg_color_saturation %>%,
+                      <%= @section_2_bg_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"               
+                >This Section</button>
             <% end %>
             <%= link_to user_train_path("section", "section-selector", @section_selector_id_3) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the about section's colors">About</button>
+              <button class="can-explore button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" 
+              data-html="true" 
+              title="
+                <div class='big-tips'>
+                  <h3>Header Section</h3>
+                  <ul>
+                    <li>
+                    color: hsl(
+                      <%= @section_3_color_hue %>,
+                      <%= @section_3_color_saturation %>%,
+                      <%= @section_3_color_luminosity %>%)
+                    </li>
+                    <li>
+                    Background-Color: hsl(
+                      <%= @section_3_bg_color_hue %>,
+                      <%= @section_3_bg_color_saturation %>%,
+                      <%= @section_3_bg_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+              >About</button>
             <% end %>
             <%= link_to user_train_path("section", "section-selector", @section_selector_id_4) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="left" title="Change the footer's colors">Footer</button>
+              <button class="can-explore button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" 
+              data-html="true" 
+              title="
+                <div class='big-tips'>
+                  <h3>Header Section</h3>
+                  <ul>
+                    <li>
+                    color: hsl(
+                      <%= @section_4_color_hue %>,
+                      <%= @section_4_color_saturation %>%,
+                      <%= @section_4_color_luminosity %>%)
+                    </li>
+                    <li>
+                    Background-Color: hsl(
+                      <%= @section_4_bg_color_hue %>,
+                      <%= @section_4_bg_color_saturation %>%,
+                      <%= @section_4_bg_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+              >Footer</button>
             <% end %>
           </ul>
         </div>
         <div class="col-md-4">
           <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1) do %>
-            <h2 class="h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Fonts</h2>
+            <h2 class="can-explore h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
+              data-toggle="tooltip" data-placement="right" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h3>Heading 2</h3>
+                <ul>
+                  <li>
+                    Font Size: <%= @h2_font_size %>px
+                  </li>
+                  <li>
+                    Text Transformation: <%= @h2_text_transform %>
+                  </li>
+                  <li>
+                    Letter Spacing: <%= @h2_letter_spacing %>px
+                  </li>
+                  <li>
+                    Font Weight: <%= @h2_font_weight %>
+                  </li>
+                  <li>
+                    word-spacing: <%= @h2_word_spacing %>px
+                  </li>
+                </ul>
+              </div>"
+            >Fonts</h2>
           <% end %>
           <ul class="body-selector-<%= @body_selector_id_2 %>">
             <%= link_to user_train_path("body", "body-selector", @body_selector_id_1) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="bottom" title="Change page's heading fonts">Heading Fonts</button>
+              <button class="can-explore button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="right"
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h4>Heading Fonts: <%= @heading_font %></h4> 
+              </div>"
+              >Heading Fonts</button>
             <% end %>
             <%= link_to user_train_path("body", "body-selector", @body_selector_id_2) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="bottom" title="Change page's body font">Body Fonts</button>
+              <button class="can-explore button-selector-<%= @button_selector_id_3 %> button-selector"  data-toggle="tooltip" data-placement="right"
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h4>Heading Fonts: <%= @heading_font %></h4> 
+              </div>"
+              >Body Fonts</button>
             <% end %>
             <!-- <button>
               Line Height
@@ -103,17 +335,92 @@
         </div>
         <div class="col-md-4">
           <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1) do %>
-            <h2 class="h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Misc</h2>
+            <h2 class="can-explore h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
+              data-toggle="tooltip" data-placement="top" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h3>Heading 2</h3>
+                <ul>
+                  <li>
+                    Font Size: <%= @h2_font_size %>px
+                  </li>
+                  <li>
+                    Text Transformation: <%= @h2_text_transform %>
+                  </li>
+                  <li>
+                    Letter Spacing: <%= @h2_letter_spacing %>px
+                  </li>
+                  <li>
+                    Font Weight: <%= @h2_font_weight %>
+                  </li>
+                  <li>
+                    word-spacing: <%= @h2_word_spacing %>px
+                  </li>
+                </ul>
+              </div>"
+            >Misc</h2>
           <% end %>
           <ul class="body-selector-<%= @body_selector_id_2 %>">
             <%= link_to user_train_path("button", "button-selector", @button_selector_id_2) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the edit and CSS buttons">Instruction Buttons</button>
+              <button class="can-explore button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="See Edit and Explore Buttons">Instruction Buttons</button>
             <% end %>
             <%= link_to user_train_path("button", "button-selector", @button_selector_id_3) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change this section's buttons">This Section's Buttons</button>
+              <button class="can-explore button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" 
+              data-placement="bottom" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <h3>This Section's Buttons</h3>
+                  <ul>
+                    <li>
+                  Font Size: <%= @button_3_font_size %>px
+                    </li>
+                    <li>
+                  Font Weight: <%= @button_3_font_weight %>
+                    </li>
+                    <li>
+                  Text Transformation: <%= @button_3_text_transform %>
+                    </li>
+                    <li>
+                  Letter Spacing: <%= @button_3_letter_spacing %>px
+                    </li>
+                    <li>
+                  Padding: <%= @button_3_padding %>px
+                    </li>
+                    <li>
+                  Border Size: <%= @button_3_border %>px
+                    </li>
+                    <li>
+                  Border-Radius: <%= @button_3_border_radius %>px
+                    </li>
+                    <li>
+                  Border-Style: <%= @button_3_border_style %>
+                    </li>
+                    <li>
+                  Color(HSL = Hue, Saturation, Luminosity):
+                    <%= @button_3_color_hue %>, 
+                    <%= @button_3_color_saturation %>%, 
+                    <%= @button_3_color_luminosity %>%)
+                    </li>
+                    <li>
+                  Border-color(HSL = Hue, Saturation, Luminosity):
+                    <%= @button_3_border_color_hue %>, 
+                    <%= @button_3_border_color_saturation %>%, 
+                    <%= @button_3_border_color_luminosity %>%)
+                    </li>
+                    <li>
+                  Background-Color: (HSL = Hue, Saturation, Luminosity):
+                    <%= @button_3_bg_color_hue %>, 
+                    <%= @button_3_bg_color_saturation %>%, 
+                    <%= @button_3_bg_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+              >This Section's Buttons</button>
             <% end %>
             <%= link_to user_train_path("li", "li-selector", @li_selector_id_1) do %>
-              <button class="button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="Change the navigation element styles in the top-right corner">Navbar</button>
+              <button class="can-explore button-selector-<%= @button_selector_id_3 %> button-selector" data-toggle="tooltip" data-placement="right" title="See Navbar">Navbar</button>
             <% end %>
           </ul>
         </div> 
@@ -124,29 +431,102 @@
   <section class="info section active-section section-selector-<%= @section_selector_id_3 %>">
     <div class="container">
       <%= link_to user_train_path("h3", "h3-selector", @h3_selector_id_1) do %>
-        <h3 class="h3-selector-<%= @h3_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">About</h3>
+        <h3 class="can-explore h3-selector-<%= @h3_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
+          data-toggle="tooltip" data-placement="top" 
+          data-html="true"
+          title="
+          <div class='big-tips'>
+            <h3>Heading 3</h3>
+            <ul>
+              <li>
+                Font Size: <%= @h3_font_size %>px
+              </li>
+              <li>
+                Text Transformation: <%= @h3_text_transform %>
+              </li>
+              <li>
+                Letter Spacing: <%= @h3_letter_spacing %>px
+              </li>
+              <li>
+                Font Weight: <%= @h3_font_weight %>
+              </li>
+              <li>
+                word-spacing: <%= @h3_word_spacing %>px
+              </li>
+            </ul>
+          </div>"
+        >About</h3>
       <% end %>
       
       <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_1) do %>
-        <p class="paragraph-selector-<%= @paragraph_selector_id_1 %> component active body-selector-<%= @body_selector_id_2 %>">
+        <p class="can-explore paragraph-selector-<%= @paragraph_selector_id_1 %> component active body-selector-<%= @body_selector_id_2 %>"
+          data-toggle="tooltip" data-placement="top" 
+          data-html="true"
+          title="
+          <div class='big-tips'>
+            <h3>About Paragraph</h3>
+            <ul>
+              <li>
+                Font Size: <%= @paragraph_1_font_size %>px
+              </li>
+              <li>
+                text-align: <%= @paragraph_1_text_align %>
+              </li>
+              <li>
+                Padding: <%= @paragraph_1_padding %>px
+              </li>
+              <li>
+                text-indent: <%= @paragraph_1_indent %>px
+              </li>
+              <li>
+                word-spacing: <%= @paragraph_1_word_spacing %>px
+              </li>
+            </ul>
+          </div>"
+          >
           <%= render "partials/about_info" %>
         </p>
       <% end %>
       
       <div class="inspirations">
         <%= link_to user_train_path("h3", "h3-selector", @h3_selector_id_1) do %>
-          <h3 class="h3-selector-<%= @h3_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Inspirations</h3>
+          <h3 class="can-explore h3-selector-<%= @h3_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
+            data-toggle="tooltip" data-placement="top" 
+            data-html="true"
+            title="
+            <div class='big-tips'>
+              <h3>Heading 3</h3>
+              <ul>
+                <li>
+                  Font Size: <%= @h3_font_size %>px
+                </li>
+                <li>
+                  Text Transformation: <%= @h3_text_transform %>
+                </li>
+                <li>
+                  Letter Spacing: <%= @h3_letter_spacing %>px
+                </li>
+                <li>
+                  Font Weight: <%= @h3_font_weight %>
+                </li>
+                <li>
+                  word-spacing: <%= @h3_word_spacing %>px
+                </li>
+              </ul>
+            </div>"
+          >Inspirations</h3>
         <% end %>
       <div class="row">
         
         <div class="col-md-6">
           <figure>
             <div class="component active can-explore"
-                data-toggle="tooltip" data-placement="right" 
+                data-toggle="tooltip" data-placement="top" 
                 data-html="true"
                 title="
                 <div class='big-tips'>
                   <ul>
+                  <h3>Image</h3>
                    <li>
                       Padding: <%= @image_padding %>px
                     </li>
@@ -176,12 +556,60 @@
               <% end %>
             </div>
             <%= link_to user_train_path("h4", "h4-selector", @h4_selector_id_1) do %>
-              <h4 class="h4-selector-<%= @h4_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Twtich Plays Pokemon</h4>
+              <h4 class="can-explore h4-selector-<%= @h4_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
+                data-toggle="tooltip" data-placement="top" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <h3>Heading 4</h3>
+                  <ul>
+                    <li>
+                      Font Size: <%= @h4_font_size %>px
+                    </li>
+                    <li>
+                      Text Transformation: <%= @h4_text_transform %>
+                    </li>
+                    <li>
+                      Letter Spacing: <%= @h4_letter_spacing %>px
+                    </li>
+                    <li>
+                      Font Weight: <%= @h4_font_weight %>
+                    </li>
+                    <li>
+                      word-spacing: <%= @h4_word_spacing %>px
+                    </li>
+                  </ul>
+                </div>"
+              >Twtich Plays Pokemon</h4>
             <% end %>
           </figure>
           
           <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2) do %>
-            <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>">
+            <p class="can-explore paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>"
+              data-toggle="tooltip" data-placement="top" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h3>Inspiration Paragraph</h3>
+                <ul>
+                  <li>
+                    Font Size: <%= @paragraph_2_font_size %>px
+                  </li>
+                  <li>
+                    text-align: <%= @paragraph_2_text_align %>
+                  </li>
+                  <li>
+                    Padding: <%= @paragraph_2_padding %>px
+                  </li>
+                  <li>
+                    text-indent: <%= @paragraph_2_indent %>px
+                  </li>
+                  <li>
+                    word-spacing: <%= @paragraph_2_word_spacing %>px
+                  </li>
+                </ul>
+              </div>"
+            >
               <%= render "partials/twitch_info" %>
             </p>
           <% end %>
@@ -190,11 +618,12 @@
         <div class="col-md-6">
            <figure>
             <div class="component active can-explore"
-               data-toggle="tooltip" data-placement="right" 
+               data-toggle="tooltip" data-placement="top" 
                 data-html="true"
                 title="
                 <div class='big-tips'>
                   <ul>
+                  <h3>Image</h3>
                    <li>
                       Padding: <%= @image_padding %>px
                     </li>
@@ -224,11 +653,59 @@
               <% end %>
             </div>
             <%= link_to user_train_path("h4", "h4-selector", @h4_selector_id_1) do %>
-              <h4 class="h4-selector-<%= @h4_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Average Faces of Women</h4>
+              <h4 class="can-explore h4-selector-<%= @h4_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
+                data-toggle="tooltip" data-placement="top" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <h3>Heading 4</h3>
+                  <ul>
+                    <li>
+                      Font Size: <%= @h4_font_size %>px
+                    </li>
+                    <li>
+                      Text Transformation: <%= @h4_text_transform %>
+                    </li>
+                    <li>
+                      Letter Spacing: <%= @h4_letter_spacing %>px
+                    </li>
+                    <li>
+                      Font Weight: <%= @h4_font_weight %>
+                    </li>
+                    <li>
+                      word-spacing: <%= @h4_word_spacing %>px
+                    </li>
+                  </ul>
+                </div>"
+              >Average Faces of Women</h4>
             <% end %>
           </figure>
           <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2) do %>
-            <p class="paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>">
+            <p class="can-explore paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>"
+              data-toggle="tooltip" data-placement="top" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <h3>Inspiration Paragraph</h3>
+                <ul>
+                  <li>
+                    Font Size: <%= @paragraph_2_font_size %>px
+                  </li>
+                  <li>
+                    text-align: <%= @paragraph_2_text_align %>
+                  </li>
+                  <li>
+                    Padding: <%= @paragraph_2_padding %>px
+                  </li>
+                  <li>
+                    text-indent: <%= @paragraph_2_indent %>px
+                  </li>
+                  <li>
+                    word-spacing: <%= @paragraph_2_word_spacing %>px
+                  </li>
+                </ul>
+              </div>"
+            >
               <%= render "partials/faces_info" %>
             </p>
           <% end %>
@@ -242,7 +719,31 @@
   
   <footer class="footer section active-section section-selector-<%= @section_selector_id_4 %>">
     <%= link_to train_path("h5", "h5-selector", @h5_selector_id_1) do %>
-      <h5 class="h5-selector-<%= @h5_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>">Curated by Greg Perlman. Copyright 2016</h5>
+      <h5 class="can-explore h5-selector-<%= @h5_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
+        data-toggle="tooltip" data-placement="top" 
+          data-html="true"
+          title="
+          <div class='big-tips'>
+            <h3>Heading 5</h3>
+            <ul>
+              <li>
+                Font Size: <%= @h5_font_size %>px
+              </li>
+              <li>
+                Text Transformation: <%= @h5_text_transform %>
+              </li>
+              <li>
+                Letter Spacing: <%= @h5_letter_spacing %>px
+              </li>
+              <li>
+                Font Weight: <%= @h5_font_weight %>
+              </li>
+              <li>
+                word-spacing: <%= @h5_word_spacing %>px
+              </li>
+            </ul>
+          </div>"
+      >Curated by Greg Perlman. Copyright 2016</h5>
     <% end %>
   </footer> 
 </div>
