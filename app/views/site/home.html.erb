@@ -432,7 +432,30 @@
       <% end %>
       
       <%= link_to train_path("paragraph", "paragraph-selector", 1) do %>
-        <p class='paragraph-selector-1 component active can-explore body-selector-2'>
+        <p class='paragraph-selector-1 component active can-explore body-selector-2'
+          data-toggle="tooltip" data-placement="top" 
+          data-html="true"
+          title="
+          <div class='big-tips'>
+            <ul>
+              <li>
+                Font Size: <%= @paragraph_1_font_size %>px
+              </li>
+              <li>
+                text-align: <%= @paragraph_1_text_align %>
+              </li>
+              <li>
+                Padding: <%= @paragraph_1_padding %>px
+              </li>
+              <li>
+                text-indent: <%= @paragraph_1_indent %>px
+              </li>
+              <li>
+                word-spacing: <%= @paragraph_1_word_spacing %>px
+              </li>
+            </ul>
+          </div>"
+        >
           <%= render "partials/about_info" %>
         </p>
       <% end %>
@@ -468,18 +491,93 @@
         
         <div class='col-md-6'>
           <figure>
-            <div class='component'>
+            <div class='component can-explore'
+                data-toggle="tooltip" data-placement="top" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <ul>
+                   <li>
+                      Padding: <%= @image_padding %>px
+                    </li>
+                    <li>
+                      Border Size: <%= @image_border %>px
+                    </li>
+                    <li>
+                      Border-Radius: <%= @image_border_radius %>px
+                    </li>
+                    <li>
+                      height: <%= @image_height %>px
+                    </li>
+                    <li>
+                      width: <%= @image_width %>px
+                    </li>
+                    <li>
+                    Border-color: hsl(
+                      <%= @image_border_color_hue %>, 
+                      <%= @image_border_color_saturation %>%, 
+                      <%= @image_border_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+              >
               <%= link_to train_path("image", "image-selector", 1) do %>
                 <img class="image-selector-1 image-selector" src="/twitch.jpg" alt="Twitch Plays Pokemon">
               <% end %>
             </div>
             <%= link_to train_path("h4", "h4-selector", 1) do %>
-              <h4 class='h4-selector-1 component active can-explore body-selector-1'>Twtich Plays Pokemon</h4>
+              <h4 class='h4-selector-1 component active can-explore body-selector-1'
+                data-toggle="tooltip" data-placement="right" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <ul>
+                    <li>
+                      Font Size: <%= @h4_font_size %>px
+                    </li>
+                    <li>
+                      Text Transformation: <%= @h4_text_transform %>
+                    </li>
+                    <li>
+                      Letter Spacing: <%= @h4_letter_spacing %>px
+                    </li>
+                    <li>
+                      Font Weight: <%= @h4_font_weight %>
+                    </li>
+                    <li>
+                      word-spacing: <%= @h4_word_spacing %>px
+                    </li>
+                  </ul>
+                </div>"
+              >Twtich Plays Pokemon</h4>
             <% end %>
           </figure>
           
           <%= link_to train_path("paragraph", "paragraph-selector", 2) do %>
-            <p class='paragraph-selector-2 component active can-explore body-selector-2'>
+            <p class='paragraph-selector-2 component active can-explore body-selector-2'
+              data-toggle="tooltip" data-placement="top" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <ul>
+                  <li>
+                    Font Size: <%= @paragraph_2_font_size %>px
+                  </li>
+                  <li>
+                    text-align: <%= @paragraph_2_text_align %>
+                  </li>
+                  <li>
+                    Padding: <%= @paragraph_2_padding %>px
+                  </li>
+                  <li>
+                    text-indent: <%= @paragraph_2_indent %>px
+                  </li>
+                  <li>
+                    word-spacing: <%= @paragraph_2_word_spacing %>px
+                  </li>
+                </ul>
+              </div>"
+                >
               <%= render "partials/twitch_info" %>
             </p>
           <% end %>
@@ -487,17 +585,92 @@
         
         <div class='col-md-6'>
            <figure>
-            <div class='component'>
+            <div class='component can-explore'
+                data-toggle="tooltip" data-placement="top" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <ul>
+                   <li>
+                      Padding: <%= @image_padding %>px
+                    </li>
+                    <li>
+                      Border Size: <%= @image_border %>px
+                    </li>
+                    <li>
+                      Border-Radius: <%= @image_border_radius %>px
+                    </li>
+                    <li>
+                      height: <%= @image_height %>px
+                    </li>
+                    <li>
+                      width: <%= @image_width %>px
+                    </li>
+                    <li>
+                    Border-color: hsl(
+                      <%= @image_border_color_hue %>, 
+                      <%= @image_border_color_saturation %>%, 
+                      <%= @image_border_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+              >
               <%= link_to train_path("image", "image-selector", 1) do %>
                 <img class="image-selector-1 image-selector" src="/faces.jpg" alt="Average of women's faces">
               <% end %>
             </div>
             <%= link_to train_path("h4", "h4-selector", 1) do %>
-              <h4 class='h4-selector-1 component active can-explore body-selector-1'>Average Faces of Women</h4>
+              <h4 class='h4-selector-1 component active can-explore body-selector-1'
+                data-toggle="tooltip" data-placement="right" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <ul>
+                    <li>
+                      Font Size: <%= @h4_font_size %>px
+                    </li>
+                    <li>
+                      Text Transformation: <%= @h4_text_transform %>
+                    </li>
+                    <li>
+                      Letter Spacing: <%= @h4_letter_spacing %>px
+                    </li>
+                    <li>
+                      Font Weight: <%= @h4_font_weight %>
+                    </li>
+                    <li>
+                      word-spacing: <%= @h4_word_spacing %>px
+                    </li>
+                  </ul>
+                </div>"
+              >Average Faces of Women</h4>
             <% end %>
           </figure>
           <%= link_to train_path("paragraph", "paragraph-selector", 2) do %>
-            <p class='paragraph-selector-2 component active can-explore body-selector-2'>
+            <p class='paragraph-selector-2 component active can-explore body-selector-2'
+              data-toggle="tooltip" data-placement="top" 
+              data-html="true"
+              title="
+              <div class='big-tips'>
+                <ul>
+                  <li>
+                    Font Size: <%= @paragraph_2_font_size %>px
+                  </li>
+                  <li>
+                    text-align: <%= @paragraph_2_text_align %>
+                  </li>
+                  <li>
+                    Padding: <%= @paragraph_2_padding %>px
+                  </li>
+                  <li>
+                    text-indent: <%= @paragraph_2_indent %>px
+                  </li>
+                  <li>
+                    word-spacing: <%= @paragraph_2_word_spacing %>px
+                  </li>
+                </ul>
+              </div>"
+              >
               <%= render "partials/faces_info" %>
             </p>
           <% end %>
@@ -511,7 +684,30 @@
   
   <footer class='footer section section-selector-4'>
     <%= link_to train_path("h5", "h5-selector", 1) do %>
-      <h5 class='h5-selector-1 component active can-explore body-selector-1'>Curated by Greg Perlman. Copyright 2016</h5>
+      <h5 class='h5-selector-1 component active can-explore body-selector-1'
+        data-toggle="tooltip" data-placement="top" 
+          data-html="true"
+          title="
+          <div class='big-tips'>
+            <ul>
+              <li>
+                Font Size: <%= @h5_font_size %>px
+              </li>
+              <li>
+                Text Transformation: <%= @h5_text_transform %>
+              </li>
+              <li>
+                Letter Spacing: <%= @h5_letter_spacing %>px
+              </li>
+              <li>
+                Font Weight: <%= @h5_font_weight %>
+              </li>
+              <li>
+                word-spacing: <%= @h5_word_spacing %>px
+              </li>
+            </ul>
+          </div>"
+      >Curated by Greg Perlman. Copyright 2016</h5>
     <% end %>
   </footer> 
 

@@ -14,7 +14,7 @@
       <div class="col-md-10">
         <nav class="custom-nav">
           <ul class="body-selector-<%= @body_selector_id_2 %>">
-          
+
             <%= link_to root_path do %>
               <li class="li-selector-<%= @li_selector_id_1 %>">
                 Home
@@ -141,7 +141,36 @@
         
         <div class="col-md-6">
           <figure>
-            <div class="component active">
+            <div class="component active can-explore"
+                data-toggle="tooltip" data-placement="right" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <ul>
+                   <li>
+                      Padding: <%= @image_padding %>px
+                    </li>
+                    <li>
+                      Border Size: <%= @image_border %>px
+                    </li>
+                    <li>
+                      Border-Radius: <%= @image_border_radius %>px
+                    </li>
+                    <li>
+                      height: <%= @image_height %>px
+                    </li>
+                    <li>
+                      width: <%= @image_width %>px
+                    </li>
+                    <li>
+                    Border-color: hsl(
+                      <%= @image_border_color_hue %>, 
+                      <%= @image_border_color_saturation %>%, 
+                      <%= @image_border_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+              >
               <%= link_to user_train_path("image", "image-selector", @image_selector_id_1) do %>
                 <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/twitch.jpg" alt="Twitch Plays Pokemon">
               <% end %>
@@ -160,7 +189,36 @@
         
         <div class="col-md-6">
            <figure>
-            <div class="component active">
+            <div class="component active can-explore"
+               data-toggle="tooltip" data-placement="right" 
+                data-html="true"
+                title="
+                <div class='big-tips'>
+                  <ul>
+                   <li>
+                      Padding: <%= @image_padding %>px
+                    </li>
+                    <li>
+                      Border Size: <%= @image_border %>px
+                    </li>
+                    <li>
+                      Border-Radius: <%= @image_border_radius %>px
+                    </li>
+                    <li>
+                      height: <%= @image_height %>px
+                    </li>
+                    <li>
+                      width: <%= @image_width %>px
+                    </li>
+                    <li>
+                    Border-color: hsl(
+                      <%= @image_border_color_hue %>, 
+                      <%= @image_border_color_saturation %>%, 
+                      <%= @image_border_color_luminosity %>%)
+                    </li>
+                  </ul>
+                </div>"
+              >
               <%= link_to user_train_path("image", "image-selector", @image_selector_id_1) do %>
                 <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/faces.jpg" alt="Average of women's faces">
               <% end %>
