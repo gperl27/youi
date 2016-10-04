@@ -1,16 +1,20 @@
-<div class="modal fade" id='save' tabindex="-1" role="dialog">
+<div class="modal fade text-center" id='save' tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Save</h4>
+        <h2 class="modal-title">Save</h2>
       </div>
       <div class="modal-body">
         <h4>The following link will always bring you back to your current session: </h4>
-        <code>http://youi.co/user/<%= @cookie %></code>
+        <hr>
+        <div class='copy-div'>
+          <code id='copy-data'>http://youi.co/user/<%= @cookie %></code>
+          <button class='copy btn btn-default glyphicon glyphicon-copy' data-clipboard-action='copy' data-clipboard-target='#copy-data'></button>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-dismiss="modal">Got It</button>
+        <button type="button" class="btn btn-warning center-block" data-dismiss="modal">Got It</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

@@ -11,8 +11,21 @@ $(document).on('turbolinks:load', function(){
     $('[data-toggle="tooltip"]').tooltip()
   });
 
+  //easy copy for custom links
+  var clip = new Clipboard('.copy');
+
+  //feedback for copying
+  // $('.copy').on('click', function(){
+  //     $(this).tooltip('toggle');
+  //   });
+
+
+
   //don't show tooltips until 'explore-mode' is clicked
   $('.can-explore').tooltip('destroy');
+  //same with 'copy'
+  // $('.copy').tooltip('destroy');
+
 
   //grab id of selector to set first component change on load
   var id = $('.good').data("id");
