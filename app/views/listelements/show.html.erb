@@ -15,13 +15,13 @@
       </ul>
     </div>
     <div class='col-md-6'>
-        <%= column_chart @fontsize %>    
+        <%= column_chart @fontsize, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>    
     </div>
   </div>
   <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
-      <%= column_chart @letterspacing %>
+      <%= column_chart @letterspacing, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>
     </div>
     <div class='col-md-6'>
       <h2>Letter Spacing</h2>
@@ -43,13 +43,13 @@
       </ul>
     </div>
     <div class='col-md-6'>
-        <%= column_chart @fontstyle %>    
+        <%= column_chart @fontstyle, xtitle: "Styles", ytitle: "Likes", label: "Likes" %>    
     </div>
   </div>
   <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
-      <%= column_chart @texttransformation %>
+      <%= column_chart @texttransformation, xtitle: "Transformations", ytitle: "Likes", label: "Likes" %>
     </div>
     <div class='col-md-6'>
       <h2>Text Transformation</h2>

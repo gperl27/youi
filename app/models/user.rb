@@ -55,7 +55,7 @@ class User < ApplicationRecord
 
 
     li = self.listelements.create!
-    li.listelement_properties.create!(fontsize: 14, letterspacing: 6, texttransformation: "Capitalize", fontstyle: "italic")
+    li.listelement_properties.create!(fontsize: 14, letterspacing: 6, texttransformation: "capitalize", fontstyle: "italic")
 
     paragraph = self.paragraphs.create!
     paragraph.paragraph_properties.create!(textalign: "left", fontsize: 12, wordspacing: 3, padding: 5, indent: 25)

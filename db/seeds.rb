@@ -47,7 +47,7 @@ button_3.button_properties.create!(
 
 
 li = Listelement.create!
-li.listelement_properties.create!(fontsize: 14, letterspacing: 6, texttransformation: "Capitalize", fontstyle: "italic")
+li.listelement_properties.create!(fontsize: 14, letterspacing: 6, texttransformation: "capitalize", fontstyle: "italic")
 
 paragraph = Paragraph.create!
 paragraph.paragraph_properties.create!(textalign: "left", fontsize: 12, wordspacing: 3, padding: 5, indent: 25)

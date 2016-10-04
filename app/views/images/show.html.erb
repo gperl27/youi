@@ -19,13 +19,13 @@
       </ul>
     </div>
     <div class='col-md-6'>
-        <%= column_chart @border %>    
+        <%= column_chart @border, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>    
     </div>
   </div>
   <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
-      <%= column_chart @height %>
+      <%= column_chart @height, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>
     </div>
     <div class='col-md-6'>
       <h2>Height</h2>
@@ -49,13 +49,13 @@
       </ul>
     </div>
     <div class='col-md-6'>
-        <%= column_chart @borderradius %>    
+        <%= column_chart @borderradius, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>    
     </div>
   </div>
   <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
-      <%= column_chart @width %>
+      <%= column_chart @width, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>
     </div>
     <div class='col-md-6'>
       <h2>Width</h2>
@@ -79,7 +79,7 @@
       </ul>
     </div>
     <div class='col-md-6'>
-        <%= column_chart @padding %>    
+        <%= column_chart @padding, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>    
     </div>
   </div>
   <hr class='blue-line'>

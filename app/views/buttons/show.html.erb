@@ -18,12 +18,13 @@
       </ul>
     </div>
     <div class='col-md-6'>
-        <%= column_chart @fontsize %>    
+        <%= column_chart @fontsize, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>    
     </div>
   </div>
+  <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
-      <%= column_chart @letterspacing %>
+      <%= column_chart @letterspacing, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>
     </div>
     <div class='col-md-6'>
       <h2>Letter Spacing</h2>
@@ -35,6 +36,7 @@
       </ul>
     </div>
   </div>
+  <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
       <h2>Font Weight</h2>
@@ -46,12 +48,13 @@
       </ul>
     </div>
     <div class='col-md-6'>
-        <%= column_chart @fontweight %>    
+        <%= column_chart @fontweight, xtitle: "Weight", ytitle: "Likes", label: "Likes" %>    
     </div>
   </div>
+  <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
-      <%= column_chart @texttransformation %>
+      <%= column_chart @texttransformation, xtitle: "Transformations", ytitle: "Likes", label: "Likes" %>
     </div>
     <div class='col-md-6'>
       <h2>Text Transformation</h2>
@@ -61,7 +64,7 @@
       </ul>
     </div>
   </div>
-
+  <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
       <h2>Border-Size</h2>
@@ -73,12 +76,13 @@
       </ul>
     </div>
     <div class='col-md-6'>
-        <%= column_chart @border %>    
+        <%= column_chart @border, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>    
     </div>
   </div>
+  <hr class='blue-line'>  
   <div class='row'>
     <div class='col-md-6'>
-      <%= column_chart @border_style %>
+      <%= column_chart @border_style, xtitle: "Styles", ytitle: "Likes", label: "Likes" %>
     </div>
     <div class='col-md-6'>
       <h2>Border-Style</h2>
@@ -88,7 +92,7 @@
       </ul>
     </div>
   </div>
-
+  <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
       <h2>Border-Radius</h2>
@@ -100,10 +104,10 @@
       </ul>
     </div>
     <div class='col-md-6'>
-        <%= column_chart @borderradius %>    
+        <%= column_chart @borderradius, xtitle: "Pixels", ytitle: "Likes", label: "Likes" %>    
     </div>
   </div>
-
+  <hr class='blue-line'>
   <div class='row text-color'>
     <h2>Text Color</h2>
 
@@ -137,6 +141,7 @@
         <h4>Most Popular: <%= @color_luminosity %>%</h4>
     </div>
   </div>
+  <hr class='blue-line'>
 
   <div class='row bg-color'>
     <h2>Background-Color</h2>
@@ -171,6 +176,7 @@
         <h4>Most Popular: <%= @bg_color_luminosity %>%</h4>
     </div>
   </div>
+  <hr class='blue-line'>
 
   <div class='row border-color'>
     <h2>Border-Color</h2>
