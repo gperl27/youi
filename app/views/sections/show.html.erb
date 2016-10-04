@@ -1,9 +1,12 @@
 <%= render("partials/show_style") %>
 <%= render 'partials/stats_header' %>
 
-<div class='container'>
+<div class='stats-sub-heading'>
   <h1>Section Choices</h1>
-  <h2><%= @changes %> have been made to this component.</h2>
+  <h2><%= @changes %> changes have been made to this component.</h2>
+</div>
+
+<div class='container graph-div'>
 
   <div class='row text-color'>
     <h2>Text Color</h2>
@@ -72,5 +75,5 @@
         <h4>Most Popular: <%= @bg_color_luminosity %>%</h4>
     </div>
   </div>
-  <%= render 'partials/stats_footer' %>
 </div>
+  <%= render 'partials/stats_footer' %>

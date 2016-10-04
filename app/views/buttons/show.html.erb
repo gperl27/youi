@@ -1,17 +1,20 @@
 <%= render("partials/show_style") %>
 <%= render 'partials/stats_header' %>
 
-<div class='container'>
+<div class='stats-sub-heading'> 
   <h1>Button Choices</h1>
-  <h2><%= @changes %> have been made to this component.</h2>
+  <h2><%= @changes %> changes have been made to this component.</h2>
+</div>
+
+<div class='container graph-div'>
   <div class='row'>
     <div class='col-md-6'>
       <h2>Fontsize</h2>
       <ul>
-        <li>Max <%= @fontsize_max %>px</li>
-        <li>Min <%= @fontsize_min %>px</li>
-        <li>Most Chosen <%= @fontsize_most %>px</li>
-        <li>Least Chosen <%= @fontsize_least %>px</li>
+        <li>Max: <span class='orange'><%= @fontsize_max %>px</span></li>
+        <li>Min: <span class='orange'><%= @fontsize_min %>px</span></li>
+        <li>Most Chosen: <span class='orange'><%= @fontsize_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @fontsize_least %>px</span></li>
       </ul>
     </div>
     <div class='col-md-6'>
@@ -25,10 +28,10 @@
     <div class='col-md-6'>
       <h2>Letter Spacing</h2>
       <ul>
-        <li>Max <%= @letterspacing_max %>px</li>
-        <li>Min <%= @letterspacing_min %>px</li>
-        <li>Most Chosen <%= @letterspacing_most %>px</li>
-        <li>Least Chosen <%= @letterspacing_least %>px</li>
+        <li>Max: <span class='orange'><%= @letterspacing_max %>px</span></li>
+        <li>Min: <span class='orange'><%= @letterspacing_min %>px</span></li>
+        <li>Most Chosen: <span class='orange'><%= @letterspacing_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @letterspacing_least %>px</span></li>
       </ul>
     </div>
   </div>
@@ -36,10 +39,10 @@
     <div class='col-md-6'>
       <h2>Font Weight</h2>
       <ul>
-        <li>Max <%= @fontweight_max %>px</li>
-        <li>Min <%= @fontweight_min %>px</li>
-        <li>Most Chosen <%= @fontweight_most %>px</li>
-        <li>Least Chosen <%= @fontweight_least %>px</li>
+        <li>Max: <span class='orange'><%= @fontweight_max %></span></li>
+        <li>Min: <span class='orange'><%= @fontweight_min %></span></li>
+        <li>Most Chosen: <span class='orange'><%= @fontweight_most %></span></li>
+        <li>Least Chosen: <span class='orange'><%= @fontweight_least %></span></li>
       </ul>
     </div>
     <div class='col-md-6'>
@@ -53,8 +56,8 @@
     <div class='col-md-6'>
       <h2>Text Transformation</h2>
       <ul>
-        <li>Most Chosen <%= @texttransformation_most %>px</li>
-        <li>Least Chosen <%= @texttransformation_least %>px</li>
+        <li>Most Chosen: <span class='orange'><%= @texttransformation_most %></span></li>
+        <li>Least Chosen: <span class='orange'><%= @texttransformation_least %></span></li>
       </ul>
     </div>
   </div>
@@ -63,10 +66,10 @@
     <div class='col-md-6'>
       <h2>Border-Size</h2>
       <ul>
-        <li>Max <%= @border_max %>px</li>
-        <li>Min <%= @border_min %>px</li>
-        <li>Most Chosen <%= @border_most %>px</li>
-        <li>Least Chosen <%= @border_least %>px</li>
+        <li>Max: <span class='orange'><%= @border_max %>px</span></li>
+        <li>Min: <span class='orange'><%= @border_min %>px</span></li>
+        <li>Most Chosen: <span class='orange'><%= @border_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @border_least %>px</span></li>
       </ul>
     </div>
     <div class='col-md-6'>
@@ -80,8 +83,8 @@
     <div class='col-md-6'>
       <h2>Border-Style</h2>
       <ul>
-        <li>Most Chosen <%= @border_style_most %>px</li>
-        <li>Least Chosen <%= @border_style_least %>px</li>
+        <li>Most Chosen: <span class='orange'><%= @border_style_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @border_style_least %>px</span></li>
       </ul>
     </div>
   </div>
@@ -90,10 +93,10 @@
     <div class='col-md-6'>
       <h2>Border-Radius</h2>
       <ul>
-        <li>Max <%= @borderradius_max %>px</li>
-        <li>Min <%= @borderradius_min %>px</li>
-        <li>Most Chosen <%= @borderradius_most %>px</li>
-        <li>Least Chosen <%= @borderradius_least %>px</li>
+        <li>Max: <span class='orange'><%= @borderradius_max %>px</span></li>
+        <li>Min: <span class='orange'><%= @borderradius_min %>px</span></li>
+        <li>Most Chosen: <span class='orange'><%= @borderradius_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @borderradius_least %>px</span></li>
       </ul>
     </div>
     <div class='col-md-6'>
@@ -202,5 +205,5 @@
         <h4>Most Popular: <%= @border_color_luminosity %>%</h4>
     </div>
   </div>
-  <%= render 'partials/stats_footer' %>
 </div>
+  <%= render 'partials/stats_footer' %>

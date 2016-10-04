@@ -1,25 +1,28 @@
 <%= render("partials/show_style") %>
 <%= render 'partials/stats_header' %>
 
-<div class='container'>
+<div class='stats-sub-heading'>  
   <h1>Image Choices</h1>
   <h2><%= @changes %> changes have been made to this component.</h2>
+</div>
+
+<div class='container graph-div'>
 
   <div class='row'>
     <div class='col-md-6'>
       <h2>Border-Size</h2>
       <ul>
-        <li>Max <%= @border_max %>px</li>
-        <li>Min <%= @border_min %>px</li>
-        <li>Most Chosen <%= @border_most %>px</li>
-        <li>Least Chosen <%= @border_least %>px</li>
+        <li>Max: <span class='orange'><%= @border_max %>px</span></li>
+        <li>Min: <span class='orange'><%= @border_min %>px</span></li>
+        <li>Most Chosen: <span class='orange'><%= @border_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @border_least %>px</span></li>
       </ul>
     </div>
     <div class='col-md-6'>
         <%= column_chart @border %>    
     </div>
   </div>
-
+  <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
       <%= column_chart @height %>
@@ -27,29 +30,29 @@
     <div class='col-md-6'>
       <h2>Height</h2>
       <ul>
-        <li>Max <%= @height_max %>px</li>
-        <li>Min <%= @height_min %>px</li>
-        <li>Most Chosen <%= @height_most %>px</li>
-        <li>Least Chosen <%= @height_least %>px</li>
+        <li>Max: <span class='orange'><%= @height_max %>px</span></li>
+        <li>Min: <span class='orange'><%= @height_min %>px</span></li>
+        <li>Most Chosen: <span class='orange'><%= @height_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @height_least %>px</span></li>
       </ul>
     </div>
   </div>
-
+  <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
       <h2>Border-Radius</h2>
       <ul>
-        <li>Max <%= @borderradius_max %>px</li>
-        <li>Min <%= @borderradius_min %>px</li>
-        <li>Most Chosen <%= @borderradius_most %>px</li>
-        <li>Least Chosen <%= @borderradius_least %>px</li>
+        <li>Max: <span class='orange'><%= @borderradius_max %>px</span></li>
+        <li>Min: <span class='orange'><%= @borderradius_min %>px</span></li>
+        <li>Most Chosen: <span class='orange'><%= @borderradius_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @borderradius_least %>px</span></li>
       </ul>
     </div>
     <div class='col-md-6'>
         <%= column_chart @borderradius %>    
     </div>
   </div>
-
+  <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
       <%= column_chart @width %>
@@ -57,29 +60,29 @@
     <div class='col-md-6'>
       <h2>Width</h2>
       <ul>
-        <li>Max <%= @width_max %>px</li>
-        <li>Min <%= @width_min %>px</li>
-        <li>Most Chosen <%= @width_most %>px</li>
-        <li>Least Chosen <%= @width_least %>px</li>
+        <li>Max: <span class='orange'><%= @width_max %>px</span></li>
+        <li>Min: <span class='orange'><%= @width_min %>px</span></li>
+        <li>Most Chosen: <span class='orange'><%= @width_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @width_least %>px</span></li>
       </ul>
     </div>
   </div>
-
+  <hr class='blue-line'>
   <div class='row'>
     <div class='col-md-6'>
       <h2>Padding</h2>
       <ul>
-        <li>Max <%= @padding_max %>px</li>
-        <li>Min <%= @padding_min %>px</li>
-        <li>Most Chosen <%= @padding_most %>px</li>
-        <li>Least Chosen <%= @padding_least %>px</li>
+        <li>Max: <span class='orange'><%= @padding_max %>px</span></li>
+        <li>Min: <span class='orange'><%= @padding_min %>px</span></li>
+        <li>Most Chosen: <span class='orange'><%= @padding_most %>px</span></li>
+        <li>Least Chosen: <span class='orange'><%= @padding_least %>px</span></li>
       </ul>
     </div>
     <div class='col-md-6'>
         <%= column_chart @padding %>    
     </div>
   </div>
-
+  <hr class='blue-line'>
   <div class='row border-color'>
     <h2>Border-Color</h2>
 
@@ -113,5 +116,5 @@
         <h4>Most Popular: <%= @border_color_luminosity %>%</h4>
     </div>
   </div>
-  <%= render 'partials/stats_footer' %>
 </div>
+  <%= render 'partials/stats_footer' %>
