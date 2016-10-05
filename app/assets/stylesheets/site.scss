@@ -36,6 +36,7 @@ html {
 
 
 .big-tips {
+  z-index: 2;
   width: 300px;
   ul {
     text-align: left;
@@ -45,6 +46,10 @@ html {
     }
   }
   padding: 10px 25px 25px 25px;
+}
+
+.section-tips {
+  z-index: 1 !important;
 }
 
 .tooltip-special {
@@ -77,6 +82,10 @@ html {
       list-style-type: none;
     }
   }
+}
+
+.instruction-buttons {
+  padding: 5px;
 }
 
 .header {
@@ -196,12 +205,16 @@ html {
   }
 }
 
+.actual-fonts {
+  font-size: 42px;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /** footer **/
 
 .footer {
   text-align: center;
-  padding: 25px;  
+  padding: 25px 30%;  
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

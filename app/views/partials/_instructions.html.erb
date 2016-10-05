@@ -6,9 +6,16 @@
     <div class='col-md-7'>
       <h2>Instructions:</h2>
       <ul>
-        <li>Most of what you see on this page CAN be changed!</li>
+        <li><strong>Things you can change: </strong>(Hover over stuff)</li>
         <li>
-          Individual components (like the 'Try Me' button below) are <strong>changeable</strong> if they have a  <span class='green'>green</span> border when you <strong>hover over them</strong>.
+          <div class='green'>
+            Individual Elements
+          </div>
+        </li>
+        <li>
+          <div>
+            Entire Section Colors
+          </div>
         </li>
         <li>
           Entire sections such as the header can be changed using the <strong>set of buttons below</strong>.
@@ -16,133 +23,136 @@
         <li>
           To learn more, please read the 'About' section below.
         </li>
+        <li>
+          <div class='info-panel'>
+            <h3 data-toggle="modal" data-target="#instructions"><strong>How It Works</strong></h3>
+            <%= link_to user_path(@cookie) do %>
+              <h3><strong>CUSTOM TEMPLATE</strong></h3>
+            <% end %>
+          </div>
+        </li>
       </ul>
     </div>
     <div class='col-md-5'>
       <div class='special-buttons'>
         <ul>
-          <li>
-            <button class="edit can-explore button-selector-2 button-selector-<%= @button_selector_id_2 %>"
-                data-toggle="tooltip" data-placement="right" 
-                data-html="true"
-                title="
-                <div class='big-tips tooltip-special'>
-                  <h3>Edit Button</h3>
-                  <ul>
-                    <li>
-                  Font Size: <%= @button_2_font_size %>px
-                    </li>
-                    <li>
-                  Font Weight: <%= @button_2_font_weight %>
-                    </li>
-                    <li>
-                  Text Transformation: <%= @button_2_text_transform %>
-                    </li>
-                    <li>
-                  Letter Spacing: <%= @button_2_letter_spacing %>px
-                    </li>
-                    <li>
-                  Padding: <%= @button_2_padding %>px
-                    </li>
-                    <li>
-                  Border Size: <%= @button_2_border %>px
-                    </li>
-                    <li>
-                  Border-Radius: <%= @button_2_border_radius %>px
-                    </li>
-                    <li>
-                  Border-Style: <%= @button_2_border_style %>
-                    </li>
-                    <li>
-                  Color (hsl): (
-                    <%= @button_2_color_hue %>, 
-                    <%= @button_2_color_saturation %>%, 
-                    <%= @button_2_color_luminosity %>%)
-                    </li>
-                    <li>
-                  Border-color (hsl): (
-                    <%= @button_2_border_color_hue %>, 
-                    <%= @button_2_border_color_saturation %>%, 
-                    <%= @button_2_border_color_luminosity %>%)
-                    </li>
-                    <li>
-                  Background-Color (hsl): (
-                    <%= @button_2_bg_color_hue %>, 
-                    <%= @button_2_bg_color_saturation %>%, 
-                    <%= @button_2_bg_color_luminosity %>%)
-                    </li>
-                  </ul>
-                </div>"
+          <div class='instruction-buttons section active-section'>
+            
+            <li>
+              <button class="not edit can-explore button-selector-2 button-selector-<%= @button_selector_id_2 %>"
+                  data-toggle="tooltip" data-placement="right" 
+                  data-html="true"
+                  title="
+                  <div class='big-tips tooltip-special'>
+                    <h3>Hover Button</h3>
+                    <ul>
+                      <li>
+                    Font Size: <%= @button_2_font_size %>px
+                      </li>
+                      <li>
+                    Font Weight: <%= @button_2_font_weight %>
+                      </li>
+                      <li>
+                    Text Transformation: <%= @button_2_text_transform %>
+                      </li>
+                      <li>
+                    Letter Spacing: <%= @button_2_letter_spacing %>px
+                      </li>
+                      <li>
+                    Padding: <%= @button_2_padding %>px
+                      </li>
+                      <li>
+                    Border Size: <%= @button_2_border %>px
+                      </li>
+                      <li>
+                    Border-Radius: <%= @button_2_border_radius %>px
+                      </li>
+                      <li>
+                    Border-Style: <%= @button_2_border_style %>
+                      </li>
+                      <li>
+                    Color (hsl): (
+                      <%= @button_2_color_hue %>, 
+                      <%= @button_2_color_saturation %>%, 
+                      <%= @button_2_color_luminosity %>%)
+                      </li>
+                      <li>
+                    Border-color (hsl): (
+                      <%= @button_2_border_color_hue %>, 
+                      <%= @button_2_border_color_saturation %>%, 
+                      <%= @button_2_border_color_luminosity %>%)
+                      </li>
+                      <li>
+                    Background-Color (hsl): (
+                      <%= @button_2_bg_color_hue %>, 
+                      <%= @button_2_bg_color_saturation %>%, 
+                      <%= @button_2_bg_color_luminosity %>%)
+                      </li>
+                    </ul>
+                  </div>"
+                  >
+                Hovers
+              </button>
+              <span class="edit-mode not">On</span>
+            </li>
+            <li>
+              <button class="not explore can-explore button-selector-2 button-selector-<%= @button_selector_id_2 %>"
+                  data-toggle="tooltip" data-placement="right" 
+                  data-html="true"
+                  title="
+                  <div class='big-tips tooltip-special'>
+                    <h3>Tooltip Button</h3>
+                    <ul>
+                      <li>
+                    Font Size: <%= @button_2_font_size %>px
+                      </li>
+                      <li>
+                    Font Weight: <%= @button_2_font_weight %>
+                      </li>
+                      <li>
+                    Text Transformation: <%= @button_2_text_transform %>
+                      </li>
+                      <li>
+                    Letter Spacing: <%= @button_2_letter_spacing %>px
+                      </li>
+                      <li>
+                    Padding: <%= @button_2_padding %>px
+                      </li>
+                      <li>
+                    Border Size: <%= @button_2_border %>px
+                      </li>
+                      <li>
+                    Border-Radius: <%= @button_2_border_radius %>px
+                      </li>
+                      <li>
+                    Border-Style: <%= @button_2_border_style %>
+                      </li>
+                      <li>
+                    Color (hsl): (
+                      <%= @button_2_color_hue %>, 
+                      <%= @button_2_color_saturation %>%, 
+                      <%= @button_2_color_luminosity %>%)
+                      </li>
+                      <li>
+                    Border-color (hsl): (
+                      <%= @button_2_border_color_hue %>, 
+                      <%= @button_2_border_color_saturation %>%, 
+                      <%= @button_2_border_color_luminosity %>%)
+                      </li>
+                      <li>
+                    Background-Color (hsl): (
+                      <%= @button_2_bg_color_hue %>, 
+                      <%= @button_2_bg_color_saturation %>%, 
+                      <%= @button_2_bg_color_luminosity %>%)
+                      </li>
+                    </ul>
+                  </div>"
                 >
-              Hovers
-            </button>
-            <span class="edit-mode">On</span>
-          </li>
-          <li>
-            <button class="explore can-explore button-selector-2 button-selector-<%= @button_selector_id_2 %>"
-                data-toggle="tooltip" data-placement="right" 
-                data-html="true"
-                title="
-                <div class='big-tips tooltip-special'>
-                  <h3>Explore Button</h3>
-                  <ul>
-                    <li>
-                  Font Size: <%= @button_2_font_size %>px
-                    </li>
-                    <li>
-                  Font Weight: <%= @button_2_font_weight %>
-                    </li>
-                    <li>
-                  Text Transformation: <%= @button_2_text_transform %>
-                    </li>
-                    <li>
-                  Letter Spacing: <%= @button_2_letter_spacing %>px
-                    </li>
-                    <li>
-                  Padding: <%= @button_2_padding %>px
-                    </li>
-                    <li>
-                  Border Size: <%= @button_2_border %>px
-                    </li>
-                    <li>
-                  Border-Radius: <%= @button_2_border_radius %>px
-                    </li>
-                    <li>
-                  Border-Style: <%= @button_2_border_style %>
-                    </li>
-                    <li>
-                  Color (hsl): (
-                    <%= @button_2_color_hue %>, 
-                    <%= @button_2_color_saturation %>%, 
-                    <%= @button_2_color_luminosity %>%)
-                    </li>
-                    <li>
-                  Border-color (hsl): (
-                    <%= @button_2_border_color_hue %>, 
-                    <%= @button_2_border_color_saturation %>%, 
-                    <%= @button_2_border_color_luminosity %>%)
-                    </li>
-                    <li>
-                  Background-Color (hsl): (
-                    <%= @button_2_bg_color_hue %>, 
-                    <%= @button_2_bg_color_saturation %>%, 
-                    <%= @button_2_bg_color_luminosity %>%)
-                    </li>
-                  </ul>
-                </div>"
-              >
-              Tooltips
-            </button>
-            <span class="explore-mode">Off</span>
-          </li>
-          <li>
-            <div class='info-panel'>
-              <h3 data-toggle="modal" data-target="#instructions"><strong>First time visiting? **READ THIS**</strong></h3>
-              <%= link_to user_path(@cookie) do %>
-                <h3><strong>Want your own Youi template? Click here</strong></h3>
-              <% end %>
-            </div>
-          </li>
+                Tooltips
+              </button>
+              <span class="explore-mode not">Off</span>
+            </li>
+          </div>
         </ul>
       </div>
     </div>
