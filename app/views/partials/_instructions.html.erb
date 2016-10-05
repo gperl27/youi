@@ -3,31 +3,25 @@
       You've made <%= count %> changes
   </span>
   <div class='row'>
-    <div class='col-md-7'>
+    <div class='col-md-7 sub-instructions'>
       <h2>Instructions:</h2>
       <ul>
-        <li><strong>Things you can change: </strong>(Hover over stuff)</li>
+        <li><strong>Things you can change: </strong>(Try hovering over stuff)</li>
         <li>
           <div class='green'>
             Individual Elements
           </div>
         </li>
         <li>
-          <div>
-            Entire Section Colors
+          <div class='blue'>
+            Entire Sections
           </div>
-        </li>
-        <li>
-          Entire sections such as the header can be changed using the <strong>set of buttons below</strong>.
-        </li>
-        <li>
-          To learn more, please read the 'About' section below.
         </li>
         <li>
           <div class='info-panel'>
             <h3 data-toggle="modal" data-target="#instructions"><strong>How It Works</strong></h3>
             <%= link_to user_path(@cookie) do %>
-              <h3><strong>CUSTOM TEMPLATE</strong></h3>
+              <h3><strong>Custom Template</strong></h3>
             <% end %>
           </div>
         </li>
