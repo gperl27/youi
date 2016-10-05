@@ -8,7 +8,7 @@
       <ul>
         <li>Most of what you see on this page CAN be changed!</li>
         <li>
-          Individual components (like the 'Youi' text in the top-left corner of the page) are changeable if they have a  <span class='green'>green</span> border when you <strong>hover over them</strong>.
+          Individual components (like the 'Try Me' button below) are <strong>changeable</strong> if they have a  <span class='green'>green</span> border when you <strong>hover over them</strong>.
         </li>
         <li>
           Entire sections such as the header can be changed using the <strong>set of buttons below</strong>.
@@ -141,8 +141,17 @@
             </button>
             <span class="explore-mode">Off</span>
           </li>
+          <li>
+            <div class='info-panel'>
+              <h3 data-toggle="modal" data-target="#instructions"><strong>First time visiting? **READ THIS**</strong></h3>
+              <%= link_to user_path(@cookie) do %>
+                <h3><strong>Want your own Youi template? Click here</strong></h3>
+              <% end %>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
   </div>
 </div>
+<%= render "partials/instructions_modal" %>

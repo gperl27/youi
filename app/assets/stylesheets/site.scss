@@ -153,6 +153,18 @@ html {
   margin-bottom: 25px;
 }
 
+/** Info Panel **/
+
+.info-panel {
+  h3 {
+    opacity: .6;
+    cursor: pointer;
+  }
+  h3:hover {
+    opacity: 1;
+  }
+}
+
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* info */
