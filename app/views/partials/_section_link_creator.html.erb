@@ -1,0 +1,29 @@
+<!-- /** Add Links to entire div without overwriting other click events **/
+ -->
+
+<script type="text/javascript">
+  function addSectionLinks(section, path){
+    $(section).click(function(e) {
+       window.location = path; 
+    });
+
+    $(`${section} .not`).click(function(e){
+      e.stopPropagation();
+    });
+  }
+
+  function invokeSectionLinks(){
+    addSectionLinks(".header", '<%= train_path("section", "section-selector", 1) %>');
+    addSectionLinks(".site-editables", '<%= train_path("section", "section-selector", 2) %>');
+    addSectionLinks(".info", '<%= train_path("section", "section-selector", 3) %>');
+    addSectionLinks(".footer", '<%= train_path("section", "section-selector", 4) %>');
+  }
+
+  function invokeCustomSectionLinks(){
+    
+  }
+
+  switch("<%= function %>"){
+    case "main": invokeSectionLinks(); break;
+  }
+</script>

@@ -231,6 +231,12 @@ html {
   transition: .2s;
 }
 
+.section:hover {
+  cursor: pointer;
+  border: 5px solid blue;
+  transition: .2s;
+}
+
 .green {
   margin-left: 10px;
   margin-right: 10px;

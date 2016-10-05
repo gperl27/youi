@@ -3,8 +3,8 @@
   <hr>
   <h3>Now Editing: <span class='properties'><%= @currently_editing %></span></h3>
   <span class='glyphicon glyphicon-move move'></span>
-  <button class='btn btn-success good glyphicon glyphicon-ok' data-id="<%= @id %>" data-selector="<%= @class %>" data-model="<%= @model %>"></button>
-  <button class='btn btn-danger bad glyphicon glyphicon-remove' data-selector='<%= @class %>'></button>
+  <button class='btn btn-success good' data-id="<%= @id %>" data-selector="<%= @class %>" data-model="<%= @model %>">I LIKE THIS</button>
+  <button class='btn btn-danger bad' data-selector='<%= @class %>'>I DON'T LIKE THIS</button>
   <hr>
   <div class='current-styles'></div>
   <%= link_to path do %>
