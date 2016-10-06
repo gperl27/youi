@@ -100,16 +100,25 @@ html {
 .custom-nav {
   margin-top: 15px;
   float: right;
-  // margin-right: 50px;
   li {
-    opacity: .6;  
+    opacity: .6;
     display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
   }
   li:hover {
-    transition: .2s;
     opacity: 1;
+    transition: .2s;
+  }
+}
+
+.only-custom-links {
+  padding-left: 0;
+  li {
+    display: inline-block;
+    opacity: .6;
+    font-size: 32px;
+    margin-right: 5px;
   }
 }
 

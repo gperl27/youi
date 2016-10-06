@@ -52,8 +52,8 @@
             >youi</h1>
           <% end %>
         </div>      
-        <div class="col-md-10">
-          <nav class="custom-nav can-explore">
+        <div class="not col-md-10">
+          <nav class="not custom-nav can-explore">
             <ul class="not can-explore body-selector-<%= @body_selector_id_2 %>"
               data-toggle="tooltip" data-placement="bottom" 
               data-html="true"
@@ -91,15 +91,6 @@
                   Stats
                 </li>
               <% end %>
-              <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
-              <%= link_to user_create_path(@cookie), :method => :post do %>
-                <li class="not li-selector-<%= @li_selector_id_1 %>">
-                  New Session
-                </li>
-              <% end %>
-              <li class="not li-selector-<%= @li_selector_id_1 %> save" data-toggle="modal" data-target="#save">
-                Save
-              </li>
             </ul>
           </nav>
         </div>      
@@ -110,6 +101,16 @@
   
   <section class="instructions container">
     <p class='you'>**Only YOU can see this page</p>
+    <ul class='only-custom-links'>  
+      <%= link_to user_create_path(@cookie), :method => :post do %>
+        <li class='btn btn-default'>
+          New Template
+        </li>
+      <% end %>
+      <li class = "btn btn-default save" data-toggle="modal" data-target="#save">
+        Save
+      </li>
+    </ul>
     <%= render "partials/instructions", count: @total_count  %>
     <div class='row'>
       <div class='col-md-7'>
@@ -649,7 +650,7 @@
 <script type="text/javascript">
 
     function invokeCustomSectionLinks(){
-      // addSectionLinks(".header", '<%= user_train_path("section", "section-selector", @section_selector_id_1 ) %>');
+      addSectionLinks(".header", '<%= user_train_path("section", "section-selector", @section_selector_id_1 ) %>');
       addSectionLinks(".site-editables", '<%= user_train_path("section", "section-selector", @section_selector_id_2 ) %>');
       addSectionLinks(".info", '<%= user_train_path("section", "section-selector", @section_selector_id_3 ) %>');
       addSectionLinks(".footer", '<%= user_train_path("section", "section-selector", @section_selector_id_4 ) %>');
