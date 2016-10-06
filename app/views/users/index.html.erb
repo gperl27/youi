@@ -53,7 +53,7 @@
           <% end %>
         </div>      
         <div class="not col-md-10">
-          <nav class="not custom-nav can-explore">
+          <nav class="not custom-nav section active-section can-explore">
             <ul class="not can-explore body-selector-<%= @body_selector_id_2 %>"
               data-toggle="tooltip" data-placement="bottom" 
               data-html="true"
@@ -654,8 +654,8 @@
       addSectionLinks(".site-editables", '<%= user_train_path("section", "section-selector", @section_selector_id_2 ) %>');
       addSectionLinks(".info", '<%= user_train_path("section", "section-selector", @section_selector_id_3 ) %>');
       addSectionLinks(".footer", '<%= user_train_path("section", "section-selector", @section_selector_id_4 ) %>');
-      addSectionLinks('.instruction-buttons', '<%= user_train_path("button", "button-selector", @button_selector_id_2 ) %>')
-      // addSectionLinks('.custom-nav', '<%= user_train_path("li", "li-selector", @li_selector_id_1) %>');
+      addSectionLinks('.instruction-buttons', '<%= user_train_path("button", "button-selector", @button_selector_id_2 ) %>');
+      addSectionLinks('.custom-nav', '<%= user_train_path("li", "li-selector", @li_selector_id_1) %>');
     }
 
 </script>
