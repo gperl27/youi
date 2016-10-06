@@ -2,7 +2,7 @@
 <%= render "partials/current_modal" %>
 <div class="container-fluid body">
   <%= render 'custom_modal' %>
-  <header class="can-explore header section active-section section-selector-<%= @section_selector_id_1 %>"
+  <div class="can-explore header section active-section section-selector-<%= @section_selector_id_1 %>"
     data-toggle="tooltip" data-placement="bottom" 
     data-html="true" 
     title="
@@ -52,9 +52,9 @@
             >youi</h1>
           <% end %>
         </div>      
-        <div class="not col-md-10">
+        <div class="col-md-10">
           <nav class="not custom-nav section active-section can-explore">
-            <ul class="not can-explore body-selector-<%= @body_selector_id_2 %>"
+            <ul class="can-explore body-selector-<%= @body_selector_id_2 %>"
               data-toggle="tooltip" data-placement="bottom" 
               data-html="true"
               title="
@@ -96,7 +96,7 @@
         </div>      
       </div>
     </div>
-  </header>
+  </div>
   
   
   <section class="instructions container">
