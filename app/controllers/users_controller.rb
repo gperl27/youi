@@ -1,17 +1,17 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:index, :show, :download]
-  before_action :h1_props, only: [:index, :show, :download]
-  before_action :h2_props, only: [:index, :show, :download]
-  before_action :h3_props, only: [:index, :show, :download]
-  before_action :h4_props, only: [:index, :show, :download]
-  before_action :h5_props, only: [:index, :show, :download]
-  before_action :button_props, only: [:index, :show, :download]
-  before_action :paragraph_props, only: [:index, :show, :download]
-  before_action :image_props, only: [:index, :show, :download]
-  before_action :section_props, only: [:index, :show, :download]
-  before_action :body_props, only: [:index, :show, :download]
-  before_action :li_props, only: [:index, :show, :download]
-  before_action :total_count, only: [:index,:show, :download]
+  before_action :find_user, only: [:index, :show ]
+  before_action :h1_props, only: [:index, :show ]
+  before_action :h2_props, only: [:index, :show ]
+  before_action :h3_props, only: [:index, :show ]
+  before_action :h4_props, only: [:index, :show ]
+  before_action :h5_props, only: [:index, :show ]
+  before_action :button_props, only: [:index, :show ]
+  before_action :paragraph_props, only: [:index, :show ]
+  before_action :image_props, only: [:index, :show ]
+  before_action :section_props, only: [:index, :show ]
+  before_action :body_props, only: [:index, :show ]
+  before_action :li_props, only: [:index, :show ]
+  before_action :total_count, only: [:index,:show ]
 
   def index
     current_cookie = User.find_by(id: session[:user_id]).cookie_id
@@ -24,7 +24,8 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       @cookie = user.cookie_id
     end
-    
+
+    @pronoun = "You"
   end
 
   def create
@@ -49,6 +50,7 @@ class UsersController < ApplicationController
     @cookie = User.find_by(id: session[:user_id]).cookie_id
 
     @currently_editing = which_component_is_editing(@class)
+    @pronoun = "You"
   end
 
   # def download
@@ -76,7 +78,7 @@ class UsersController < ApplicationController
        @user.buttons[0].button_properties.count, @user.buttons[1].button_properties.count,
        # @user.buttons[2].button_properties.count
     ].reduce(:+)
-    @total_count -= 18
+    @total_count -= 17
   end
 
   def which_component_is_editing(data)

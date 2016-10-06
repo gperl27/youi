@@ -25,6 +25,7 @@ class SiteController < ApplicationController
       current_user = User.find_by(id: session[:user_id])
       @cookie = current_user.cookie_id
     end
+    @pronoun = "We"
   end
 
   def index
@@ -43,6 +44,7 @@ class SiteController < ApplicationController
     @cookie = User.find_by(id: session[:user_id]).cookie_id
 
     @currently_editing = which_component_is_editing(@class)
+    @pronoun = "You"
   end
 
   private
