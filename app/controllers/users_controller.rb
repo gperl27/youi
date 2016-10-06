@@ -26,6 +26,7 @@ class UsersController < ApplicationController
     end
 
     @pronoun = "You"
+    @y = "y"
   end
 
   def create

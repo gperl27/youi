@@ -617,7 +617,7 @@
           </ul>
         </div>"
     >
-    <%= link_to user_train_path("h5", "h5-selector", @h5_selector_id_1 , anchor: "info"), class: 'not' do %>
+    <%= link_to user_train_path("h5", "h5-selector", @h5_selector_id_1 , anchor: "foot"), class: 'not' do %>
       <h5 class="can-explore h5-selector-<%= @h5_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
         data-toggle="tooltip" data-placement="right" 
           data-html="true"
@@ -642,7 +642,7 @@
               </li>
             </ul>
           </div>"
-      >Curated by Greg Perlman. Copyright 2016</h5>
+      >Curated by Greg Perlman. Copyright (c) 2016</h5>
     <% end %>
   </footer> 
 </div>
@@ -653,7 +653,7 @@
       addSectionLinks(".header", '<%= user_train_path("section", "section-selector", @section_selector_id_1 ) %>');
       addSectionLinks(".site-editables", '<%= user_train_path("section", "section-selector", @section_selector_id_2 , anchor: "fonts") %>');
       addSectionLinks(".info", '<%= user_train_path("section", "section-selector", @section_selector_id_3 , anchor: "info") %>');
-      addSectionLinks(".footer", '<%= user_train_path("section", "section-selector", @section_selector_id_4 , anchor: "info") %>');
+      addSectionLinks(".footer", '<%= user_train_path("section", "section-selector", @section_selector_id_4 , anchor: "foot") %>');
       addSectionLinks('.instruction-buttons', '<%= user_train_path("button", "button-selector", @button_selector_id_2 ) %>');
       addSectionLinks('.custom-nav', '<%= user_train_path("li", "li-selector", @li_selector_id_1) %>');
     }

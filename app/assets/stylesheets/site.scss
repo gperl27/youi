@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $neon-green-border:inset 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 55px #00FF00, 0 0 75px #00FF00;
-$neon-blue-border: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #0000ff, inset 0 0 30px #0000ff, inset 0 0 40px #0000ff, inset 0 0 55px #0000ff, inset 0 0 75px #0000ff;
+$neon-blue-border: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #20BEFF, inset 0 0 30px #20BEFF, inset 0 0 40px #20BEFF, inset 0 0 55px #20BEFF, inset 0 0 75px #20BEFF;
+$neon-red-border: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #93004A, inset 0 0 30px #93004A, inset 0 0 40px #93004A, inset 0 0 55px #93004A, inset 0 0 75px #93004A;
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -262,6 +263,10 @@ html {
   transition: .2s;
 }
 
+.special-section section:hover {
+  box-shadow: $neon-red-border !important;
+}
+
 .green, .blue {
   text-align: center;
   font-size: 32px;
@@ -273,12 +278,12 @@ html {
 }
 
 .green {
-  color: green;
+  color: #5cb85c;
   box-shadow: $neon-green-border;
 }
 
 .blue {
-  color: blue;
+  color: #3C35FF;
   box-shadow: $neon-blue-border;
 }
 
