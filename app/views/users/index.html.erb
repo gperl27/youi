@@ -27,7 +27,7 @@
     <div class='container'>
       <div class="row">
           <div class="col-md-2">
-          <%= link_to user_train_path("h1", "h1-selector", @h1_selector_id_1) do %>
+          <%= link_to user_train_path("h1", "h1-selector", @h1_selector_id_1), class: 'not' do %>
             <h1 class="h1-selector-<%= @h1_selector_id_1 %> component active can-explore body-selector-<%= @body_selector_id_1 %>"
               data-toggle="tooltip" data-placement="right" 
               data-html="true"
@@ -54,7 +54,7 @@
         </div>      
         <div class="col-md-10">
           <nav class="custom-nav can-explore">
-            <ul class="can-explore body-selector-<%= @body_selector_id_2 %>"
+            <ul class="not can-explore body-selector-<%= @body_selector_id_2 %>"
               data-toggle="tooltip" data-placement="bottom" 
               data-html="true"
               title="
@@ -76,28 +76,28 @@
                 </ul>
               </div>"
               >
-              <%= link_to root_path do %>
+              <%= link_to root_path, class: 'not' do %>
                 <li class="li-selector-<%= @li_selector_id_1 %>">
                   Home
                 </li>
               <% end %>
-              <%= link_to user_path(@cookie) do %>
+              <%= link_to user_path(@cookie), class: 'not' do %>
                 <li class="where-am-i li-selector-<%= @li_selector_id_1 %>">
                   Custom
                 </li>
               <% end %>
-              <%= link_to stats_path do %>
+              <%= link_to stats_path, class: 'not' do %>
                 <li class="li-selector-<%= @li_selector_id_1 %>">
                   Stats
                 </li>
               <% end %>
               <span class="li-selector-<%= @li_selector_id_1 %>"> |</span>
               <%= link_to user_create_path(@cookie), :method => :post do %>
-                <li class="li-selector-<%= @li_selector_id_1 %>">
+                <li class="not li-selector-<%= @li_selector_id_1 %>">
                   New Session
                 </li>
               <% end %>
-              <li class="li-selector-<%= @li_selector_id_1 %> save" data-toggle="modal" data-target="#save">
+              <li class="not li-selector-<%= @li_selector_id_1 %> save" data-toggle="modal" data-target="#save">
                 Save
               </li>
             </ul>
@@ -200,7 +200,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1) do %>
+          <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1), class: 'not' do %>
             <h2 class="can-explore h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
               data-toggle="tooltip" data-placement="right" 
               data-html="true"
@@ -228,7 +228,7 @@
             >Title Fonts</h2>
             <hr>
           <% end %>
-          <%= link_to train_path("body", "body-selector", @body_selector_id_1 ) do %>
+          <%= link_to user_train_path("body", "body-selector", @body_selector_id_1 ), class: 'not' do %>
               <p class='actual-fonts not can-explore component active can-explore body-selector-<%= @body_selector_id_1 %>'  
                data-toggle="tooltip" data-placement="right"
                data-html="true"
@@ -240,7 +240,7 @@
             <% end %>
         </div>
         <div class="col-md-6">
-          <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1) do %>
+          <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1), class: 'not' do %>
             <h2 class="can-explore h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
               data-toggle="tooltip" data-placement="right" 
               data-html="true"
@@ -268,13 +268,13 @@
             >Body Font</h2>
             <hr>
           <% end %>
-          <%= link_to train_path("body", "body-selector", @body_selector_id_2 ) do %>
+          <%= link_to user_train_path("body", "body-selector", @body_selector_id_2 ), class: 'not' do %>
               <p class='actual-fonts not can-explore component active can-explore body-selector-<%= @body_selector_id_2 %>'  
                data-toggle="tooltip" data-placement="right"
                data-html="true"
                 title="
                 <div class='big-tips'>
-                  <h4>Heading Fonts: <%= @heading_font %></h4> 
+                  <h4>Heading Fonts: <%= @body_font %></h4> 
                 </div>"
               >The quick brown fox jumps over the lazy dog</p>
             <% end %>
@@ -307,7 +307,7 @@
         </div>"
     >
     <div class="container">
-      <%= link_to user_train_path("h3", "h3-selector", @h3_selector_id_1) do %>
+      <%= link_to user_train_path("h3", "h3-selector", @h3_selector_id_1), class: 'not' do %>
         <h3 class="can-explore h3-selector-<%= @h3_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
           data-toggle="tooltip" data-placement="top" 
           data-html="true"
@@ -335,7 +335,7 @@
         >About</h3>
       <% end %>
       
-      <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_1) do %>
+      <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_1), class: 'not' do %>
         <p class="can-explore paragraph-selector-<%= @paragraph_selector_id_1 %> component active body-selector-<%= @body_selector_id_2 %>"
           data-toggle="tooltip" data-placement="top" 
           data-html="true"
@@ -366,7 +366,7 @@
       <% end %>
       
       <div class="inspirations">
-        <%= link_to user_train_path("h3", "h3-selector", @h3_selector_id_1) do %>
+        <%= link_to user_train_path("h3", "h3-selector", @h3_selector_id_1), class: 'not' do %>
           <h3 class="can-explore h3-selector-<%= @h3_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
             data-toggle="tooltip" data-placement="top" 
             data-html="true"
@@ -428,11 +428,11 @@
                   </ul>
                 </div>"
               >
-              <%= link_to user_train_path("image", "image-selector", @image_selector_id_1) do %>
+              <%= link_to user_train_path("image", "image-selector", @image_selector_id_1), class: 'not' do %>
                 <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/twitch.jpg" alt="Twitch Plays Pokemon">
               <% end %>
             </div>
-            <%= link_to user_train_path("h4", "h4-selector", @h4_selector_id_1) do %>
+            <%= link_to user_train_path("h4", "h4-selector", @h4_selector_id_1), class: 'not' do %>
               <h4 class="can-explore h4-selector-<%= @h4_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
                 data-toggle="tooltip" data-placement="top" 
                 data-html="true"
@@ -461,7 +461,7 @@
             <% end %>
           </figure>
           
-          <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2) do %>
+          <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2), class: 'not' do %>
             <p class="can-explore paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>"
               data-toggle="tooltip" data-placement="top" 
               data-html="true"
@@ -525,11 +525,11 @@
                   </ul>
                 </div>"
               >
-              <%= link_to user_train_path("image", "image-selector", @image_selector_id_1) do %>
+              <%= link_to user_train_path("image", "image-selector", @image_selector_id_1), class: 'not' do %>
                 <img class="image-selector-<%= @image_selector_id_1 %> image-selector" src="/faces.jpg" alt="Average of women's faces">
               <% end %>
             </div>
-            <%= link_to user_train_path("h4", "h4-selector", @h4_selector_id_1) do %>
+            <%= link_to user_train_path("h4", "h4-selector", @h4_selector_id_1), class: 'not' do %>
               <h4 class="can-explore h4-selector-<%= @h4_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
                 data-toggle="tooltip" data-placement="top" 
                 data-html="true"
@@ -557,7 +557,7 @@
               >Average Faces of Women</h4>
             <% end %>
           </figure>
-          <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2) do %>
+          <%= link_to user_train_path("paragraph", "paragraph-selector", @paragraph_selector_id_2), class: 'not' do %>
             <p class="can-explore paragraph-selector-<%= @paragraph_selector_id_2 %> component active body-selector-<%= @body_selector_id_2 %>"
               data-toggle="tooltip" data-placement="top" 
               data-html="true"
@@ -616,7 +616,7 @@
           </ul>
         </div>"
     >
-    <%= link_to user_train_path("h5", "h5-selector", @h5_selector_id_1) do %>
+    <%= link_to user_train_path("h5", "h5-selector", @h5_selector_id_1), class: 'not' do %>
       <h5 class="can-explore h5-selector-<%= @h5_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
         data-toggle="tooltip" data-placement="right" 
           data-html="true"
@@ -645,3 +645,17 @@
     <% end %>
   </footer> 
 </div>
+
+<script type="text/javascript">
+
+    function invokeCustomSectionLinks(){
+      // addSectionLinks(".header", '<%= user_train_path("section", "section-selector", @section_selector_id_1 ) %>');
+      addSectionLinks(".site-editables", '<%= user_train_path("section", "section-selector", @section_selector_id_2 ) %>');
+      addSectionLinks(".info", '<%= user_train_path("section", "section-selector", @section_selector_id_3 ) %>');
+      addSectionLinks(".footer", '<%= user_train_path("section", "section-selector", @section_selector_id_4 ) %>');
+      addSectionLinks('.instruction-buttons', '<%= user_train_path("button", "button-selector", @button_selector_id_2 ) %>')
+      // addSectionLinks('.custom-nav', '<%= user_train_path("li", "li-selector", @li_selector_id_1) %>');
+    }
+
+</script>
+<%= render "partials/section_link_creator", function: 'custom' %>

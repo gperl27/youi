@@ -18,13 +18,12 @@
     addSectionLinks(".info", '<%= train_path("section", "section-selector", 3) %>');
     addSectionLinks(".footer", '<%= train_path("section", "section-selector", 4) %>');
     addSectionLinks('.instruction-buttons', '<%= train_path("button", "button-selector", 2) %>')
+    addSectionLinks('.custom-nav', '<%= train_path("li", "li-selector", 1) %>');
   }
 
-  function invokeCustomSectionLinks(){
-
-  }
 
   switch("<%= function %>"){
     case "main": invokeSectionLinks(); break;
+    case "custom": invokeCustomSectionLinks(); break;
   }
 </script>
