@@ -243,7 +243,7 @@
         <div class="col-md-6">
           <%= link_to user_train_path("h2", "h2-selector", @h2_selector_id_1, anchor: "fonts"), class: 'not' do %>
             <h2 class="can-explore h2-selector-<%= @h2_selector_id_1 %> component active body-selector-<%= @body_selector_id_1 %>"
-              data-toggle="tooltip" data-placement="right" 
+              data-toggle="tooltip" data-placement="top" 
               data-html="true"
               title="
               <div class='big-tips'>
@@ -266,12 +266,12 @@
                   </li>
                 </ul>
               </div>"
-            >Body Font</h2>
+            >Main Font</h2>
             <hr>
           <% end %>
           <%= link_to user_train_path("body", "body-selector", @body_selector_id_2, anchor: "fonts" ), class: 'not' do %>
               <p class='actual-fonts not can-explore component active can-explore body-selector-<%= @body_selector_id_2 %>'  
-               data-toggle="tooltip" data-placement="right"
+               data-toggle="tooltip" data-placement="bottom"
                data-html="true"
                 title="
                 <div class='big-tips'>
