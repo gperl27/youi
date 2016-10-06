@@ -37,13 +37,13 @@ button_2.button_properties.create!(
     color_hue: 1, color_saturation: 1, color_luminosity: 1
   )
 
-button_3 = Button.create!
-button_3.button_properties.create!(
-  fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
-    border: 5, borderradius: 10, border_style: "solid", border_hue: 52, border_saturation: 52, border_luminosity: 52,
-    bg_hue: 2, bg_saturation: 98, bg_luminosity: 98,
-    color_hue: 2, color_saturation: 2, color_luminosity: 2
-  )
+# button_3 = Button.create!
+# button_3.button_properties.create!(
+#   fontsize: 16, texttransformation: "capitalize", fontweight: 200, letterspacing: 3, padding: 15,
+#     border: 5, borderradius: 10, border_style: "solid", border_hue: 52, border_saturation: 52, border_luminosity: 52,
+#     bg_hue: 2, bg_saturation: 98, bg_luminosity: 98,
+#     color_hue: 2, color_saturation: 2, color_luminosity: 2
+#   )
 
 
 li = Listelement.create!
@@ -88,5 +88,5 @@ headingfont = heading.body_properties.create!(fontfamily: "Georgia")
 
 
 rand = SecureRandom.urlsafe_base64    
-user_1 = User.create!(cookie_id: rand)
+# user_1 = User.create!(cookie_id: rand)
 # user_2 = User.create!(cookie_id: 2)

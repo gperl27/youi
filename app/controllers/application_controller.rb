@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
       "body-selector-2" => "Body Fonts",
       "button-selector-1" => "Try Me Button",
       "button-selector-2" => "Selection Buttons",
-      "button-selector-3" => "Edit Button",
+      # "button-selector-3" => "Edit Button",
       "paragraph-selector-1" => "About Paragraph",
       "paragraph-selector-2" => "Image Paragraphs",
       "image-selector-1" => "Images",

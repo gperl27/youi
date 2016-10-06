@@ -77,8 +77,8 @@ class SiteController < ApplicationController
        Section.first.section_properties.count, Section.second.section_properties.count,
        Section.third.section_properties.count, Section.fourth.section_properties.count,
        Body.first.body_properties.count, Body.second.body_properties.count,
-       Button.first.button_properties.count, Button.second.button_properties.count,
-       Button.third.button_properties.count
+       Button.first.button_properties.count, Button.second.button_properties.count
+       # Button.third.button_properties.count
     ].reduce(:+)
   end
 
@@ -144,7 +144,7 @@ class SiteController < ApplicationController
   def button_props
     button_1 = Button.find(1).button_properties
     button_2 = Button.find(2).button_properties
-    button_3 = Button.find(3).button_properties
+    # button_3 = Button.find(3).button_properties
 
 
     @button_1_font_size = average(button_1, "fontsize")
@@ -183,23 +183,23 @@ class SiteController < ApplicationController
     @button_2_bg_color_saturation = median(button_2, "bg_saturation")
     @button_2_bg_color_luminosity = median(button_2, "bg_luminosity")
 
-    @button_3_font_size = average(button_3, "fontsize")
-    @button_3_font_weight = median(button_3, "fontweight")
-    @button_3_text_transform = median(button_3, "texttransformation")
-    @button_3_letter_spacing = average(button_3, "letterspacing")
-    @button_3_padding = average(button_3, "padding")
-    @button_3_border = average(button_3, "border")
-    @button_3_border_radius = average(button_3, "borderradius")
-    @button_3_border_style = median(button_3, "border_style")
-    @button_3_color_hue = median(button_3, "color_hue")
-    @button_3_color_saturation = median(button_3, "color_saturation")
-    @button_3_color_luminosity = median(button_3, "color_luminosity")
-    @button_3_border_color_hue = median(button_3, "border_hue")
-    @button_3_border_color_saturation = median(button_3, "border_saturation")
-    @button_3_border_color_luminosity = median(button_3, "border_luminosity")
-    @button_3_bg_color_hue = median(button_3, "bg_hue")
-    @button_3_bg_color_saturation = median(button_3, "bg_saturation")
-    @button_3_bg_color_luminosity = median(button_3, "bg_luminosity")
+    # @button_3_font_size = average(button_3, "fontsize")
+    # @button_3_font_weight = median(button_3, "fontweight")
+    # @button_3_text_transform = median(button_3, "texttransformation")
+    # @button_3_letter_spacing = average(button_3, "letterspacing")
+    # @button_3_padding = average(button_3, "padding")
+    # @button_3_border = average(button_3, "border")
+    # @button_3_border_radius = average(button_3, "borderradius")
+    # @button_3_border_style = median(button_3, "border_style")
+    # @button_3_color_hue = median(button_3, "color_hue")
+    # @button_3_color_saturation = median(button_3, "color_saturation")
+    # @button_3_color_luminosity = median(button_3, "color_luminosity")
+    # @button_3_border_color_hue = median(button_3, "border_hue")
+    # @button_3_border_color_saturation = median(button_3, "border_saturation")
+    # @button_3_border_color_luminosity = median(button_3, "border_luminosity")
+    # @button_3_bg_color_hue = median(button_3, "bg_hue")
+    # @button_3_bg_color_saturation = median(button_3, "bg_saturation")
+    # @button_3_bg_color_luminosity = median(button_3, "bg_luminosity")
   end
 
   def paragraph_props
