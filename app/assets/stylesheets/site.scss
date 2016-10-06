@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$neon-green-border: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 55px #00FF00, 0 0 75px #00FF00;
+$neon-green-border:inset 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 55px #00FF00, 0 0 75px #00FF00;
+$neon-blue-border: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #0000ff, inset 0 0 30px #0000ff, inset 0 0 40px #0000ff, inset 0 0 55px #0000ff, inset 0 0 75px #0000ff;
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -248,7 +249,7 @@ html {
 
 .section:hover {
   cursor: pointer;
-  border: 5px solid blue;
+  box-shadow: $neon-blue-border;
   transition: .2s;
 }
 
@@ -269,7 +270,7 @@ html {
 
 .blue {
   color: blue;
-  border: 1px solid blue;
+  box-shadow: $neon-blue-border;
 }
 
 .sub-instructions {
